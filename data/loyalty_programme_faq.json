@@ -1,0 +1,284 @@
+{
+  "department": "Loyalty Programme & Employee Benefits",
+  "department_key": "loyalty_programme",
+  "audience": "internal",
+  "doc_id": "loyalty_programme_faq_v1",
+  "generated_date": "2026-02-22T09:22:09.530968+00:00",
+  "num_entries": 25,
+  "entries": [
+    {
+      "question": "What is the Shop4You loyalty points system?",
+      "answer": "The Shop4You loyalty points system is designed to reward our employees for their dedication and support. Employees earn points on every purchase they make at Shop4You, which can then be redeemed for discounts on future purchases, exclusive products, or special experiences.",
+      "tags": [
+        "loyalty points",
+        "employee rewards"
+      ],
+      "last_updated": "2026-02-22T09:22:09.530968+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How do I enrol in the employee discount programme?",
+      "answer": "To enrol in the employee discount programme, please log into the employee portal and navigate to the 'Discounts' section. There, you will find detailed instructions on how to activate your employee discount. If you encounter any issues, feel free to contact HR for assistance.",
+      "tags": [
+        "employee discount",
+        "enrolment",
+        "HR support"
+      ],
+      "last_updated": "2026-02-22T09:22:09.530968+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What steps should I follow to redeem my loyalty points?",
+      "answer": "To redeem your loyalty points, log into your Shop4You account and go to the 'My Rewards' section. You can browse available rewards and choose how you'd like to use your points. Once selected, follow the prompts to complete the redemption process.",
+      "tags": [
+        "reward redemption",
+        "loyalty points",
+        "process"
+      ],
+      "last_updated": "2026-02-22T09:22:09.530968+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "I ordered a laptop but received headphones, what do I do?",
+      "answer": "If you've received the wrong item, please let us know and we will assist you immediately. They will guide you through the process of returning the incorrect item and ensure that the correct one is dispatched to you promptly.",
+      "tags": [
+        "order issue",
+        "customer service",
+        "incorrect item"
+      ],
+      "last_updated": "2026-02-22T09:22:09.530968+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What happens if I don't use my loyalty points before they expire?",
+      "answer": "Loyalty points at Shop4You are valid for 12 months from the date they are earned. If not redeemed within this period, they will expire and be removed from your account. We recommend keeping track of your points and using them before the expiration date.",
+      "tags": [
+        "loyalty points",
+        "expiration",
+        "rewards"
+      ],
+      "last_updated": "2026-02-22T09:22:09.530968+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Am I eligible for a referral bonus if my friend joins Shop4You?",
+      "answer": "Yes, you are eligible for a referral bonus if your friend joins Shop4You and completes their probationary period. Make sure your friend mentions your name during their application process, and you will receive the bonus once the conditions are met.",
+      "tags": [
+        "referral bonus",
+        "eligibility",
+        "employee rewards"
+      ],
+      "last_updated": "2026-02-22T09:22:09.530968+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How can I upgrade my loyalty tier?",
+      "answer": "To upgrade your loyalty tier, you must accumulate a certain number of points within a calendar year. Each tier offers additional perks and benefits. You can track your progress and current tier status on the Shop4You employee portal.",
+      "tags": [
+        "loyalty tier",
+        "upgrade",
+        "loyalty programme"
+      ],
+      "last_updated": "2026-02-22T09:22:09.530968+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can I change my reward redemption request after submission?",
+      "answer": "Once you have submitted your reward redemption request, it cannot be changed. However, if you made an error, please contact our support team as soon as possible, and they will do their best to assist you.",
+      "tags": [
+        "reward redemption",
+        "request change",
+        "support"
+      ],
+      "last_updated": "2026-02-22T09:22:09.530968+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Are there any special perks for employees during the holiday season?",
+      "answer": "Yes, Shop4You offers several special perks during the holiday season, including additional discounts, exclusive access to sales, and holiday-themed events. Keep an eye on your email for announcements about these exciting offers.",
+      "tags": [
+        "employee perks",
+        "holiday season",
+        "special offers"
+      ],
+      "last_updated": "2026-02-22T09:22:09.530968+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Who do I contact for issues regarding my loyalty points balance?",
+      "answer": "If you notice any discrepancies with your loyalty points balance, please contact the Shop4You loyalty programme support team. They will investigate the issue and provide you with a resolution as quickly as possible.",
+      "tags": [
+        "loyalty points",
+        "support",
+        "account issues"
+      ],
+      "last_updated": "2026-02-22T09:22:09.530968+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How often is my employee discount updated?",
+      "answer": "The employee discount is reviewed annually and may be adjusted based on various factors. Any changes to the discount will be communicated to you via email and updated in the employee portal.",
+      "tags": [
+        "employee discount",
+        "updates",
+        "discount policy"
+      ],
+      "last_updated": "2026-02-22T09:22:09.530968+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What if I miss the deadline for a tier upgrade?",
+      "answer": "If you miss the deadline for a tier upgrade, you will remain in your current tier until the next evaluation period. We encourage you to monitor your points and upgrade eligibility regularly to avoid missing future opportunities.",
+      "tags": [
+        "tier upgrade",
+        "deadlines",
+        "loyalty programme"
+      ],
+      "last_updated": "2026-02-22T09:22:09.530968+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can I combine my employee discount with loyalty points redemption?",
+      "answer": "Yes, you can combine your employee discount with loyalty points redemption to maximise your savings. Simply apply your loyalty points at checkout, and your employee discount will automatically be applied to the remaining balance.",
+      "tags": [
+        "employee discount",
+        "loyalty points",
+        "savings"
+      ],
+      "last_updated": "2026-02-22T09:22:09.530968+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What are the benefits of being in the top loyalty tier?",
+      "answer": "As a top-tier member of the Shop4You loyalty programme, you enjoy exclusive perks such as higher point earning rates, priority customer service, and invitations to special events. These benefits are designed to enhance your shopping experience and reward your loyalty.",
+      "tags": [
+        "loyalty tier",
+        "benefits",
+        "exclusive perks"
+      ],
+      "last_updated": "2026-02-22T09:22:09.530968+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How can I track my referral bonus progress?",
+      "answer": "You can track the progress of your referral bonuses through the Shop4You employee portal. Navigate to the 'Referrals' section to view the status of your referrals and any pending bonuses. If you have questions, feel free to reach out to the HR department.",
+      "tags": [
+        "referral bonus",
+        "progress tracking",
+        "HR support"
+      ],
+      "last_updated": "2026-02-22T09:22:09.530968+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What should I do if I forget to apply my employee discount at checkout?",
+      "answer": "If you forget to apply your employee discount at checkout, please let us know and we will assist you within 24 hours. They may be able to assist you in applying the discount retroactively or provide an alternative solution.",
+      "tags": [
+        "employee discount",
+        "checkout issue",
+        "customer service"
+      ],
+      "last_updated": "2026-02-22T09:22:09.530968+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Is there a cap on the number of loyalty points I can earn?",
+      "answer": "There is no cap on the number of loyalty points you can earn at Shop4You. The more you shop, the more points you'll accumulate, which can be redeemed for various rewards and benefits.",
+      "tags": [
+        "loyalty points",
+        "earnings",
+        "rewards"
+      ],
+      "last_updated": "2026-02-22T09:22:09.530968+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How can I find out about upcoming employee perks and events?",
+      "answer": "Upcoming employee perks and events are announced via email and posted on the Shop4You employee portal. Be sure to check these resources regularly to stay informed and take advantage of these opportunities.",
+      "tags": [
+        "employee perks",
+        "events",
+        "announcements"
+      ],
+      "last_updated": "2026-02-22T09:22:09.530968+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can I transfer my loyalty points to another employee?",
+      "answer": "Currently, Shop4You does not allow the transfer of loyalty points between employees. Points are non-transferable and are intended to be used by the account holder for personal rewards and benefits.",
+      "tags": [
+        "loyalty points",
+        "transfer policy",
+        "account policy"
+      ],
+      "last_updated": "2026-02-22T09:22:09.530968+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What are the criteria for earning referral bonuses?",
+      "answer": "To earn a referral bonus, the referred individual must successfully join Shop4You and complete their probationary period. Ensure they provide your details during the application process to qualify for the bonus.",
+      "tags": [
+        "referral bonus",
+        "criteria",
+        "employee rewards"
+      ],
+      "last_updated": "2026-02-22T09:22:09.530968+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How do I check my current loyalty tier?",
+      "answer": "You can check your current loyalty tier by logging into the Shop4You employee portal and navigating to the 'My Rewards' section. Your tier status and progress towards the next tier are displayed there.",
+      "tags": [
+        "loyalty tier",
+        "account status",
+        "employee portal"
+      ],
+      "last_updated": "2026-02-22T09:22:09.530968+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What if I encounter an issue with my reward redemption?",
+      "answer": "If you encounter any issues during reward redemption, please contact the Shop4You customer support team. They will assist you in resolving the problem and ensuring you receive your chosen reward.",
+      "tags": [
+        "reward redemption",
+        "support",
+        "issue resolution"
+      ],
+      "last_updated": "2026-02-22T09:22:09.530968+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Are there any exclusive rewards only available to employees?",
+      "answer": "Yes, Shop4You offers exclusive rewards and experiences that are only available to employees. These can include special discounts, unique products, and invitations to exclusive events.",
+      "tags": [
+        "exclusive rewards",
+        "employee benefits",
+        "special offers"
+      ],
+      "last_updated": "2026-02-22T09:22:09.530968+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What is the process for submitting a referral?",
+      "answer": "To submit a referral, fill out the referral form found in the Shop4You employee portal. Include your referral's details and ensure they mention your name during their application process. HR will follow up once the referral completes their probationary period.",
+      "tags": [
+        "referral process",
+        "submission",
+        "HR support"
+      ],
+      "last_updated": "2026-02-22T09:22:09.530968+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can I use my employee discount while shopping online?",
+      "answer": "Yes, your employee discount can be used both in-store and online. When shopping online, ensure you are logged into your employee account to automatically apply your discount at checkout.",
+      "tags": [
+        "employee discount",
+        "online shopping",
+        "checkout process"
+      ],
+      "last_updated": "2026-02-22T09:22:09.530968+00:00",
+      "confidence_score": 0.95
+    }
+  ]
+}

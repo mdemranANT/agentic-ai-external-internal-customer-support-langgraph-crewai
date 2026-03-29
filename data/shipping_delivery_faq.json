@@ -1,0 +1,285 @@
+{
+  "department": "Shipping & Delivery",
+  "department_key": "shipping_delivery",
+  "audience": "external",
+  "doc_id": "shipping_delivery_faq_v1",
+  "generated_date": "2026-02-21T21:20:24.620003+00:00",
+  "num_entries": 25,
+  "entries": [
+    {
+      "question": "What are the standard delivery times for orders within the UK?",
+      "answer": "Our standard delivery time for orders within the UK is typically 3-5 working days. However, during peak periods like holidays, delivery may take a little longer due to increased demand. You’ll receive a tracking number once your order is dispatched to keep you updated on its progress.",
+      "tags": [
+        "delivery time",
+        "UK shipping",
+        "standard delivery"
+      ],
+      "last_updated": "2026-02-21T21:20:24.620003+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How do I track my parcel with Shop4You?",
+      "answer": "Once your order has been dispatched, you will receive an email containing a tracking number and a link to the courier's website. By clicking on the link and entering your tracking number, you can view the current status and estimated delivery time of your parcel.",
+      "tags": [
+        "track parcel",
+        "shipping",
+        "order tracking"
+      ],
+      "last_updated": "2026-02-21T21:20:24.620003+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can I change my delivery address after placing an order?",
+      "answer": "Yes, you can change your delivery address before the order is dispatched. please let us know and we will assist you as soon as possible to update your address. Unfortunately, once the order has been shipped, we cannot modify the delivery address.",
+      "tags": [
+        "change address",
+        "order modification",
+        "customer service"
+      ],
+      "last_updated": "2026-02-21T21:20:24.620003+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What are the international shipping options available at Shop4You?",
+      "answer": "Shop4You offers international shipping to select countries. We provide standard international delivery, which typically takes 7-14 working days, and express delivery, which takes 3-5 working days. Shipping costs and times vary depending on the destination.",
+      "tags": [
+        "international shipping",
+        "shipping options",
+        "delivery"
+      ],
+      "last_updated": "2026-02-21T21:20:24.620003+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What happens if my delivery fails because I wasn't at home?",
+      "answer": "If a delivery attempt is made and no one is available to receive the parcel, the courier will leave a card with instructions for rescheduling the delivery or collecting the package from a local depot. Please follow the instructions on the card to ensure successful delivery.",
+      "tags": [
+        "failed delivery",
+        "delivery issues",
+        "reschedule"
+      ],
+      "last_updated": "2026-02-21T21:20:24.620003+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "I ordered a laptop but received a toaster, what do I do?",
+      "answer": "We apologise for the mix-up. please let us know and we will assist you immediately with your order details and a photo of the received item. We will arrange for the correct item to be sent to you and provide instructions for returning the incorrect item.",
+      "tags": [
+        "order issue",
+        "wrong item",
+        "customer support"
+      ],
+      "last_updated": "2026-02-21T21:20:24.620003+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What is the shipping cost for orders over £50 in the UK?",
+      "answer": "For orders over £50 within the UK, we offer free standard delivery. If you require faster delivery, you can choose express shipping at a reduced rate during checkout. Please note that this offer may vary during special promotions.",
+      "tags": [
+        "shipping cost",
+        "UK delivery",
+        "free shipping"
+      ],
+      "last_updated": "2026-02-21T21:20:24.620003+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Am I eligible for a refund on shipping costs if my delivery is late?",
+      "answer": "If your delivery is delayed beyond the estimated delivery time due to issues on our end, you may be eligible for a refund of the shipping costs. please let us know and we will assist you with your order details to initiate a review of your case.",
+      "tags": [
+        "refund policy",
+        "late delivery",
+        "shipping refund"
+      ],
+      "last_updated": "2026-02-21T21:20:24.620003+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Who do I contact for a missing parcel?",
+      "answer": "If your parcel has not arrived within the estimated delivery time, please let us know and we will assist you. They will assist you in tracking down your parcel and resolving the issue as quickly as possible.",
+      "tags": [
+        "missing parcel",
+        "customer service",
+        "order tracking"
+      ],
+      "last_updated": "2026-02-21T21:20:24.620003+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can I expedite my delivery after placing an order?",
+      "answer": "If your order has not yet been dispatched, you can upgrade your shipping method to express delivery by reaching out to us. Additional charges may apply. Once the order is shipped, we cannot expedite the delivery process.",
+      "tags": [
+        "expedited delivery",
+        "order change",
+        "shipping upgrade"
+      ],
+      "last_updated": "2026-02-21T21:20:24.620003+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What should I do if my parcel is damaged upon arrival?",
+      "answer": "If your parcel arrives damaged, please take photos of the damage and let us know and we will assist you immediately. We will assist you with a return or exchange and ensure you receive a replacement as soon as possible.",
+      "tags": [
+        "damaged parcel",
+        "return",
+        "customer support"
+      ],
+      "last_updated": "2026-02-21T21:20:24.620003+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How can I find out the shipping cost before placing an order?",
+      "answer": "You can view the estimated shipping cost by adding items to your cart and entering your delivery address at checkout. The shipping cost will be calculated based on your location and selected delivery method before you complete the purchase.",
+      "tags": [
+        "shipping cost",
+        "checkout",
+        "order process"
+      ],
+      "last_updated": "2026-02-21T21:20:24.620003+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What if I miss the deadline for address changes or cancellations?",
+      "answer": "If you miss the deadline for making changes to your order, we recommend accepting the delivery and reaching out to us to discuss return options. Unfortunately, once an order is dispatched, we cannot alter the delivery address or cancel the shipment.",
+      "tags": [
+        "address change",
+        "order cancellation",
+        "delivery process"
+      ],
+      "last_updated": "2026-02-21T21:20:24.620003+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can I have my order delivered to a different country from where I placed it?",
+      "answer": "Yes, you can choose a different delivery country during checkout. Select the desired country as the delivery address and ensure it is part of our international shipping destinations. Shipping costs and times will adjust accordingly.",
+      "tags": [
+        "international delivery",
+        "order process",
+        "different country"
+      ],
+      "last_updated": "2026-02-21T21:20:24.620003+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Are there any shipping restrictions for certain products?",
+      "answer": "Some products may have shipping restrictions due to size, weight, or international regulations. If any item in your cart cannot be shipped to your address, you will be notified at checkout. We recommend checking the product details for specific restrictions.",
+      "tags": [
+        "shipping restrictions",
+        "product limitations",
+        "international shipping"
+      ],
+      "last_updated": "2026-02-21T21:20:24.620003+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What are the steps to return an item due to late delivery?",
+      "answer": "To return an item due to late delivery, let us know and we will assist you within 14 days of receiving the item. They will provide you with a return authorisation and instructions on how to send the item back. Once received, we will process your refund or exchange.",
+      "tags": [
+        "return process",
+        "late delivery",
+        "customer service"
+      ],
+      "last_updated": "2026-02-21T21:20:24.620003+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can I ship to multiple addresses in a single order?",
+      "answer": "Currently, each order can only be shipped to one address. If you need to send items to multiple addresses, we recommend placing separate orders for each destination. This ensures accurate tracking and delivery for each shipment.",
+      "tags": [
+        "multiple addresses",
+        "order process",
+        "shipping"
+      ],
+      "last_updated": "2026-02-21T21:20:24.620003+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What should I do if I receive the wrong tracking number?",
+      "answer": "If you receive an incorrect tracking number, please let us know and we will assist you as soon as possible. They will provide you with the correct tracking information and ensure your parcel's status can be accurately monitored.",
+      "tags": [
+        "tracking number",
+        "order issue",
+        "customer support"
+      ],
+      "last_updated": "2026-02-21T21:20:24.620003+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Is it possible to schedule a specific delivery date for my order?",
+      "answer": "While we cannot guarantee specific delivery dates, you can select express shipping for a faster delivery window. For special requests, please let us know and we will assist you, and we will do our best to accommodate your needs within the courier's capabilities.",
+      "tags": [
+        "delivery date",
+        "special request",
+        "shipping options"
+      ],
+      "last_updated": "2026-02-21T21:20:24.620003+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can I make changes to my order after it has been dispatched?",
+      "answer": "Once an order has been dispatched, we are unable to make changes to it, including modifying the delivery address or contents. If you need to make adjustments, please let us know and we will assist you to discuss return or exchange options.",
+      "tags": [
+        "order changes",
+        "dispatched order",
+        "customer service"
+      ],
+      "last_updated": "2026-02-21T21:20:24.620003+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How do I know if my order is eligible for express delivery?",
+      "answer": "During checkout, eligible items will display available delivery options, including express delivery. If express delivery is not offered, it may be due to the product's size, weight, or destination restrictions. let us know and we will help for further clarification.",
+      "tags": [
+        "express delivery",
+        "eligibility",
+        "shipping options"
+      ],
+      "last_updated": "2026-02-21T21:20:24.620003+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What are the delivery options for rural areas in the UK?",
+      "answer": "For rural areas within the UK, we offer standard delivery, which typically takes 3-7 working days. Delivery times may vary based on location and local courier services. We recommend checking the estimated delivery time at checkout for more precise information.",
+      "tags": [
+        "rural delivery",
+        "UK shipping",
+        "delivery options"
+      ],
+      "last_updated": "2026-02-21T21:20:24.620003+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How are shipping costs calculated for international orders?",
+      "answer": "International shipping costs are calculated based on the destination, weight, and dimensions of your package. During checkout, enter your delivery address to view the estimated shipping cost and choose your preferred delivery option before completing the purchase.",
+      "tags": [
+        "international shipping",
+        "shipping cost",
+        "order process"
+      ],
+      "last_updated": "2026-02-21T21:20:24.620003+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can I request a hold on my parcel if I'm away during delivery?",
+      "answer": "If you anticipate being unavailable during the delivery window, please let us know and we will assist you to place a temporary hold on your parcel. We will coordinate with the courier to delay the delivery until your return, if possible.",
+      "tags": [
+        "parcel hold",
+        "delivery delay",
+        "customer service"
+      ],
+      "last_updated": "2026-02-21T21:20:24.620003+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What should I do if I never received a confirmation email after ordering?",
+      "answer": "If you haven't received a confirmation email, first check your spam or junk folder. If it's not there, please let us know and we will assist you to verify your order status and confirm that your email address was entered correctly during checkout.",
+      "tags": [
+        "confirmation email",
+        "order status",
+        "customer support"
+      ],
+      "last_updated": "2026-02-21T21:20:24.620003+00:00",
+      "confidence_score": 0.95
+    }
+  ]
+}

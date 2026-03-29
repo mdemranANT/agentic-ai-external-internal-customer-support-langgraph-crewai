@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop4You — Agentic AI Assistant</title>
+  <style>
+    :root {
+      --primary: #667eea;
+      --primary-dark: #5a67d8;
+      --accent: #ff6b35;
+      --dark: #1a1a2e;
+      --grey: #f8f9fa;
+      --border: #e2e8f0;
+      --text: #2d3748;
+      --text-light: #718096;
+      --green: #48bb78;
+      --red: #e74c3c;
+      --orange: #e67e22;
+      --yellow: #f1c40f;
+      --teal: #1abc9c;
+      --purple: #9b59b6;
+      --pink: #e91e63;
+      --blue: #3498db;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #667eea22 0%, #764ba222 100%);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, #764ba2 100%);
+      color: white;
+      padding: 2.5rem 2rem;
+      border-radius: 16px;
+      margin-bottom: 2rem;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.5px;
+    }
+
+    header .meta {
+      opacity: 0.85;
+      font-size: 0.95rem;
+      margin-top: 0.3rem;
+    }
+
+    header .tagline {
+      font-size: 1.05rem;
+      margin-top: 0.8rem;
+      opacity: 0.95;
+    }
+
+    header .stats-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+
+    header .stat-pill {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 0.3rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    /* TOC */
+    .toc {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .toc h3 {
+      margin-bottom: 0.8rem;
+      color: var(--dark);
+      font-size: 1.1rem;
+    }
+
+    .toc ul {
+      list-style: none;
+      columns: 2;
+      column-gap: 2rem;
+    }
+
+    .toc li {
+      padding: 0.25rem 0;
+    }
+
+    .toc a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .toc a:hover {
+      text-decoration: underline;
+    }
+
+    /* Sections */
+    section {
+      background: white;
+      border-radius: 12px;
+      padding: 1.8rem 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    section h2 {
+      font-size: 1.35rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--border);
+      color: var(--dark);
+    }
+
+    section h3 {
+      font-size: 1.1rem;
+      margin: 1.2rem 0 0.6rem;
+      color: var(--primary-dark);
+    }
+
+    section h4 {
+      font-size: 0.95rem;
+      margin: 1rem 0 0.4rem;
+      color: var(--text);
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.8rem 0;
+      font-size: 0.9rem;
+    }
+
+    th {
+      background: var(--dark);
+      color: white;
+      padding: 0.6rem 0.8rem;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    td {
+      padding: 0.55rem 0.8rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    tr:nth-child(even) td {
+      background: #f7fafc;
+    }
+
+    tr:hover td {
+      background: #edf2f7;
+    }
+
+    td code,
+    th code {
+      background: #edf2f7;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-family: 'Cascadia Code', 'Fira Code', monospace;
+    }
+
+    /* Code / Pre */
+    pre {
+      background: #1a1a2e;
+      color: #e2e8f0;
+      padding: 1.2rem 1.5rem;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-size: 0.82rem;
+      line-height: 1.6;
+      font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+      margin: 0.8rem 0;
+    }
+
+    code {
+      font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+    }
+
+    p code,
+    li code {
+      background: #edf2f7;
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.88rem;
+      color: var(--primary-dark);
+    }
+
+    /* Lists */
+    ol,
+    ul {
+      padding-left: 1.5rem;
+      margin: 0.5rem 0;
+    }
+
+    li {
+      margin: 0.3rem 0;
+    }
+
+    /* Stretch goals */
+    .stretch-table td:first-child {
+      text-align: center;
+      font-weight: 700;
+      width: 2rem;
+    }
+
+    /* Badge */
+    .badge {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 0.15rem 0.6rem;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      vertical-align: middle;
+    }
+
+    .badge-green {
+      background: var(--green);
+    }
+
+    .badge-red {
+      background: var(--red);
+    }
+
+    .badge-orange {
+      background: var(--orange);
+    }
+
+    /* Blockquote */
+    blockquote {
+      border-left: 4px solid var(--primary);
+      padding: 0.8rem 1.2rem;
+      background: #f0f4ff;
+      border-radius: 0 8px 8px 0;
+      margin: 0.8rem 0;
+      font-style: italic;
+      color: var(--text-light);
+    }
+
+    /* Horizontal rule */
+    hr {
+      border: none;
+      height: 2px;
+      background: var(--border);
+      margin: 1.5rem 0;
+    }
+
+    /* Command blocks */
+    .cmd {
+      background: #2d3748;
+      color: #68d391;
+      padding: 0.8rem 1.2rem;
+      border-radius: 8px;
+      font-family: 'Cascadia Code', monospace;
+      font-size: 0.85rem;
+      margin: 0.5rem 0;
+      overflow-x: auto;
+    }
+
+    .cmd .comment {
+      color: #a0aec0;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: var(--text-light);
+      font-size: 0.85rem;
+    }
+
+    /* Print */
+    @media print {
+      body {
+        background: white;
+      }
+
+      header {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      section,
+      .toc {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        break-inside: avoid;
+      }
+
+      pre {
+        white-space: pre-wrap;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .toc ul {
+        columns: 1;
+      }
+
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      header .stats-bar {
+        gap: 0.5rem;
+      }
+
+      pre {
+        font-size: 0.72rem;
+        padding: 0.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- ═══════════════════ HEADER ═══════════════════ -->
+    <header>
+      <h1>Shop4You &mdash; Agentic AI Assistant</h1>
+      <div class="meta">
+        <strong>Capstone Project:</strong> Agentic AI Assistant for Shop4You (Retail Company)<br>
+        <strong>Learner:</strong> Mohammed Emran &nbsp;|&nbsp;
+        <strong>Updated:</strong> February 23, 2026
+      </div>
+      <div class="tagline">
+        An end-to-end <strong>multi-agent</strong> customer and employee support system for <strong>Shop4You</strong>,
+        a fictional UK-based online retailer. Built with <strong>LangGraph</strong>, <strong>CrewAI</strong>,
+        <strong>GPT-4o</strong>, <strong>ChromaDB</strong>, <strong>Streamlit</strong>, and <strong>FastAPI</strong>.
+      </div>
+      <div class="stats-bar">
+        <span class="stat-pill">7 AI Agents</span>
+        <span class="stat-pill">6 Tools</span>
+        <span class="stat-pill">200 FAQ Vectors</span>
+        <span class="stat-pill">8 Departments</span>
+        <span class="stat-pill">10 Demo Users</span>
+        <span class="stat-pill">11 Demo Orders</span>
+      </div>
+    </header>
+
+    <!-- ═══════════════════ TOC ═══════════════════ -->
+    <div class="toc">
+      <h3>Table of Contents</h3>
+      <ul>
+        <li><a href="#what-it-does">What it does</a></li>
+        <li><a href="#agents">The 7 AI Agents</a></li>
+        <li><a href="#tools">The 6 Tools</a></li>
+        <li><a href="#architecture">Architecture</a></li>
+        <li><a href="#file-structure">Data &amp; File Structure</a></li>
+        <li><a href="#quick-start">Quick Start</a></li>
+        <li><a href="#api-endpoints">API Endpoints</a></li>
+        <li><a href="#departments">Departments</a></li>
+        <li><a href="#smart-routing">Smart Routing &amp; Orchestration</a></li>
+        <li><a href="#demo-users">Demo Users</a></li>
+        <li><a href="#tech-stack">Tech Stack</a></li>
+        <li><a href="#test-results">Test Results</a></li>
+        <li><a href="#configuration">Configuration</a></li>
+        <li><a href="#logging">Logging</a></li>
+      </ul>
+    </div>
+
+    <!-- ═══════════════════ WHAT IT DOES ═══════════════════ -->
+    <section id="what-it-does">
+      <h2>What it does</h2>
+      <p>A user logs in via the Streamlit UI (or CLI / API) and asks a question in plain English. The system:</p>
+      <ol>
+        <li><strong>Authenticates</strong> &mdash; identifies user as Customer or Employee (with loyalty tier /
+          department).</li>
+        <li><strong>Classifies</strong> the query &mdash; routes to one of 8 departments + detects
+          <strong>sentiment</strong> (positive / neutral / negative) + <strong>severity</strong> (low / medium / high).
+          Uses conversation history for follow-up understanding.
+        </li>
+        <li><strong>Routes smartly</strong> &mdash; only <strong>HIGH-severity negative</strong> queries &rarr;
+          <strong>CrewAI escalation crew</strong> (3 specialist agents). Mild/medium complaints go through RAG so the
+          department agent can help. Unrecognisable &rarr; escalate.
+        </li>
+        <li><strong>Retrieves</strong> relevant FAQ snippets from a <strong>ChromaDB</strong> knowledge base (200
+          vectors, 8 departments).</li>
+        <li><strong>Augments</strong> with <strong>tool calls</strong> &mdash; order lookup, product search, loyalty
+          points, department listing.</li>
+        <li><strong>Generates</strong> a grounded answer using <strong>GPT-4o</strong> with the retrieved context + tool
+          results + user profile.</li>
+        <li><strong>Reflects</strong> on its own answer (quality score 1-10). If score &lt; 7, regenerates up to 3
+          retries.</li>
+        <li><strong>Transfers across departments</strong> &mdash; detects when a query belongs to another department and
+          suggests a cross-department handoff via <code>[SUGGEST_TRANSFER]</code> tags, with a one-click transfer in the
+          Streamlit UI.</li>
+        <li><strong>Remembers</strong> conversation per user via <strong>SQLite-backed persistent memory</strong>.</li>
+        <li><strong>Follows up</strong> &mdash; asks "Is there anything else I can help you with?" and handles farewell
+          responses gracefully.</li>
+      </ol>
+
+      <h3>Stretch Goals Implemented</h3>
+      <table class="stretch-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Feature</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><strong>Multi-user persistent memory</strong></td>
+            <td>SQLite checkpointer (<code>shop4you_memory.db</code>). Each user gets an isolated thread
+              (<code>user_{id}</code>).</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><strong>Escalation with CrewAI investigation</strong></td>
+            <td>Negative sentiment or unknown department &rarr; <strong>3-agent CrewAI crew</strong> (Complaint Analyst
+              &rarr; Account Investigator &rarr; Resolution Specialist) produces a structured escalation report with
+              reference number.</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><strong>Extra departments + custom workflows</strong></td>
+            <td>8 departments (4 customer, 4 employee). 6 tools for product search, loyalty lookup, order lookup, KB
+              search, department listing, and escalation.</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><strong>REST API + Streamlit UI deployment</strong></td>
+            <td>FastAPI service with 6 endpoints (including cross-department transfer) + <strong>Streamlit chat
+                UI</strong> with login, user context, transfer buttons, and farewell handling.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ═══════════════════ 7 AGENTS ═══════════════════ -->
+    <section id="agents">
+      <h2>The 7 AI Agents</h2>
+      <h3>LangGraph Orchestration Agents (<code>agents.py</code>)</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Agent</th>
+            <th>Node</th>
+            <th>Role</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><strong>Classifier</strong></td>
+            <td><code>classifier_agent</code></td>
+            <td>GPT-4o structured output &mdash; detects department, sentiment, severity &amp; reasoning</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><strong>Department RAG</strong></td>
+            <td><code>department_rag_agent</code></td>
+            <td>Retrieves context from ChromaDB, calls tools (product / loyalty / order), generates answers</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><strong>Reflection</strong></td>
+            <td><code>reflection_agent</code></td>
+            <td>Quality-checks answers (score 1&ndash;10). Regenerates with feedback if &lt; 7. Up to 2 retries</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><strong>Escalation</strong></td>
+            <td><code>escalation_agent</code></td>
+            <td>Generates ESC-XXXXX reference, triggers CrewAI crew for high-severity cases</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>CrewAI Escalation Crew (<code>escalation_crew.py</code>) &mdash; sequential pipeline</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Agent</th>
+            <th>Framework</th>
+            <th>Role</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>5</td>
+            <td><strong>Complaint Analyst</strong></td>
+            <td>CrewAI</td>
+            <td>Extracts core issue, urgency, emotional state, key details (order IDs, dates, amounts)</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td><strong>Account Investigator</strong></td>
+            <td>CrewAI</td>
+            <td>Builds customer context, identifies responsible dept, flags VIP / repeat / red-flag issues</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td><strong>Resolution Specialist</strong></td>
+            <td>CrewAI</td>
+            <td>Proposes resolution + goodwill gesture, sets response time, writes final escalation report</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-top:0.8rem;"><strong>Agents 1&ndash;4</strong> (LangGraph) handle ~95% of queries. When Agent 1
+        detects negative sentiment <strong>with HIGH severity</strong> (angry, abusive, threatening), Agent 4 hands off
+        to <strong>Agents 5 &rarr; 6 &rarr; 7</strong> which run as a sequential CrewAI crew. Mild/medium negative
+        queries stay in RAG so the department agent can resolve them directly.</p>
+    </section>
+
+    <!-- ═══════════════════ 6 TOOLS ═══════════════════ -->
+    <section id="tools">
+      <h2>The 6 Tools</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>Trigger</th>
+            <th>What it does</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>search_knowledge_base</code></td>
+            <td>Every RAG query</td>
+            <td>Searches ChromaDB for top-k FAQ matches by department</td>
+          </tr>
+          <tr>
+            <td><code>list_departments</code></td>
+            <td>"What departments&hellip;?"</td>
+            <td>Returns all 8 department names + descriptions</td>
+          </tr>
+          <tr>
+            <td><code>search_product</code></td>
+            <td>Product queries</td>
+            <td>Looks up product catalogue (name, price, stock, sizes, colours)</td>
+          </tr>
+          <tr>
+            <td><code>check_loyalty_points</code></td>
+            <td>Loyalty queries</td>
+            <td>Returns member tier, points balance, discount percentage</td>
+          </tr>
+          <tr>
+            <td><code>lookup_orders</code></td>
+            <td>Order queries</td>
+            <td>Fetches order history by customer email or specific order ID</td>
+          </tr>
+          <tr>
+            <td><code>escalate_to_human</code></td>
+            <td>Negative sentiment</td>
+            <td>Generates ESC-XXXXX reference + triggers CrewAI crew</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ═══════════════════ ARCHITECTURE ═══════════════════ -->
+    <section id="architecture">
+      <h2>Architecture</h2>
+
+      <h3>High-Level System Architecture</h3>
+      <pre>
+┌──────────────────────────────────────────────────────────────────────────────────┐
+│                          SHOP4YOU AGENTIC AI SYSTEM                              │
+│                    7 Agents · 6 Tools · 200 FAQ Vectors · 8 Depts               │
+├──────────────┬───────────────────────────────────┬───────────────────────────────┤
+│  INTERFACES  │          AGENT CORE               │       EXTERNAL SERVICES       │
+│              │                                   │                               │
+│  ┌─────────┐ │  ┌─────────────────────────────┐  │  ┌─────────────────────────┐  │
+│  │Streamlit│─┼─▶│     LangGraph Orchestrator   │  │  │      OpenAI API         │  │
+│  │  Chat   │ │  │         (Agent 1)            │  │  │  ┌───────────────────┐  │  │
+│  │  UI     │ │  │                              │  │  │  │ GPT-4o (LLM)     │  │  │
+│  └─────────┘ │  │  classify ──▶ route ──▶      │──┼─▶│  └───────────────────┘  │  │
+│  ┌─────────┐ │  │  ┌──────────┐ ┌───────────┐  │  │  │  ┌───────────────────┐  │  │
+│  │  CLI    │─┼─▶│  │dept_rag  │ │escalation │  │  │  │  │text-embed-3-small│  │  │
+│  │(main.py)│ │  │  │+ 6 tools │ │+ CrewAI   │  │  │  │  └───────────────────┘  │  │
+│  └─────────┘ │  │  └────┬─────┘ │(Agents    │  │  │  └─────────────────────────┘  │
+│  ┌─────────┐ │  │       │       │ 2, 3, 4)  │  │  │                               │
+│  │FastAPI  │─┼─▶│   reflect     └───────────┘  │  │  ┌─────────────────────────┐  │
+│  │(app.py) │ │  │  (self-check)                │  │  │       ChromaDB           │  │
+│  └─────────┘ │  │       │                      │  │  │  200 FAQ vectors         │  │
+│  ┌─────────┐ │  │   ┌───▼────────────────┐     │  │  │  8 dept collections      │  │
+│  │Notebook │─┼─▶│   │ SqliteSaver        │     │  │  │  cosine similarity       │  │
+│  │ (demo)  │ │  │   │ (memory per user)  │     │  │  └─────────────────────────┘  │
+│  └─────────┘ │  │   └────────────────────┘     │  │                               │
+│              │  └─────────────────────────────┘  │  ┌─────────────────────────┐  │
+│              │                                   │  │    Data Stores           │  │
+│              │  ┌─────────────────────────────┐  │  │  users.py (10 users)     │  │
+│              │  │       User Registry          │  │  │  orders_db.py (11 orders)│  │
+│              │  │  10 demo users (5 cust,      │  │  │  products (5 items)      │  │
+│              │  │  5 emp) + auto-registration  │  │  │  loyalty (3 accounts)    │  │
+│              │  └─────────────────────────────┘  │  └─────────────────────────┘  │
+└──────────────┴───────────────────────────────────┴───────────────────────────────┘
+</pre>
+
+      <h3>LangGraph Agent Flow (Agent 1 &mdash; Orchestrator)</h3>
+      <pre>
+                              ┌──────────┐
+                              │  LOGIN   │
+                              │ (email)  │
+                              └────┬─────┘
+                                   │
+            ┌──────────────────────▼──────────────────────┐
+            │  User Registry (users.py)                   │
+            │  → Customer (Gold/Silver/Bronze/Standard)    │
+            │  → Employee (HR/IT/Ops/Loyalty)              │
+            │  → Auto-register unknown emails              │
+            └──────────────────────┬──────────────────────┘
+                                   │
+                                   ▼
+                              ┌─────────┐
+                              │  START  │
+                              └────┬────┘
+                                   │
+                                   ▼
+┌──────────────────────────────────────────────────────────────┐
+│  Step 0 — classify_query  (GPT-4o structured output)         │
+│  → department (1 of 8 + "unknown")                           │
+│  → sentiment  (positive / neutral / negative)                │
+│  → severity   (low / medium / high)                          │
+│  → reasoning  (free-text explanation)                        │
+│  (Uses last 3 turns of conversation for follow-up context)   │
+└──────────────────────────┬───────────────────────────────────┘
+                           │
+                           ▼
+                  ┌─────────────────┐
+                  │  route_query    │
+                  │  (conditional)  │
+                  └────┬───────┬────┘
+                       │       │
+          ┌────────────┘       └─────────────┐
+          │ valid department                 │ negative+HIGH severity
+          │ (or low/medium negative)         │ OR unknown dept
+          │                                  │
+          ▼                                  ▼
+┌─────────────────────────┐      ┌──────────────────────────────┐
+│ Step 1a — department_rag│      │ Step 1b — escalate           │
+│                         │      │                              │
+│  ChromaDB retrieval     │      │  Generate ref# (ESC-XXXXX)  │
+│  (dept filter,          │      │  Log warning                │
+│   top-k=3,              │      │         │                    │
+│   score ≥ 0.2)          │      │  ┌──────▼───────────────┐   │
+│         │               │      │  │   CrewAI Crew         │   │
+│  ┌──────▼────────────┐  │      │  │   (sequential)        │   │
+│  │ Tool calls        │  │      │  │                       │   │
+│  │ • lookup_orders   │  │      │  │  Agent 2: Complaint   │   │
+│  │ • search_product  │  │      │  │    Analyst            │   │
+│  │ • check_loyalty   │  │      │  │     ↓ analysis        │   │
+│  │ • list_depts      │  │      │  │  Agent 3: Account     │   │
+│  │ • search_kb       │  │      │  │    Investigator       │   │
+│  └──────┬────────────┘  │      │  │     ↓ investigation   │   │
+│         │               │      │  │  Agent 4: Resolution  │   │
+│  User context injected  │      │  │    Specialist         │   │
+│  (name, tier, email)    │      │  │     ↓ resolution plan │   │
+│         │               │      │  └──────────────────────┘   │
+│  GPT-4o generates       │      │         │                    │
+│  grounded answer        │      │  Append crew report to msg  │
+└─────────┬───────────────┘      │  + contact form              │
+          │                      └──────────────┬───────────────┘
+          │                                     │
+          ▼                                     │
+┌─────────────────────┐                         │
+│ Step 2 — reflect    │                         │
+│                     │                         │
+│  Quality score 1-10 │                         │
+│  (GPT-4o judge)     │                         │
+│         │           │                         │
+│  ┌──────▼────────┐  │                         │
+│  │ score ≥ 7?    │  │                         │
+│  │  YES → done   │  │                         │
+│  │  NO  → retry  │  │                         │
+│  │  (up to 3×)   │  │                         │
+│  └───────────────┘  │                         │
+└─────────┬───────────┘                         │
+          │                                     │
+          ▼                                     ▼
+       ╔═════╗                              ╔═════╗
+       ║ END ║                              ║ END ║
+       ╚═════╝                              ╚═════╝
+
+          │ (in interactive mode: follow-up loop)
+          ▼
+   ┌──────────────┐
+   │ Follow-up    │
+   │ "Anything    │
+   │  else?"      │
+   └──────┬───────┘
+          │
+    ┌─────▼──────┐
+    │ Farewell   │──▶ Friendly sign-off (no agent call)
+    │ detection  │
+    │ (25+ phrases│
+    └─────┬──────┘
+          │ new question
+          ▼
+       (loops back to classify_query)
+</pre>
+
+      <div
+        style="background:#1e293b;border-left:4px solid #6366f1;padding:0.8em 1.2em;border-radius:6px;margin:1.5em 0;">
+        <strong>📊 Visual Architecture Diagram:</strong> Open
+        <a href="docs/Shop4You_Architecture_Diagram.html"
+          style="color:#818cf8;">docs/Shop4You_Architecture_Diagram.html</a>
+        in a browser for an interactive, colour-coded visual version of the architecture.
+      </div>
+
+      <h3>CrewAI Escalation Crew Detail</h3>
+      <pre>
+┌─────────────────────────────────────────────────────────┐
+│              CrewAI Escalation Investigation             │
+│              (Process.sequential, GPT-4o)               │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│  INPUT: query, sentiment, department, reference_number  │
+│         │                                               │
+│  ┌──────▼──────────────────────────────────────────┐    │
+│  │  Agent 1: Complaint Analyst                     │    │
+│  │  Role: Analyze complaint severity &amp; intent      │    │
+│  │  Output: sentiment analysis, complaint category,│    │
+│  │          urgency rating, key issues             │    │
+│  └──────┬──────────────────────────────────────────┘    │
+│         │                                               │
+│  ┌──────▼──────────────────────────────────────────┐    │
+│  │  Agent 2: Account Investigator                  │    │
+│  │  Role: Investigate customer account context     │    │
+│  │  Output: account findings, order history        │    │
+│  │          check, potential root causes           │    │
+│  └──────┬──────────────────────────────────────────┘    │
+│         │                                               │
+│  ┌──────▼──────────────────────────────────────────┐    │
+│  │  Agent 3: Resolution Specialist                 │    │
+│  │  Role: Craft resolution strategy                │    │
+│  │  Output: recommended actions, compensation,     │    │
+│  │          follow-up steps, escalation priority    │    │
+│  └──────┬──────────────────────────────────────────┘    │
+│         │                                               │
+│  OUTPUT: { analysis, investigation, resolution,         │
+│            crew_output, reference_number }               │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+</pre>
+    </section>
+
+    <!-- ═══════════════════ FILE STRUCTURE ═══════════════════ -->
+    <section id="file-structure">
+      <h2>Data &amp; File Structure</h2>
+      <pre>
+shop4you/
+│
+├── ─── FUNCTIONAL CODE ────────────────────────────────
+│
+├── streamlit_app.py ────────── Streamlit Chat UI (login, chat, follow-up, farewell, switch user)
+├── main.py ─────────────────── Interactive CLI (Rich panels &amp; tables)
+├── app.py ──────────────────── FastAPI REST API (6 endpoints + cross-department transfer)
+├── demo.ipynb ──────────────── Jupyter demo walkthrough
+│
+├── config.py ───────────────── Settings, env vars, 8 department defs
+├── prompts.py ──────────────── ChatPromptTemplate instances
+├── agents.py ───────────────── LangGraph graph: Agents 1–4 (classify → RAG → reflect → escalate)
+├── escalation_crew.py ──────── CrewAI: 3-agent crew (Agents 5, 6, 7)
+│
+├── vector_store.py ─────────── ChromaDB ingestion + filtered retrieval
+├── tools.py ────────────────── 6 @tool functions (KB search, products, loyalty, orders, depts, escalate)
+├── users.py ────────────────── User registry (10 demo users, auto-registration, customer/employee logic)
+├── orders_db.py ────────────── Order database (11 demo orders for 5 customers, lookup + formatting)
+├── generate_data.py ────────── GPT-4o synthetic FAQ generator (25/dept)
+│
+├── conftest.py ─────────────── Shared pytest fixtures (agent, user_id)
+├── test_agent.py ───────────── 7 E2E agent tests
+├── test_rag.py ─────────────── 5 RAG pipeline tests
+├── test_memory_isolation.py ── Multi-user isolation test
+├── test_orchestration.py ───── 70 orchestration &amp; routing tests (Rich output)
+├── demo_customer_showcase.py ─ 10-scenario Rich CLI demo script
+│
+├── data/ ───────────────────── 8 JSON FAQ files (200 QA pairs total)
+│   ├── billing_payments.json (25)
+│   ├── hr.json (25)
+│   ├── it_helpdesk.json (25)
+│   ├── loyalty_programme.json (25)
+│   ├── operations.json (25)
+│   ├── orders_returns.json (25)
+│   ├── product_inquiries.json (25)
+│   └── shipping_delivery.json (25)
+│
+├── knowledge_base/chroma/ ──── Persistent vector store (200 vectors)
+├── logo.svg ────────────────── Shop4You logo (Streamlit sidebar)
+├── shop4you_memory.db ──────── SQLite persistent memory (auto-created)
+│
+├── ─── CONFIG ─────────────────────────────────────────
+│
+├── .vscode/ ────────────────── VS Code workspace settings
+├── requirements.txt ────────── Pinned dependencies
+├── environment.yml ─────────── Conda environment spec
+├── .env ────────────────────── API keys + feature flags (not in repo)
+├── .gitignore ──────────────── Git ignore rules
+├── README.md ───────────────── Project overview + architecture (this file)
+├── README.html ─────────────── HTML version of this README
+│
+├── ─── DOCUMENTATION (docs/) ──────────────────────────
+│
+└── docs/
+    ├── TESTING_GUIDE.md ────── Test instructions &amp; expected results
+    ├── shop4you_data_reference.html ── Complete data reference + demo chat script
+    ├── Shop4You_Architecture_Diagram.html ── Visual architecture diagram (colour-coded)
+    ├── PROJECT_STEPS.md ────── Step-by-step project plan (Markdown)
+    ├── PROJECT_STEPS.html ──── Step-by-step project plan (HTML)
+    ├── Shop4You_Presentation.html ── 35-slide Reveal.js presentation
+    └── project_brief.pdf ───── Original capstone project brief
+</pre>
+    </section>
+
+    <!-- ═══════════════════ QUICK START ═══════════════════ -->
+    <section id="quick-start">
+      <h2>Quick Start</h2>
+
+      <h3>1. Clone &amp; create environment</h3>
+      <div class="cmd">conda env create -f environment.yml<br>conda activate shop4you</div>
+      <p>Or with pip:</p>
+      <div class="cmd">python -m venv .venv &amp;&amp; .venv\Scripts\activate &nbsp;&nbsp;<span class="comment">#
+          Windows</span><br>pip install -r requirements.txt</div>
+
+      <h3>2. Set up API keys</h3>
+      <p>Copy <code>.env.example</code> to <code>.env</code> and fill in your keys:</p>
+      <div class="cmd">OPENAI_API_KEY=your_openai_api_key<br>TAVILY_API_KEY=your_tavily_api_key &nbsp;&nbsp;<span
+          class="comment"># optional,
+          not needed for core flow</span></div>
+
+      <h3>3. Generate FAQ data <span style="color:var(--text-light);font-weight:normal;">(already done &mdash; skip if
+          <code>data/</code> has files)</span></h3>
+      <div class="cmd">python generate_data.py</div>
+
+      <h3>4. Ingest into ChromaDB <span style="color:var(--text-light);font-weight:normal;">(already done &mdash; skip
+          if <code>knowledge_base/chroma/</code> exists)</span></h3>
+      <div class="cmd">python vector_store.py</div>
+
+      <h3>5. Run the Streamlit UI <span class="badge badge-green">recommended for demo</span></h3>
+      <div class="cmd">python -m streamlit run streamlit_app.py --server.port 8502<br><span class="comment"># Open:
+          http://localhost:8502</span></div>
+      <p>Login with any demo email (e.g. <code>sarah@gmail.com</code>, <code>priya@shop4you.com</code>) and start
+        chatting.</p>
+
+      <h3>6. Run the CLI</h3>
+      <div class="cmd">python main.py</div>
+
+      <h3>7. Run the API</h3>
+      <div class="cmd">python -m uvicorn app:app --reload<br><span class="comment"># Swagger UI:
+          http://localhost:8000/docs</span></div>
+
+      <h3>8. Run tests</h3>
+      <div class="cmd">pytest test_rag.py test_agent.py test_memory_isolation.py -v <span class="comment"># 13 pytest
+          tests</span><br>python test_orchestration.py
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+          class="comment"># 70 orchestration tests (needs API key, ~5 min)</span><br>python demo_customer_showcase.py
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+          class="comment"># 10-scenario Rich demo</span></div>
+    </section>
+
+    <!-- ═══════════════════ API ENDPOINTS ═══════════════════ -->
+    <section id="api-endpoints">
+      <h2>API Endpoints</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Method</th>
+            <th>Path</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>POST</code></td>
+            <td><code>/chat</code></td>
+            <td>Send <code>{ "query": "...", "user_id": "..." }</code>, get back response + department + sentiment +
+              severity + quality score + suggested_transfer</td>
+          </tr>
+          <tr>
+            <td><code>POST</code></td>
+            <td><code>/transfer</code></td>
+            <td>Cross-department handoff: re-run query in a specific department
+              <code>{ "query": "...", "target_department": "...", "user_id": "..." }</code>
+            </td>
+          </tr>
+          <tr>
+            <td><code>GET</code></td>
+            <td><code>/departments</code></td>
+            <td>List all 8 departments with metadata</td>
+          </tr>
+          <tr>
+            <td><code>GET</code></td>
+            <td><code>/history/{user_id}</code></td>
+            <td>Conversation history for a user</td>
+          </tr>
+          <tr>
+            <td><code>DELETE</code></td>
+            <td><code>/history/{user_id}</code></td>
+            <td>Clear a user's history</td>
+          </tr>
+          <tr>
+            <td><code>GET</code></td>
+            <td><code>/health</code></td>
+            <td>Returns <code>{"status": "healthy"}</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ═══════════════════ DEPARTMENTS ═══════════════════ -->
+    <section id="departments">
+      <h2>Departments</h2>
+      <p><strong>Customer-facing (external):</strong> &nbsp;Orders &amp; Returns &middot; Billing &amp; Payments
+        &middot; Shipping &amp; Delivery &middot; Product Inquiries</p>
+      <p><strong>Employee-facing (internal):</strong> &nbsp;Human Resources &middot; IT Helpdesk &middot; Operations
+        &middot; Loyalty Programme &amp; Employee Benefits</p>
+    </section>
+
+    <!-- ═══════════════════ SMART ROUTING ═══════════════════ -->
+    <section id="smart-routing">
+      <h2>Smart Routing &amp; Orchestration</h2>
+
+      <h3>Severity-Based Escalation</h3>
+      <p>Instead of escalating all negative-sentiment queries, the system uses a <strong>3-tier severity model</strong>:
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Severity</th>
+            <th>Behaviour</th>
+            <th>Examples</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Low</strong></td>
+            <td>RAG handles normally</td>
+            <td>&ldquo;Could be better&rdquo;, &ldquo;Not impressed&rdquo;</td>
+          </tr>
+          <tr>
+            <td><strong>Medium</strong></td>
+            <td>RAG with empathy-first tone</td>
+            <td>&ldquo;Disappointed with quality&rdquo;, &ldquo;Upset about delay&rdquo;</td>
+          </tr>
+          <tr>
+            <td><strong>High</strong></td>
+            <td>&rarr; CrewAI escalation crew</td>
+            <td>&ldquo;I will sue!&rdquo;, &ldquo;Worst company ever!&rdquo;, threats</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Cross-Department Handoff</h3>
+      <p>When a department agent detects that a query belongs to another department:</p>
+      <ol>
+        <li>The agent embeds a <code>[SUGGEST_TRANSFER: dept_key]</code> tag in its response</li>
+        <li>The orchestrator parses the tag and populates <code>suggested_transfer</code></li>
+        <li>In <strong>Streamlit</strong>: a transfer button appears for the user to accept</li>
+        <li>In <strong>FastAPI</strong>: the <code>/transfer</code> endpoint re-runs the query in the target department,
+          skipping classification</li>
+      </ol>
+      <p>Fallback: if no tag is present but the response mentions another department in a transfer context (e.g.
+        &ldquo;reach out to Shipping&rdquo;), the orchestrator uses best-match scoring to detect the intended
+        department.</p>
+
+      <h3>Transfer/Connect Handling</h3>
+      <p>22 transfer keywords are detected (e.g. &ldquo;connect me to&rdquo;, &ldquo;pass me to&rdquo;, &ldquo;put me
+        through&rdquo;). When a user asks to be connected to a department, the agent introduces itself and asks how it
+        can help &mdash; it never redirects.</p>
+
+      <h3>Conversation-Aware Classification</h3>
+      <p>The classifier receives the <strong>last 3 turns</strong> of conversation history, so follow-up requests like
+        &ldquo;pass me to customer service&rdquo; (after a shipping conversation) correctly route to shipping, not to an
+        unknown department.</p>
+
+      <h3>Generic Term Handling</h3>
+      <p>&ldquo;Customer service&rdquo;, &ldquo;support&rdquo;, &ldquo;agent&rdquo;, &ldquo;representative&rdquo; are
+        mapped to the contextually appropriate department (or <code>orders_returns</code> as default when no history
+        exists). These never generate an <code>unknown</code> classification.</p>
+    </section>
+
+    <!-- ═══════════════════ DEMO USERS ═══════════════════ -->
+    <section id="demo-users">
+      <h2>Demo Users</h2>
+
+      <h3>Customers</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Email</th>
+            <th>Name</th>
+            <th>Tier</th>
+            <th>Has Orders?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>sarah@gmail.com</code></td>
+            <td>Sarah Ahmed</td>
+            <td>Gold</td>
+            <td>&#10004; 3 orders</td>
+          </tr>
+          <tr>
+            <td><code>james@outlook.com</code></td>
+            <td>James Wilson</td>
+            <td>Silver</td>
+            <td>&#10004; 2 orders</td>
+          </tr>
+          <tr>
+            <td><code>emma@yahoo.com</code></td>
+            <td>Emma Chen</td>
+            <td>Bronze</td>
+            <td>&#10004; 2 orders</td>
+          </tr>
+          <tr>
+            <td><code>ali@hotmail.com</code></td>
+            <td>Ali Khan</td>
+            <td>Standard</td>
+            <td>&#10004; 1 order</td>
+          </tr>
+          <tr>
+            <td><code>maria@gmail.com</code></td>
+            <td>Maria Lopez</td>
+            <td>Gold</td>
+            <td>&#10004; 3 orders</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Employees</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Email</th>
+            <th>Name</th>
+            <th>Department</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>john@shop4you.com</code></td>
+            <td>John Davies</td>
+            <td>Operations</td>
+          </tr>
+          <tr>
+            <td><code>priya@shop4you.com</code></td>
+            <td>Priya Sharma</td>
+            <td>HR</td>
+          </tr>
+          <tr>
+            <td><code>mike@shop4you.com</code></td>
+            <td>Mike Thompson</td>
+            <td>IT Helpdesk</td>
+          </tr>
+          <tr>
+            <td><code>fatima@shop4you.com</code></td>
+            <td>Fatima Noor</td>
+            <td>Loyalty Programme</td>
+          </tr>
+          <tr>
+            <td><code>david@shop4you.com</code></td>
+            <td>David Roberts</td>
+            <td>Operations</td>
+          </tr>
+        </tbody>
+      </table>
+      <blockquote>Any unknown email auto-registers: <code>@shop4you.com</code> &rarr; employee, anything else &rarr;
+        customer.</blockquote>
+    </section>
+
+    <!-- ═══════════════════ TECH STACK ═══════════════════ -->
+    <section id="tech-stack">
+      <h2>Tech Stack</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Component</th>
+            <th>Technology</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>LLM</strong></td>
+            <td>GPT-4o (OpenAI) via <code>langchain-openai</code></td>
+          </tr>
+          <tr>
+            <td><strong>Orchestration</strong></td>
+            <td>LangGraph 1.0 (stateful graph with conditional routing)</td>
+          </tr>
+          <tr>
+            <td><strong>Multi-Agent Escalation</strong></td>
+            <td>CrewAI 1.9 (sequential 3-agent crew)</td>
+          </tr>
+          <tr>
+            <td><strong>Embeddings</strong></td>
+            <td><code>text-embedding-3-small</code> &rarr; ChromaDB (cosine similarity)</td>
+          </tr>
+          <tr>
+            <td><strong>Memory</strong></td>
+            <td><code>langgraph.checkpoint.sqlite.SqliteSaver</code> (persistent per-user threads)</td>
+          </tr>
+          <tr>
+            <td><strong>Chat UI</strong></td>
+            <td>Streamlit 1.54 (login, chat, cross-department transfer buttons, farewell detection, switch user)</td>
+          </tr>
+          <tr>
+            <td><strong>API</strong></td>
+            <td>FastAPI + Uvicorn (6 REST endpoints + Swagger docs)</td>
+          </tr>
+          <tr>
+            <td><strong>CLI</strong></td>
+            <td>Rich (panels, tables, markdown rendering)</td>
+          </tr>
+          <tr>
+            <td><strong>User Management</strong></td>
+            <td><code>users.py</code> (10 demo users, auto-registration)</td>
+          </tr>
+          <tr>
+            <td><strong>Order System</strong></td>
+            <td><code>orders_db.py</code> (11 demo orders, per-customer lookup)</td>
+          </tr>
+          <tr>
+            <td><strong>Environment</strong></td>
+            <td>Python 3.12, conda (<code>shop4you</code> env)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ═══════════════════ TEST RESULTS ═══════════════════ -->
+    <section id="test-results">
+      <h2>Test Results</h2>
+      <pre>
+E2E Agent Tests:      7/7 passed
+RAG Pipeline:         5/5 passed
+Memory Isolation:     PASS
+FastAPI:              all endpoints verified (health, departments, chat, transfer, history)
+Orchestration Tests:  70/70 passed (routing, escalation, transfers, edge cases)
+</pre>
+
+      <h3>Orchestration Test Coverage</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Tests</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Normal routing (all 8 departments)</td>
+            <td>8</td>
+            <td>8/8</td>
+          </tr>
+          <tr>
+            <td>Cross-department forced transfers</td>
+            <td>6</td>
+            <td>6/6</td>
+          </tr>
+          <tr>
+            <td>Escalation severity boundary</td>
+            <td>8</td>
+            <td>8/8</td>
+          </tr>
+          <tr>
+            <td>Transfer keyword detection (22 phrases)</td>
+            <td>8</td>
+            <td>8/8</td>
+          </tr>
+          <tr>
+            <td>Generic "customer service" (no history)</td>
+            <td>3</td>
+            <td>3/3</td>
+          </tr>
+          <tr>
+            <td>Chain transfers (A&rarr;B&rarr;C)</td>
+            <td>3</td>
+            <td>3/3</td>
+          </tr>
+          <tr>
+            <td>Ambiguous/tricky queries</td>
+            <td>7</td>
+            <td>7/7</td>
+          </tr>
+          <tr>
+            <td><code>run_query_for_department()</code> forced</td>
+            <td>4</td>
+            <td>4/4</td>
+          </tr>
+          <tr>
+            <td>No "contact customer service" in responses</td>
+            <td>5</td>
+            <td>5/5</td>
+          </tr>
+          <tr>
+            <td>Multi-turn follow-ups</td>
+            <td>5</td>
+            <td>5/5</td>
+          </tr>
+          <tr>
+            <td>Escalation + edge cases</td>
+            <td>10</td>
+            <td>10/10</td>
+          </tr>
+          <tr>
+            <td>Product&rarr;Orders retry (3 runs)</td>
+            <td>3</td>
+            <td>3/3</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ═══════════════════ CONFIGURATION ═══════════════════ -->
+    <section id="configuration">
+      <h2>Configuration</h2>
+      <p>All tuneable values live in <code>config.py</code>:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Setting</th>
+            <th>Default</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>LLM_MODEL</code></td>
+            <td><code>gpt-4o</code></td>
+            <td>primary model</td>
+          </tr>
+          <tr>
+            <td><code>LLM_MODEL_FALLBACK</code></td>
+            <td><code>gpt-4.1</code></td>
+            <td>fallback option</td>
+          </tr>
+          <tr>
+            <td><code>LLM_TEMPERATURE</code></td>
+            <td><code>0</code></td>
+            <td>deterministic outputs</td>
+          </tr>
+          <tr>
+            <td><code>EMBEDDING_MODEL</code></td>
+            <td><code>text-embedding-3-small</code></td>
+            <td>embedding model</td>
+          </tr>
+          <tr>
+            <td><code>MAX_REFLECTION_ATTEMPTS</code></td>
+            <td><code>3</code></td>
+            <td>max quality-check retries</td>
+          </tr>
+          <tr>
+            <td><code>CREWAI_ESCALATION_ENABLED</code></td>
+            <td><code>true</code></td>
+            <td>enable CrewAI crew on escalation (env var: <code>CREWAI_ESCALATION</code>)</td>
+          </tr>
+          <tr>
+            <td><code>RAG_TOP_K</code></td>
+            <td><code>3</code></td>
+            <td>docs per retrieval</td>
+          </tr>
+          <tr>
+            <td><code>RAG_SCORE_THRESHOLD</code></td>
+            <td><code>0.2</code></td>
+            <td>minimum similarity</td>
+          </tr>
+          <tr>
+            <td><code>LOG_LEVEL</code></td>
+            <td><code>INFO</code></td>
+            <td>set via env var <code>LOG_LEVEL</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ═══════════════════ LOGGING ═══════════════════ -->
+    <section id="logging">
+      <h2>Logging</h2>
+      <p>The agent logs classification decisions, routing, reflection scores, and escalations via Python's
+        <code>logging</code> module (logger name: <code>shop4you</code>). Set <code>LOG_LEVEL=DEBUG</code> in
+        <code>.env</code> for verbose output.
+      </p>
+    </section>
+
+  </div><!-- /container -->
+
+  <footer>
+    Shop4You Agentic AI Assistant &mdash; Capstone Project &mdash; Mohammed Emran &mdash; February 2026
+  </footer>
+
+</body>
+
+</html>

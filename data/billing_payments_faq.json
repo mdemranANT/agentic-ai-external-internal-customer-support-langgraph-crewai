@@ -1,0 +1,285 @@
+{
+  "department": "Billing & Payments",
+  "department_key": "billing_payments",
+  "audience": "external",
+  "doc_id": "billing_payments_faq_v1",
+  "generated_date": "2026-02-21T21:20:03.177198+00:00",
+  "num_entries": 25,
+  "entries": [
+    {
+      "question": "What payment methods does Shop4You accept?",
+      "answer": "Shop4You accepts a variety of payment methods including major credit and debit cards such as Visa, MasterCard, and American Express. We also support payments via PayPal and Apple Pay for added convenience. Please note that all transactions are processed in GBP.",
+      "tags": [
+        "payment methods",
+        "credit card",
+        "PayPal"
+      ],
+      "last_updated": "2026-02-21T21:20:03.177198+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How can I request a copy of my invoice?",
+      "answer": "If you need a copy of your invoice, simply log into your Shop4You account and navigate to 'Order History'. There, you can select the relevant order and download a PDF version of the invoice. If you encounter any issues, please let us know and we will assist you for assistance.",
+      "tags": [
+        "invoice",
+        "order history",
+        "account"
+      ],
+      "last_updated": "2026-02-21T21:20:03.177198+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "I was charged twice for my order. What should I do?",
+      "answer": "We apologise for any inconvenience this may have caused. Please contact our billing department directly through the 'Contact Us' section on our website. Provide them with your order number and payment details, and they will assist you in resolving the duplicate charge.",
+      "tags": [
+        "billing error",
+        "duplicate charge",
+        "contact support"
+      ],
+      "last_updated": "2026-02-21T21:20:03.177198+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How long does it take to process a refund?",
+      "answer": "Refunds are typically processed within 5-7 business days after the return has been received and inspected. You will receive an email confirmation once the refund has been issued. Please note that the time it takes for the funds to appear in your account may vary depending on your bank or payment provider.",
+      "tags": [
+        "refund timeline",
+        "return process",
+        "bank"
+      ],
+      "last_updated": "2026-02-21T21:20:03.177198+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can I use multiple promo codes on a single order?",
+      "answer": "Unfortunately, Shop4You only allows one promo code to be applied per order. We recommend choosing the promo code that provides the best discount or benefit for your purchase.",
+      "tags": [
+        "promo code",
+        "discount",
+        "order"
+      ],
+      "last_updated": "2026-02-21T21:20:03.177198+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How do I check the balance on my Shop4You gift card?",
+      "answer": "To check your gift card balance, visit the 'Gift Cards' section on our website and enter your gift card number. You will be able to see the remaining balance instantly. Alternatively, you can let us know and we will help for further assistance.",
+      "tags": [
+        "gift card",
+        "balance",
+        "customer service"
+      ],
+      "last_updated": "2026-02-21T21:20:03.177198+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What should I do if my payment is declined?",
+      "answer": "If your payment has been declined, we recommend checking that your payment details are correct and that your card has sufficient funds. If the issue persists, please contact your bank for more information. You can also try using a different payment method to complete your purchase.",
+      "tags": [
+        "payment declined",
+        "card details",
+        "bank"
+      ],
+      "last_updated": "2026-02-21T21:20:03.177198+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Does Shop4You offer instalment plans for payments?",
+      "answer": "Yes, Shop4You partners with Klarna to offer flexible instalment plans for eligible purchases. During checkout, select 'Pay with Klarna' to view the available payment plan options. Please ensure you meet the eligibility criteria set by Klarna before selecting this option.",
+      "tags": [
+        "instalment plan",
+        "Klarna",
+        "eligibility"
+      ],
+      "last_updated": "2026-02-21T21:20:03.177198+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Is my payment information secure with Shop4You?",
+      "answer": "Absolutely. Shop4You is committed to protecting your payment information. We use industry-standard encryption technologies and secure servers to ensure that your data is safely transmitted and stored. Additionally, we comply with all relevant data protection regulations.",
+      "tags": [
+        "payment security",
+        "encryption",
+        "data protection"
+      ],
+      "last_updated": "2026-02-21T21:20:03.177198+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What should I do if I receive an incorrect invoice?",
+      "answer": "If you receive an incorrect invoice, please contact our billing department immediately. Provide them with your order number and details of the discrepancy. Our team will promptly investigate and issue a corrected invoice if necessary.",
+      "tags": [
+        "incorrect invoice",
+        "billing department",
+        "order"
+      ],
+      "last_updated": "2026-02-21T21:20:03.177198+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Am I eligible for a refund if I used a promo code?",
+      "answer": "Yes, you are still eligible for a refund even if you used a promo code for your purchase. However, the refund will be adjusted to reflect the discounted amount paid out of pocket, excluding the value of the promo code.",
+      "tags": [
+        "refund eligibility",
+        "promo code",
+        "discount"
+      ],
+      "last_updated": "2026-02-21T21:20:03.177198+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What happens if I miss the payment deadline for an instalment plan?",
+      "answer": "If you miss a payment deadline for an instalment plan, you may incur late fees as stipulated by Klarna, our instalment plan provider. We advise contacting Klarna directly to discuss your options and avoid any potential impact on your credit score.",
+      "tags": [
+        "instalment plan",
+        "missed payment",
+        "Klarna"
+      ],
+      "last_updated": "2026-02-21T21:20:03.177198+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can I change my payment method after placing an order?",
+      "answer": "Once an order has been placed, the payment method cannot be changed. If you need to use a different payment method, you will need to cancel the current order (if it hasn't been processed) and place a new one with the desired payment method.",
+      "tags": [
+        "payment method",
+        "order change",
+        "cancellation"
+      ],
+      "last_updated": "2026-02-21T21:20:03.177198+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How do I apply a promo code to my order?",
+      "answer": "To apply a promo code, enter the code in the 'Promo Code' field at checkout and click 'Apply'. The discount will be reflected in your order total. Please ensure the promo code is still valid and meets any specified terms and conditions.",
+      "tags": [
+        "promo code",
+        "checkout",
+        "discount"
+      ],
+      "last_updated": "2026-02-21T21:20:03.177198+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What if I receive a refund but it hasn't appeared in my account?",
+      "answer": "If you have received a refund confirmation but the amount hasn't appeared in your account, please allow up to 10 business days for your bank or payment provider to process it. If the issue persists after this period, contact our customer support for further assistance.",
+      "tags": [
+        "refund",
+        "processing time",
+        "customer support"
+      ],
+      "last_updated": "2026-02-21T21:20:03.177198+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How can I update my billing address?",
+      "answer": "To update your billing address, log into your Shop4You account and go to 'Account Settings'. From there, you can edit your billing information. Make sure to save your changes before proceeding with any new orders.",
+      "tags": [
+        "billing address",
+        "account settings",
+        "update"
+      ],
+      "last_updated": "2026-02-21T21:20:03.177198+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can I pay using a currency other than GBP?",
+      "answer": "Currently, Shop4You only processes payments in GBP. If you are using an international payment method, your bank may convert the currency automatically, which might incur additional charges. We recommend checking with your bank regarding any potential fees.",
+      "tags": [
+        "currency",
+        "GBP",
+        "international payment"
+      ],
+      "last_updated": "2026-02-21T21:20:03.177198+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What should I do if my gift card is not working?",
+      "answer": "If your gift card is not working, please ensure that you have entered the correct gift card number and that it has not expired. If the problem persists, let us know and we will assist you for assistance. They will help resolve the issue as quickly as possible.",
+      "tags": [
+        "gift card",
+        "issue",
+        "customer service"
+      ],
+      "last_updated": "2026-02-21T21:20:03.177198+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How do I know if my payment was successful?",
+      "answer": "After a successful payment, you will receive an order confirmation email from Shop4You. Additionally, you can check your order status by logging into your account and visiting the 'Order History' section. If you do not receive confirmation, please contact our support team.",
+      "tags": [
+        "payment confirmation",
+        "order status",
+        "support"
+      ],
+      "last_updated": "2026-02-21T21:20:03.177198+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can I use a gift card and a promo code on the same order?",
+      "answer": "Yes, you can use both a gift card and a promo code on the same order. Apply the gift card first to cover part of the payment, and then enter the promo code at checkout to apply any additional discount.",
+      "tags": [
+        "gift card",
+        "promo code",
+        "checkout"
+      ],
+      "last_updated": "2026-02-21T21:20:03.177198+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What are the steps to dispute a billing error?",
+      "answer": "To dispute a billing error, contact our billing department through the 'Contact Us' page, providing your order details and a description of the error. Our team will investigate the issue and update you on the resolution. We aim to resolve billing disputes promptly and fairly.",
+      "tags": [
+        "billing error",
+        "dispute",
+        "resolution"
+      ],
+      "last_updated": "2026-02-21T21:20:03.177198+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Who do I contact for billing questions related to a corporate account?",
+      "answer": "For billing questions related to a corporate account, please contact our corporate sales team via the contact information provided on our 'Corporate Sales' page. They are equipped to handle any specific queries or concerns you may have regarding billing for corporate purchases.",
+      "tags": [
+        "corporate account",
+        "billing questions",
+        "contact"
+      ],
+      "last_updated": "2026-02-21T21:20:03.177198+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can I request a refund to a different payment method?",
+      "answer": "Refunds are typically issued to the original payment method used at the time of purchase. If the original method is no longer available, contact our customer support to discuss alternative refund options. We will do our best to accommodate your request.",
+      "tags": [
+        "refund",
+        "payment method",
+        "customer support"
+      ],
+      "last_updated": "2026-02-21T21:20:03.177198+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What if I applied the wrong promo code?",
+      "answer": "If you applied the wrong promo code, you can remove it and enter the correct one before completing your purchase. If you've already completed the purchase, unfortunately, we cannot retroactively apply the promo code. You may choose to cancel the order if it hasn't been processed and place it again with the correct promo code.",
+      "tags": [
+        "promo code",
+        "order cancellation",
+        "checkout"
+      ],
+      "last_updated": "2026-02-21T21:20:03.177198+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How do I verify my payment details are up to date?",
+      "answer": "To verify that your payment details are up to date, log into your Shop4You account and visit the 'Payment Methods' section. There, you can review and update your saved payment information. Ensure your details are correct to avoid any payment issues during checkout.",
+      "tags": [
+        "payment details",
+        "account",
+        "update"
+      ],
+      "last_updated": "2026-02-21T21:20:03.177198+00:00",
+      "confidence_score": 0.95
+    }
+  ]
+}

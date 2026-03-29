@@ -1,0 +1,285 @@
+{
+  "department": "IT Helpdesk",
+  "department_key": "it_helpdesk",
+  "audience": "internal",
+  "doc_id": "it_helpdesk_faq_v1",
+  "generated_date": "2026-02-21T23:37:16.167997+00:00",
+  "num_entries": 25,
+  "entries": [
+    {
+      "question": "How do I reset my Shop4You password if I’ve forgotten it?",
+      "answer": "To reset your Shop4You password, go to the login page and click on 'Forgot Password?'. Enter your Shop4You email address and follow the instructions in the email you receive. If you do not receive an email within a few minutes, please check your spam folder. If issues persist, contact the IT Helpdesk for further assistance.",
+      "tags": [
+        "password reset",
+        "login issue",
+        "IT support"
+      ],
+      "last_updated": "2026-02-21T23:37:16.167997+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What should I do if I cannot access the VPN?",
+      "answer": "If you're unable to access the Shop4You VPN, first ensure your internet connection is stable. Next, check if your VPN client software is up-to-date. If the issue persists, try restarting your device. For further assistance, contact the IT Helpdesk with details of any error messages you receive.",
+      "tags": [
+        "VPN access",
+        "remote work",
+        "connectivity issue"
+      ],
+      "last_updated": "2026-02-21T23:37:16.167997+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What is the process for requesting new hardware at Shop4You?",
+      "answer": "To request new hardware, submit a hardware request form via the Shop4You IT portal. Include details of your current equipment and the reason for the new hardware. Once submitted, your request will be reviewed by IT, and you will be notified of the decision within 3-5 working days.",
+      "tags": [
+        "hardware request",
+        "equipment",
+        "IT procedures"
+      ],
+      "last_updated": "2026-02-21T23:37:16.167997+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "I am unable to send emails from my Shop4You account. What could be wrong?",
+      "answer": "If you're having trouble sending emails, check your internet connection and ensure your email client is connected. Verify that your sent folder isn’t full, as this can sometimes cause issues. If problems persist, check for any email client updates or contact IT Helpdesk for further troubleshooting.",
+      "tags": [
+        "email issue",
+        "communication",
+        "IT support"
+      ],
+      "last_updated": "2026-02-21T23:37:16.167997+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How can I check if there is a system outage affecting Shop4You services?",
+      "answer": "To check for system outages, visit the Shop4You IT status page. This page provides real-time updates on any current outages or maintenance activities. If you do not see any reported issues but are experiencing problems, contact the IT Helpdesk for confirmation.",
+      "tags": [
+        "system outage",
+        "service status",
+        "IT status page"
+      ],
+      "last_updated": "2026-02-21T23:37:16.167997+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What are the steps for installing new software on my work computer?",
+      "answer": "To install new software, access the Shop4You software portal and search for the required application. Follow the installation instructions provided. If administrative privileges are required, submit a request through the IT Helpdesk. Ensure your computer meets the software's system requirements before proceeding.",
+      "tags": [
+        "software installation",
+        "IT procedures",
+        "application"
+      ],
+      "last_updated": "2026-02-21T23:37:16.167997+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "I accidentally deleted a critical email. Can it be recovered?",
+      "answer": "You can recover deleted emails from your Shop4You account by checking the 'Deleted Items' folder. If it is not there, it may be recoverable from the server for up to 30 days. Contact the IT Helpdesk with the email details for further recovery assistance.",
+      "tags": [
+        "email recovery",
+        "data management",
+        "IT support"
+      ],
+      "last_updated": "2026-02-21T23:37:16.167997+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What happens if I miss the deadline for a hardware request submission?",
+      "answer": "If you miss the deadline for submitting a hardware request, your request may be delayed until the next review cycle. Contact the IT Helpdesk to discuss your options and see if an exception can be made based on urgency.",
+      "tags": [
+        "hardware request",
+        "procedural deadline",
+        "IT policy"
+      ],
+      "last_updated": "2026-02-21T23:37:16.167997+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Who do I contact if I encounter a security breach on my Shop4You device?",
+      "answer": "In the event of a security breach, immediately contact the IT Helpdesk. Provide as much detail as possible about the incident. Follow any instructions given by the IT security team to secure your device and data.",
+      "tags": [
+        "security breach",
+        "IT security",
+        "emergency contact"
+      ],
+      "last_updated": "2026-02-21T23:37:16.167997+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can I change my software request after it has been submitted?",
+      "answer": "Modifications to a software request can be made before it has been processed. Contact the IT Helpdesk as soon as possible to update your request. Once the request is under review or completed, changes may not be possible.",
+      "tags": [
+        "software request",
+        "IT procedures",
+        "request modification"
+      ],
+      "last_updated": "2026-02-21T23:37:16.167997+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How do I set up my Shop4You email on a mobile device?",
+      "answer": "To set up your Shop4You email on a mobile device, download an email client such as Outlook or Gmail. Enter your Shop4You email address and password, then follow the setup wizard. Ensure you have the correct server settings; contact IT Helpdesk if you need these details.",
+      "tags": [
+        "email setup",
+        "mobile device",
+        "IT support"
+      ],
+      "last_updated": "2026-02-21T23:37:16.167997+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What should I do if my Shop4You laptop is running slowly?",
+      "answer": "If your Shop4You laptop is running slowly, first restart it to clear temporary files. Check for any unnecessary programs running in the background and close them. Ensure your system is up-to-date with the latest patches and antivirus definitions. Contact IT Helpdesk if performance issues continue.",
+      "tags": [
+        "performance issue",
+        "troubleshooting",
+        "IT support"
+      ],
+      "last_updated": "2026-02-21T23:37:16.167997+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What is Shop4You's policy on personal devices for work purposes?",
+      "answer": "Shop4You allows the use of personal devices for work purposes under the BYOD (Bring Your Own Device) policy. Ensure your device meets security standards and has necessary software installed. Regularly update your device's operating system and antivirus software to comply with company security policies.",
+      "tags": [
+        "BYOD",
+        "IT policy",
+        "personal devices"
+      ],
+      "last_updated": "2026-02-21T23:37:16.167997+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How can I request access to a restricted software application?",
+      "answer": "To request access to restricted software, fill out the software access form on the IT portal. Include a justification for access and any relevant project details. The request will be reviewed by the IT team, and you'll receive a response within 5 working days.",
+      "tags": [
+        "software access",
+        "restricted application",
+        "IT procedures"
+      ],
+      "last_updated": "2026-02-21T23:37:16.167997+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What do I do if my VPN disconnects frequently?",
+      "answer": "If your VPN disconnects frequently, verify your internet stability and check if there are any known outages. Try switching to a wired connection if possible. Update your VPN client software to the latest version. Reach out to IT Helpdesk for further assistance if the problem persists.",
+      "tags": [
+        "VPN issue",
+        "connectivity",
+        "IT support"
+      ],
+      "last_updated": "2026-02-21T23:37:16.167997+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Am I eligible for a hardware upgrade if my current equipment is outdated?",
+      "answer": "Eligibility for a hardware upgrade at Shop4You is assessed based on the age and performance of current equipment. Submit a request through the hardware request form, and IT will evaluate your current setup. You will be informed if you qualify for an upgrade.",
+      "tags": [
+        "hardware upgrade",
+        "eligibility",
+        "IT policy"
+      ],
+      "last_updated": "2026-02-21T23:37:16.167997+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What are the security protocols for accessing Shop4You systems remotely?",
+      "answer": "When accessing Shop4You systems remotely, use the company's VPN and ensure your device is secured with the latest updates and antivirus software. Follow any additional security measures communicated by the IT department, such as two-factor authentication, to protect company data.",
+      "tags": [
+        "remote access",
+        "security protocols",
+        "IT policy"
+      ],
+      "last_updated": "2026-02-21T23:37:16.167997+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What is the procedure for reporting a phishing email?",
+      "answer": "If you receive a phishing email, do not click on any links or attachments. Report it to the IT Helpdesk immediately by forwarding the email to the designated phishing email address. IT will investigate and take necessary actions to protect against potential threats.",
+      "tags": [
+        "phishing",
+        "security",
+        "email issue"
+      ],
+      "last_updated": "2026-02-21T23:37:16.167997+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How often should I change my Shop4You password for security reasons?",
+      "answer": "For security reasons, it is recommended to change your Shop4You password every 90 days. Use a strong password with a mix of letters, numbers, and symbols. Avoid using easily guessable information such as birthdays or common words.",
+      "tags": [
+        "password policy",
+        "IT security",
+        "best practices"
+      ],
+      "last_updated": "2026-02-21T23:37:16.167997+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What steps should I take if I suspect my account has been compromised?",
+      "answer": "If you suspect your Shop4You account has been compromised, change your password immediately. Check for any unauthorized activities and report them to the IT Helpdesk. Follow any further instructions provided by the IT security team to secure your account.",
+      "tags": [
+        "account security",
+        "compromised account",
+        "IT support"
+      ],
+      "last_updated": "2026-02-21T23:37:16.167997+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How can I get help with troubleshooting my Shop4You desktop computer?",
+      "answer": "For troubleshooting your Shop4You desktop, first try basic steps like restarting the computer or checking cables. Review any specific error messages for guidance. If problems persist, contact the IT Helpdesk with detailed information about the issue.",
+      "tags": [
+        "troubleshooting",
+        "desktop computer",
+        "IT support"
+      ],
+      "last_updated": "2026-02-21T23:37:16.167997+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What if I need urgent IT support outside regular working hours?",
+      "answer": "If you require urgent IT support outside regular working hours, contact the IT Helpdesk emergency line. This service is available for critical issues that cannot wait until normal hours. For non-urgent matters, please submit a ticket through the IT portal and it will be addressed the next business day.",
+      "tags": [
+        "IT support",
+        "emergency",
+        "out-of-hours service"
+      ],
+      "last_updated": "2026-02-21T23:37:16.167997+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can I install personal software on my Shop4You work computer?",
+      "answer": "Installing personal software on Shop4You work computers is generally not permitted due to security and compliance reasons. If you need specific software for work purposes, submit a request through the IT portal for evaluation and approval.",
+      "tags": [
+        "software policy",
+        "IT security",
+        "compliance"
+      ],
+      "last_updated": "2026-02-21T23:37:16.167997+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What is the protocol for reporting a lost or stolen Shop4You device?",
+      "answer": "If a Shop4You device is lost or stolen, report it immediately to the IT Helpdesk and your line manager. Provide details about the device and the circumstances of the loss. IT will take necessary actions to secure company data and assist in device recovery if possible.",
+      "tags": [
+        "lost device",
+        "security",
+        "IT protocols"
+      ],
+      "last_updated": "2026-02-21T23:37:16.167997+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What are the requirements for setting up a new workstation at home?",
+      "answer": "Setting up a new home workstation requires a stable internet connection, VPN access, and company-approved software installed on your device. Follow ergonomic guidelines to ensure a comfortable setup. Contact IT Helpdesk for assistance with setting up remote access and any equipment needs.",
+      "tags": [
+        "home workstation",
+        "remote work",
+        "IT support"
+      ],
+      "last_updated": "2026-02-21T23:37:16.167997+00:00",
+      "confidence_score": 0.95
+    }
+  ]
+}

@@ -1,0 +1,2616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop4You — Agentic AI Assistant | Capstone Presentation</title>
+
+    <!-- Reveal.js from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/night.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --accent: #667eea;
+            --accent2: #764ba2;
+            --green: #48bb78;
+            --orange: #ed8936;
+            --red: #fc8181;
+            --cyan: #63b3ed;
+            --bg-card: rgba(255, 255, 255, 0.06);
+        }
+
+        .reveal {
+            font-family: 'Inter', -apple-system, sans-serif;
+        }
+
+        .reveal h1,
+        .reveal h2,
+        .reveal h3,
+        .reveal h4 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            text-transform: none;
+        }
+
+        .reveal h1 {
+            font-size: 2em;
+        }
+
+        .reveal h2 {
+            font-size: 1.3em;
+            margin-bottom: 0.25em;
+        }
+
+        .reveal h3 {
+            font-size: 1.05em;
+        }
+
+        .reveal p,
+        .reveal li,
+        .reveal td,
+        .reveal th {
+            font-size: 0.6em;
+            line-height: 1.35;
+        }
+
+        /* Allow individual slides to scroll if content overflows */
+        .reveal .slides section {
+            overflow-y: auto !important;
+            max-height: 100% !important;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(102, 126, 234, 0.4) transparent;
+        }
+
+        .reveal .slides section::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .reveal .slides section::-webkit-scrollbar-thumb {
+            background: rgba(102, 126, 234, 0.4);
+            border-radius: 3px;
+        }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Subtitle */
+        .subtitle {
+            font-size: 0.55em !important;
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 300;
+            margin-top: 0.3em;
+        }
+
+        /* Badges */
+        .badge {
+            display: inline-block;
+            padding: 0.25em 0.75em;
+            border-radius: 20px;
+            font-size: 0.55em;
+            font-weight: 600;
+            margin: 0.15em;
+        }
+
+        .badge-purple {
+            background: rgba(118, 75, 162, 0.3);
+            border: 1px solid var(--accent2);
+            color: #d6bcfa;
+        }
+
+        .badge-blue {
+            background: rgba(99, 179, 237, 0.2);
+            border: 1px solid var(--cyan);
+            color: var(--cyan);
+        }
+
+        .badge-green {
+            background: rgba(72, 187, 120, 0.2);
+            border: 1px solid var(--green);
+            color: var(--green);
+        }
+
+        .badge-orange {
+            background: rgba(237, 137, 54, 0.2);
+            border: 1px solid var(--orange);
+            color: var(--orange);
+        }
+
+        /* Cards */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 0.4em 0.6em;
+            margin: 0.15em;
+            text-align: left;
+        }
+
+        .card h4 {
+            margin: 0 0 0.15em 0;
+            font-size: 0.64em;
+        }
+
+        .card p,
+        .card li {
+            font-size: 0.52em;
+            margin: 0.08em 0;
+        }
+
+        /* Grid layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.4em;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0.35em;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 0.3em;
+        }
+
+        /* Tables */
+        .reveal table {
+            font-size: 0.54em;
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0.2em 0;
+        }
+
+        .reveal table th {
+            background: rgba(102, 126, 234, 0.2);
+            padding: 0.3em 0.5em;
+            text-align: left;
+            border-bottom: 2px solid var(--accent);
+            font-weight: 600;
+        }
+
+        .reveal table td {
+            padding: 0.25em 0.5em;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .reveal table tr:hover td {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        /* Code blocks */
+        .reveal pre {
+            font-size: 0.5em;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 0.3em 0;
+        }
+
+        .reveal code {
+            font-family: 'Fira Code', monospace;
+        }
+
+        .reveal pre code {
+            max-height: 320px;
+        }
+
+        /* Flow diagram boxes */
+        .flow-box {
+            display: inline-block;
+            padding: 0.4em 0.8em;
+            border-radius: 8px;
+            font-size: 0.6em;
+            font-weight: 600;
+            margin: 0.1em;
+        }
+
+        .flow-arrow {
+            display: inline-block;
+            font-size: 0.7em;
+            color: var(--accent);
+            margin: 0 0.2em;
+        }
+
+        .flow-purple {
+            background: rgba(118, 75, 162, 0.35);
+            border: 1px solid var(--accent2);
+        }
+
+        .flow-blue {
+            background: rgba(99, 179, 237, 0.25);
+            border: 1px solid var(--cyan);
+        }
+
+        .flow-green {
+            background: rgba(72, 187, 120, 0.25);
+            border: 1px solid var(--green);
+        }
+
+        .flow-orange {
+            background: rgba(237, 137, 54, 0.25);
+            border: 1px solid var(--orange);
+        }
+
+        .flow-red {
+            background: rgba(252, 129, 129, 0.25);
+            border: 1px solid var(--red);
+        }
+
+        /* Stats row */
+        .stats-row {
+            display: flex;
+            gap: 0.35em;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border-radius: 10px;
+            padding: 0.4em 0.7em;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            min-width: 85px;
+        }
+
+        .stat-card .number {
+            font-size: 1.3em;
+            font-weight: 800;
+            margin-bottom: 0;
+        }
+
+        .stat-card .label {
+            font-size: 0.45em;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Highlight text */
+        .hl {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .hl2 {
+            color: var(--accent2);
+            font-weight: 600;
+        }
+
+        .hlg {
+            color: var(--green);
+            font-weight: 600;
+        }
+
+        .hlo {
+            color: var(--orange);
+            font-weight: 600;
+        }
+
+        .hlr {
+            color: var(--red);
+            font-weight: 600;
+        }
+
+        .hlc {
+            color: var(--cyan);
+            font-weight: 600;
+        }
+
+        /* Section divider */
+        .section-slide h2 {
+            font-size: 1.8em;
+        }
+
+        /* Check marks */
+        .check {
+            color: var(--green);
+        }
+
+        /* Small text */
+        .small {
+            font-size: 0.55em !important;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Diagram: ASCII art style */
+        .diagram {
+            font-family: 'Fira Code', monospace;
+            font-size: 0.4em;
+            line-height: 1.3;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 0.6em 0.8em;
+            text-align: left;
+            white-space: pre;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow-x: auto;
+        }
+
+        /* Fragment extra styles */
+        .reveal .slides section .fragment.highlight-current-blue.visible {
+            color: var(--cyan);
+        }
+
+        /* Numbered list with icons */
+        .numbered-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.45em;
+            margin: 0.15em 0;
+            font-size: 0.62em;
+        }
+
+        .step-num {
+            flex-shrink: 0;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.75em;
+        }
+
+        /* Slide number */
+        .reveal .slide-number {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            background: rgba(102, 126, 234, 0.3);
+            padding: 4px 10px;
+            border-radius: 8px 0 0 0;
+        }
+
+        /* Progress bar */
+        .reveal .progress span {
+            background: linear-gradient(90deg, var(--accent), var(--accent2));
+        }
+
+        /* Vertical slides indicator */
+        .reveal .controls .navigate-down {
+            color: var(--accent);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 1: TITLE                                               -->
+            <!-- ============================================================ -->
+            <section>
+                <h1 class="gradient-text">Shop4You</h1>
+                <h3 style="font-weight: 400; color: rgba(255,255,255,0.8);">
+                    Agentic AI Customer &amp; Employee Support System
+                </h3>
+                <p class="subtitle" style="margin-top: 1.5em;">
+                    Capstone Project — Agentic AI
+                </p>
+                <p class="subtitle">Mohammed Emran &nbsp;|&nbsp; February 2026</p>
+
+                <div style="margin-top: 2em;">
+                    <span class="badge badge-purple">7 AI Agents</span>
+                    <span class="badge badge-blue">6 Tools</span>
+                    <span class="badge badge-green">200 FAQ Vectors</span>
+                    <span class="badge badge-orange">8 Departments</span>
+                </div>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 2: AGENDA                                              -->
+            <!-- ============================================================ -->
+            <section>
+                <h2>Agenda</h2>
+                <div class="grid-2" style="text-align: left;">
+                    <div class="card">
+                        <h4>🎯 Part 1 — Overview</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li>▸ Problem Statement &amp; Goals</li>
+                            <li>▸ Key Features</li>
+                            <li>▸ System Architecture</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>🤖 Part 2 — Agent Design</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li>▸ The 7 AI Agents (4 Orchestration + 3 CrewAI)</li>
+                            <li>▸ LangGraph Orchestrator Flow</li>
+                            <li>▸ CrewAI Escalation Crew</li>
+                            <li>▸ Smart Routing &amp; Classification</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>🔧 Part 3 — Core Capabilities</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li>▸ RAG Pipeline &amp; Knowledge Base</li>
+                            <li>▸ The 6 Tools</li>
+                            <li>▸ Reflection &amp; Self-Correction</li>
+                            <li>▸ Cross-Department Handoffs</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>🚀 Part 4 — Deployment &amp; Results</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li>▸ Interfaces (Streamlit, API, CLI)</li>
+                            <li>▸ Testing &amp; Results (70/70)</li>
+                            <li>▸ Setup &amp; Prerequisites</li>
+                            <li>▸ Live Demo &amp; API Demo</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 3: PROBLEM STATEMENT                                   -->
+            <!-- ============================================================ -->
+            <section>
+                <h2>Problem Statement</h2>
+                <div class="card" style="max-width: 85%; margin: 0.8em auto;">
+                    <p style="font-size: 0.75em; text-align: center; font-style: italic;">
+                        "Shop4You, a UK-based online retailer, needs an AI assistant
+                        that can handle both <span class="hl">customer inquiries</span>
+                        and <span class="hl2">internal employee questions</span> across
+                        multiple departments — with smart escalation for complex complaints."
+                    </p>
+                </div>
+
+                <div class="grid-3" style="margin-top: 1em;">
+                    <div class="card" style="text-align: center;">
+                        <p style="font-size: 1.6em; margin-bottom:0.2em;">😤</p>
+                        <h4>Challenge 1</h4>
+                        <p>8 departments with different contexts, tones, and audiences</p>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <p style="font-size: 1.6em; margin-bottom:0.2em;">🔀</p>
+                        <h4>Challenge 2</h4>
+                        <p>Queries sometimes span multiple departments needing handoffs</p>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <p style="font-size: 1.6em; margin-bottom:0.2em;">🔥</p>
+                        <h4>Challenge 3</h4>
+                        <p>Angry customers need escalation, not generic FAQ answers</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1em;">
+                    <p class="small">Goal: Build a production-ready multi-agent system using LangGraph + CrewAI + RAG +
+                        GPT-4o</p>
+                </div>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 4: WHAT IT DOES — FEATURES                             -->
+            <!-- ============================================================ -->
+            <section>
+                <h2>What Shop4You Does</h2>
+                <div style="text-align: left; max-width: 90%; margin: 0 auto;">
+                    <div class="numbered-step fragment">
+                        <div class="step-num">1</div>
+                        <div><strong>Authenticates</strong> — identifies user as Customer or Employee (with loyalty tier
+                            / department)</div>
+                    </div>
+                    <div class="numbered-step fragment">
+                        <div class="step-num">2</div>
+                        <div><strong>Classifies</strong> — routes to 1 of 8 departments + detects <span
+                                class="hl">sentiment</span> + <span class="hlo">severity</span> (uses last 3 turns)
+                        </div>
+                    </div>
+                    <div class="numbered-step fragment">
+                        <div class="step-num">3</div>
+                        <div><strong>Routes smartly</strong> — only <span class="hlr">HIGH-severity negative</span> →
+                            CrewAI escalation. Mild/medium → RAG</div>
+                    </div>
+                    <div class="numbered-step fragment">
+                        <div class="step-num">4</div>
+                        <div><strong>Retrieves</strong> relevant FAQ snippets from <span class="hlc">ChromaDB</span>
+                            knowledge base (200 vectors, 8 departments)</div>
+                    </div>
+                    <div class="numbered-step fragment">
+                        <div class="step-num">5</div>
+                        <div><strong>Augments</strong> with tool calls — order lookup, product search, loyalty points,
+                            department listing</div>
+                    </div>
+                    <div class="numbered-step fragment">
+                        <div class="step-num">6</div>
+                        <div><strong>Generates</strong> a grounded answer using GPT-4o with retrieved context + tool
+                            results + user profile</div>
+                    </div>
+                    <div class="numbered-step fragment">
+                        <div class="step-num">7</div>
+                        <div><strong>Reflects</strong> on its own answer (quality 1–10). If score &lt; 7, regenerates up
+                            to 3 retries</div>
+                    </div>
+                    <div class="numbered-step fragment">
+                        <div class="step-num">8</div>
+                        <div><strong>Transfers</strong> across departments — detects cross-dept queries via
+                            <code>[SUGGEST_TRANSFER]</code> tags
+                        </div>
+                    </div>
+                    <div class="numbered-step fragment">
+                        <div class="step-num">9</div>
+                        <div><strong>Remembers</strong> conversation per user via SQLite-backed persistent memory</div>
+                    </div>
+                    <div class="numbered-step fragment">
+                        <div class="step-num">10</div>
+                        <div><strong>Follows up</strong> — asks "Anything else?" and handles farewell responses
+                            gracefully</div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 5: KEY NUMBERS                                         -->
+            <!-- ============================================================ -->
+            <section>
+                <h2>By the Numbers</h2>
+                <div class="stats-row" style="margin-top: 1.5em;">
+                    <div class="stat-card">
+                        <div class="number gradient-text">7</div>
+                        <div class="label">AI Agents</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number" style="color: var(--cyan);">6</div>
+                        <div class="label">Tools</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number" style="color: var(--green);">200</div>
+                        <div class="label">FAQ Vectors</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number" style="color: var(--orange);">8</div>
+                        <div class="label">Departments</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number" style="color: var(--accent2);">10</div>
+                        <div class="label">Demo Users</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number" style="color: var(--red);">11</div>
+                        <div class="label">Demo Orders</div>
+                    </div>
+                </div>
+
+                <div class="stats-row" style="margin-top: 1em;">
+                    <div class="stat-card">
+                        <div class="number" style="color: var(--green);">70/70</div>
+                        <div class="label">Orchestration Tests</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number" style="color: var(--green);">13/13</div>
+                        <div class="label">Pytest (RAG+Agent+Memory)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number" style="color: var(--green);">5/5</div>
+                        <div class="label">RAG Pipeline Tests</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number" style="color: var(--green);">6</div>
+                        <div class="label">API Endpoints</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number" style="color: var(--cyan);">3</div>
+                        <div class="label">Interfaces</div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 6: SECTION DIVIDER — ARCHITECTURE                     -->
+            <!-- ============================================================ -->
+            <section class="section-slide" data-background-gradient="linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)">
+                <h2 class="gradient-text">System Architecture</h2>
+                <p style="color: rgba(255,255,255,0.5); font-size: 0.7em;">How the pieces fit together</p>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 7: HIGH-LEVEL ARCHITECTURE (Visual)                    -->
+            <!-- ============================================================ -->
+            <section>
+                <h2>High-Level Architecture</h2>
+                <div
+                    style="display:flex; flex-direction:column; align-items:center; gap:0.15em; margin-top:0.2em; font-size:0.52em;">
+
+                    <!-- ── USER QUERY ── -->
+                    <div
+                        style="background:linear-gradient(135deg,rgba(102,126,234,0.3),rgba(118,75,162,0.3)); border:2px solid var(--accent); border-radius:50px; padding:0.15em 1.4em; font-weight:700; letter-spacing:0.05em;">
+                        👤 User Query</div>
+                    <div style="color:var(--accent); font-size:1.1em; line-height:1;">↓</div>
+
+                    <!-- ── INTERFACES ── -->
+                    <div style="display:flex; gap:0.2em; justify-content:center; flex-wrap:wrap;">
+                        <div
+                            style="background:rgba(99,179,237,0.12); border:1px solid rgba(99,179,237,0.25); border-radius:6px; padding:0.15em 0.4em; text-align:center;">
+                            🖥️ <strong>Streamlit</strong></div>
+                        <div
+                            style="background:rgba(99,179,237,0.12); border:1px solid rgba(99,179,237,0.25); border-radius:6px; padding:0.15em 0.4em; text-align:center;">
+                            ⚡ <strong>FastAPI</strong></div>
+                        <div
+                            style="background:rgba(99,179,237,0.12); border:1px solid rgba(99,179,237,0.25); border-radius:6px; padding:0.15em 0.4em; text-align:center;">
+                            💻 <strong>CLI</strong></div>
+                        <div
+                            style="background:rgba(99,179,237,0.12); border:1px solid rgba(99,179,237,0.25); border-radius:6px; padding:0.15em 0.4em; text-align:center;">
+                            📓 <strong>Notebook</strong></div>
+                    </div>
+                    <div style="color:var(--cyan); font-size:1.1em; line-height:1;">↓</div>
+
+                    <!-- ══════════════ AGENT CORE ══════════════ -->
+                    <div
+                        style="background:rgba(118,75,162,0.06); border:2px solid rgba(118,75,162,0.25); border-radius:12px; padding:0.3em 0.5em 0.25em; width:100%; max-width:680px;">
+                        <div
+                            style="text-align:center; font-weight:700; color:var(--accent2); font-size:0.78em; margin-bottom:0.15em; letter-spacing:0.3px;">
+                            LANGGRAPH ORCHESTRATOR — AGENT CORE</div>
+
+                        <!-- Row 1: classifier → route -->
+                        <div
+                            style="display:flex; align-items:center; justify-content:center; gap:0.3em; margin-bottom:0.15em;">
+                            <div
+                                style="background:rgba(102,126,234,0.12); border:1px solid rgba(102,126,234,0.3); border-radius:8px; padding:0.15em 0.5em; text-align:center;">
+                                🧠 <strong>classifier_agent</strong> <span style="font-size:0.75em; opacity:0.5;">(Agent
+                                    1)</span>
+                                <br><span style="font-size:0.78em; opacity:0.5;">dept · sentiment · severity ·
+                                    reasoning</span>
+                            </div>
+                            <span style="color:var(--accent); font-weight:700; font-size:1.1em;">→</span>
+                            <div
+                                style="background:rgba(237,137,54,0.12); border:1px solid rgba(237,137,54,0.3); border-radius:8px; padding:0.15em 0.5em; text-align:center;">
+                                🔀 <strong>route_query</strong>
+                                <br><span style="font-size:0.78em; opacity:0.5;">Decision Node</span>
+                            </div>
+                        </div>
+
+                        <!-- Branch labels -->
+                        <div style="display:flex; justify-content:center; gap:6em; margin:0.05em 0;">
+                            <span style="color:var(--green); font-size:0.72em; font-weight:600;">↙ valid dept</span>
+                            <span style="color:var(--red); font-size:0.72em; font-weight:600;">neg + HIGH ↘</span>
+                        </div>
+
+                        <!-- Row 2: RAG path | Escalation path -->
+                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.25em; margin-top:0.05em;">
+                            <!-- LEFT: RAG path -->
+                            <div style="display:flex; flex-direction:column; align-items:center; gap:0.1em;">
+                                <div
+                                    style="background:rgba(72,187,120,0.10); border:1px solid rgba(72,187,120,0.3); border-radius:8px; padding:0.15em 0.4em; text-align:center; width:100%;">
+                                    📚 <strong>department_rag_agent</strong> <span
+                                        style="font-size:0.75em; opacity:0.5;">(Agent 2)</span>
+                                    <br><span style="font-size:0.78em; opacity:0.5;">ChromaDB retrieval + 6 Tools +
+                                        GPT-4o</span>
+                                </div>
+                                <div style="color:var(--green); font-size:0.9em; line-height:1;">↓</div>
+                                <div
+                                    style="background:rgba(237,137,54,0.10); border:1px solid rgba(237,137,54,0.3); border-radius:8px; padding:0.15em 0.4em; text-align:center; width:100%;">
+                                    🔄 <strong>reflection_agent</strong> <span
+                                        style="font-size:0.75em; opacity:0.5;">(Agent 3)</span>
+                                    <br><span style="font-size:0.78em; opacity:0.5;">Score 1-10 · ≥7 ✅ · &lt;7 retry
+                                        3×</span>
+                                </div>
+                            </div>
+
+                            <!-- RIGHT: Escalation path -->
+                            <div style="display:flex; flex-direction:column; align-items:center; gap:0.1em;">
+                                <div
+                                    style="background:rgba(252,129,129,0.10); border:1px solid rgba(252,129,129,0.3); border-radius:8px; padding:0.15em 0.4em; text-align:center; width:100%;">
+                                    🚨 <strong>escalation_agent</strong> <span
+                                        style="font-size:0.75em; opacity:0.5;">(Agent 4)</span>
+                                    <br><span style="font-size:0.78em; opacity:0.5;">ESC-XXXXX ref · triggers
+                                        CrewAI</span>
+                                </div>
+                                <div style="color:var(--red); font-size:0.9em; line-height:1;">↓</div>
+                                <div
+                                    style="background:rgba(252,129,129,0.08); border:1px dashed rgba(252,129,129,0.35); border-radius:8px; padding:0.12em 0.3em; text-align:center; width:100%;">
+                                    <span style="font-size:0.72em; font-weight:600; color:var(--red);">CrewAI Sequential
+                                        Crew</span>
+                                    <div
+                                        style="display:flex; gap:0.12em; justify-content:center; margin-top:0.08em; flex-wrap:wrap;">
+                                        <span
+                                            style="background:rgba(252,129,129,0.15); border:1px solid rgba(252,129,129,0.3); border-radius:4px; padding:0.08em 0.25em; font-size:0.72em;">🔍
+                                            Agent 5</span>
+                                        <span style="font-size:0.8em; color:var(--red);">→</span>
+                                        <span
+                                            style="background:rgba(252,129,129,0.15); border:1px solid rgba(252,129,129,0.3); border-radius:4px; padding:0.08em 0.25em; font-size:0.72em;">🕵️
+                                            Agent 6</span>
+                                        <span style="font-size:0.8em; color:var(--red);">→</span>
+                                        <span
+                                            style="background:rgba(252,129,129,0.15); border:1px solid rgba(252,129,129,0.3); border-radius:4px; padding:0.08em 0.25em; font-size:0.72em;">✅
+                                            Agent 7</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Memory bar at bottom of agent core -->
+                        <div style="display:flex; justify-content:center; margin-top:0.15em;">
+                            <div
+                                style="background:rgba(118,75,162,0.10); border:1px solid rgba(118,75,162,0.25); border-radius:6px; padding:0.1em 0.6em; text-align:center;">
+                                💾 <strong>SqliteSaver</strong> <span style="font-size:0.78em; opacity:0.5;">— per-user
+                                    thread memory · survives restarts</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="color:var(--green); font-size:0.72em; font-weight:600; margin:0.05em 0;">calls ↕ returns
+                    </div>
+
+                    <!-- ── EXTERNAL SERVICES ── -->
+                    <div style="display:flex; gap:0.2em; justify-content:center; flex-wrap:wrap;">
+                        <div
+                            style="background:rgba(72,187,120,0.10); border:1px solid rgba(72,187,120,0.25); border-radius:6px; padding:0.12em 0.4em; text-align:center;">
+                            ☁️ <strong>OpenAI</strong> <span style="opacity:0.4; font-size:0.85em;">GPT-4o</span></div>
+                        <div
+                            style="background:rgba(72,187,120,0.10); border:1px solid rgba(72,187,120,0.25); border-radius:6px; padding:0.12em 0.4em; text-align:center;">
+                            🗄️ <strong>ChromaDB</strong> <span style="opacity:0.4; font-size:0.85em;">200
+                                vectors</span></div>
+                        <div
+                            style="background:rgba(72,187,120,0.10); border:1px solid rgba(72,187,120,0.25); border-radius:6px; padding:0.12em 0.4em; text-align:center;">
+                            💾 <strong>SQLite</strong> <span style="opacity:0.4; font-size:0.85em;">memory</span></div>
+                        <div
+                            style="background:rgba(72,187,120,0.10); border:1px solid rgba(72,187,120,0.25); border-radius:6px; padding:0.12em 0.4em; text-align:center;">
+                            📊 <strong>Data</strong> <span style="opacity:0.4; font-size:0.85em;">10 users · 11
+                                orders</span></div>
+                    </div>
+
+                    <div style="color:var(--green); font-size:1.1em; line-height:1;">↓</div>
+                    <div
+                        style="background:linear-gradient(135deg,rgba(72,187,120,0.3),rgba(72,187,120,0.15)); border:2px solid var(--green); border-radius:50px; padding:0.12em 1.2em; font-weight:700; color:var(--green);">
+                        ✔ Response to User</div>
+                </div>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 7b: VISUAL ARCHITECTURE DIAGRAM                        -->
+            <!-- ============================================================ -->
+            <section>
+                <h2>Visual Architecture Diagram</h2>
+                <iframe src="Shop4You_Architecture_Diagram.html"
+                    style="width: 100%; height: 580px; border: none; border-radius: 10px; background: #0f172a;"></iframe>
+                <p style="font-size: 0.5em; color: rgba(255,255,255,0.4); margin-top: 0.3em;">Open
+                    <code>docs/Shop4You_Architecture_Diagram.html</code> in a browser for full view
+                </p>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 8: THE 7 AI AGENTS                                     -->
+            <!-- ============================================================ -->
+            <section>
+                <h2>The 7 AI Agents</h2>
+                <p style="font-size:0.6em; opacity:0.6; margin-top:-0.3em;">4 LangGraph Orchestration Agents
+                    &nbsp;+&nbsp; 3 CrewAI Escalation Agents</p>
+
+                <!-- Group 1: LangGraph Orchestration Agents -->
+                <h4 style="font-size:0.65em; color:var(--accent); margin:0.5em 0 0.3em; text-align:left;">🔷 LangGraph
+                    Orchestration Agents <span style="font-size:0.85em; opacity:0.5;">(agents.py)</span></h4>
+                <div class="grid-2" style="font-size:0.9em;">
+                    <div class="card" style="border-left: 3px solid var(--cyan); padding:0.4em 0.6em;">
+                        <h4 style="font-size:0.75em;">🧠 Agent 1 — Classifier</h4>
+                        <p><span class="badge badge-purple" style="font-size:0.7em;">classifier_agent</span></p>
+                        <p style="font-size:0.7em;">GPT-4o structured output — detects department, sentiment, severity
+                            &amp; reasoning</p>
+                    </div>
+                    <div class="card" style="border-left: 3px solid var(--green); padding:0.4em 0.6em;">
+                        <h4 style="font-size:0.75em;">📚 Agent 2 — Department RAG</h4>
+                        <p><span class="badge badge-green" style="font-size:0.7em;">department_rag_agent</span></p>
+                        <p style="font-size:0.7em;">Retrieves context from ChromaDB, calls tools (product / loyalty /
+                            order), generates answers</p>
+                    </div>
+                    <div class="card" style="border-left: 3px solid var(--orange); padding:0.4em 0.6em;">
+                        <h4 style="font-size:0.75em;">🔄 Agent 3 — Reflection</h4>
+                        <p><span class="badge badge-blue" style="font-size:0.7em;">reflection_agent</span></p>
+                        <p style="font-size:0.7em;">Quality-checks answers (score 1–10). Regenerates with feedback if
+                            &lt; 7. Up to 2 retries</p>
+                    </div>
+                    <div class="card" style="border-left: 3px solid var(--red); padding:0.4em 0.6em;">
+                        <h4 style="font-size:0.75em;">🚨 Agent 4 — Escalation</h4>
+                        <p><span class="badge badge-purple" style="font-size:0.7em;">escalation_agent</span></p>
+                        <p style="font-size:0.7em;">Generates ESC-XXXXX reference, triggers CrewAI crew for
+                            high-severity cases</p>
+                    </div>
+                </div>
+
+                <!-- Group 2: CrewAI Escalation Agents -->
+                <h4 style="font-size:0.65em; color:var(--orange); margin:0.5em 0 0.3em; text-align:left;">🔶 CrewAI
+                    Escalation Crew <span style="font-size:0.85em; opacity:0.5;">(escalation_crew.py) — sequential
+                        pipeline</span></h4>
+                <div class="grid-3" style="font-size:0.9em;">
+                    <div class="card" style="border-left: 3px solid var(--red); padding:0.4em 0.6em;">
+                        <h4 style="font-size:0.75em;">🔍 Agent 5 — Complaint Analyst</h4>
+                        <p><span class="badge badge-orange" style="font-size:0.7em;">CrewAI</span></p>
+                        <p style="font-size:0.7em;">Extracts core issue, urgency, emotional state, key details (order
+                            IDs, dates, amounts)</p>
+                    </div>
+                    <div class="card" style="border-left: 3px solid var(--orange); padding:0.4em 0.6em;">
+                        <h4 style="font-size:0.75em;">🕵️ Agent 6 — Account Investigator</h4>
+                        <p><span class="badge badge-orange" style="font-size:0.7em;">CrewAI</span></p>
+                        <p style="font-size:0.7em;">Builds customer context, identifies responsible dept, flags VIP /
+                            repeat / red-flag issues</p>
+                    </div>
+                    <div class="card" style="border-left: 3px solid var(--green); padding:0.4em 0.6em;">
+                        <h4 style="font-size:0.75em;">✅ Agent 7 — Resolution Specialist</h4>
+                        <p><span class="badge badge-orange" style="font-size:0.7em;">CrewAI</span></p>
+                        <p style="font-size:0.7em;">Proposes resolution + goodwill gesture, sets response time, writes
+                            final escalation report</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 0.6em; text-align: center; font-size:0.85em;">
+                    <span class="flow-box flow-purple">Agents 1–4 (LangGraph)</span>
+                    <span class="flow-arrow">→ HIGH severity →</span>
+                    <span class="flow-box flow-red">Agent 5</span>
+                    <span class="flow-arrow">→</span>
+                    <span class="flow-box flow-orange">Agent 6</span>
+                    <span class="flow-arrow">→</span>
+                    <span class="flow-box flow-green">Agent 7</span>
+                </div>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 9: LANGGRAPH ORCHESTRATOR FLOW (Visual)                -->
+            <!-- ============================================================ -->
+            <section>
+                <h2>LangGraph Orchestrator Flow</h2>
+                <div
+                    style="display:flex; flex-direction:column; align-items:center; gap:0; margin-top:0.3em; font-size:0.55em;">
+
+                    <!-- START -->
+                    <div
+                        style="background:linear-gradient(135deg,rgba(102,126,234,0.3),rgba(118,75,162,0.3)); border:2px solid var(--accent); border-radius:50px; padding:0.2em 1.2em; font-weight:700; letter-spacing:0.05em;">
+                        ▶ START</div>
+                    <div style="color:var(--accent); font-size:1.2em; line-height:1;">↓</div>
+
+                    <!-- Agent 1: classifier_agent -->
+                    <div
+                        style="background:rgba(99,179,237,0.12); border:2px solid var(--cyan); border-radius:10px; padding:0.35em 1em; text-align:center; max-width:520px; width:100%;">
+                        <div style="font-weight:700; color:var(--cyan); font-size:0.9em;">Agent 1 — classifier_agent
+                        </div>
+                        <div style="font-size:0.78em; opacity:0.7; margin-top:0.15em;">GPT-4o structured output →
+                            department · sentiment · severity · reasoning</div>
+                        <div style="font-size:0.72em; opacity:0.5; margin-top:0.1em;">Uses last 3 conversation turns for
+                            follow-up context</div>
+                    </div>
+                    <div style="color:var(--accent); font-size:1.2em; line-height:1;">↓</div>
+
+                    <!-- route_query decision diamond -->
+                    <div
+                        style="background:rgba(237,137,54,0.15); border:2px solid var(--orange); transform:rotate(45deg); width:65px; height:65px; display:flex; align-items:center; justify-content:center;">
+                        <div
+                            style="transform:rotate(-45deg); font-weight:700; font-size:0.7em; color:var(--orange); text-align:center; line-height:1.1;">
+                            route_<br>query</div>
+                    </div>
+
+                    <!-- Two branches -->
+                    <div
+                        style="display:grid; grid-template-columns:1fr 1fr; gap:1em; width:100%; max-width:600px; margin-top:0.3em;">
+                        <!-- Left branch label -->
+                        <div style="text-align:center;">
+                            <div style="font-size:0.72em; color:var(--green); font-weight:600; margin-bottom:0.2em;">✅
+                                Valid dept (or low/med neg)</div>
+                        </div>
+                        <!-- Right branch label -->
+                        <div style="text-align:center;">
+                            <div style="font-size:0.72em; color:var(--red); font-weight:600; margin-bottom:0.2em;">🚨
+                                Negative+HIGH or unknown</div>
+                        </div>
+
+                        <!-- Step 1a -->
+                        <div
+                            style="background:rgba(72,187,120,0.10); border:2px solid var(--green); border-radius:10px; padding:0.35em 0.5em; text-align:center;">
+                            <div style="font-weight:700; color:var(--green); font-size:0.85em;">Agent 2 —
+                                department_rag_agent
+                            </div>
+                            <div style="font-size:0.75em; opacity:0.65; margin-top:0.1em;">ChromaDB retrieval + 6
+                                Tools<br>GPT-4o grounded answer<br>Transfer detection</div>
+                        </div>
+                        <!-- Step 1b -->
+                        <div
+                            style="background:rgba(252,129,129,0.10); border:2px solid var(--red); border-radius:10px; padding:0.35em 0.5em; text-align:center;">
+                            <div style="font-weight:700; color:var(--red); font-size:0.85em;">Agent 4 — escalation_agent
+                            </div>
+                            <div style="font-size:0.75em; opacity:0.65; margin-top:0.1em;">ESC-XXXXX reference
+                                #<br>CrewAI 3-agent crew<br>Structured report</div>
+                        </div>
+
+                        <!-- Step 2 (left only) -->
+                        <div style="text-align:center;">
+                            <div style="color:var(--green); font-size:1em; line-height:1;">↓</div>
+                            <div
+                                style="background:rgba(237,137,54,0.10); border:2px solid var(--orange); border-radius:10px; padding:0.3em 0.5em; text-align:center;">
+                                <div style="font-weight:700; color:var(--orange); font-size:0.85em;">Agent 3 —
+                                    reflection_agent
+                                </div>
+                                <div style="font-size:0.75em; opacity:0.65;">Quality score 1-10<br>≥ 7 → done · &lt; 7 →
+                                    retry (up to 3×)</div>
+                            </div>
+                            <div style="color:var(--green); font-size:1em; line-height:1; margin-top:0.15em;">↓</div>
+                            <div
+                                style="background:linear-gradient(135deg,rgba(72,187,120,0.25),rgba(72,187,120,0.15)); border:2px solid var(--green); border-radius:50px; padding:0.15em 1em; font-weight:700; color:var(--green);">
+                                ✔ END</div>
+                        </div>
+                        <!-- END (right) -->
+                        <div
+                            style="text-align:center; display:flex; flex-direction:column; justify-content:flex-end; align-items:center;">
+                            <div style="color:var(--red); font-size:1em; line-height:1; margin-bottom:0.15em;">↓</div>
+                            <div
+                                style="background:linear-gradient(135deg,rgba(252,129,129,0.25),rgba(252,129,129,0.15)); border:2px solid var(--red); border-radius:50px; padding:0.15em 1em; font-weight:700; color:var(--red);">
+                                ✔ END</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 10: SMART ROUTING & CLASSIFICATION                     -->
+            <!-- ============================================================ -->
+            <section>
+                <h2>Smart Routing &amp; Classification</h2>
+
+                <div class="grid-2">
+                    <div>
+                        <h4 style="font-size: 0.7em;">Classification Output (Structured)</h4>
+                        <pre><code class="language-python" style="font-size: 0.95em;">class QueryClassification(BaseModel):
+    department: str   # 1 of 8 keys + "unknown"
+    sentiment: Literal["positive",
+                       "neutral", "negative"]
+    severity: Literal["low", "medium", "high"]
+    reasoning: str    # why this classification</code></pre>
+
+                        <h4 style="font-size: 0.7em; margin-top: 0.6em;">Routing Decision Tree</h4>
+                        <pre><code class="language-python" style="font-size: 0.95em;">if dept == "unknown":
+    → escalate  # can't match any dept
+elif sentiment == "negative"
+     and severity == "high":
+    → escalate  # very angry / threats
+else:
+    → department_rag_agent  # everything else</code></pre>
+                    </div>
+
+                    <div>
+                        <h4 style="font-size: 0.7em;">Severity-Based Escalation</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Severity</th>
+                                    <th>Behaviour</th>
+                                    <th>Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="hlg">Low</span></td>
+                                    <td>RAG handles normally</td>
+                                    <td>"Could be better"</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="hlo">Medium</span></td>
+                                    <td>RAG with empathy</td>
+                                    <td>"Disappointed with quality"</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="hlr">High</span></td>
+                                    <td>→ CrewAI escalation</td>
+                                    <td>"I will sue!", Threats</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="card" style="margin-top: 0.5em;">
+                            <h4>Why not escalate all negatives?</h4>
+                            <p>Mild complaints like <em>"a bit disappointed"</em> are
+                                common and answerable — sending them to a 3-agent crew
+                                wastes resources and gives a worse user experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 11: DEPARTMENTS (8)                                    -->
+            <!-- ============================================================ -->
+            <section>
+                <h2>8 Departments</h2>
+                <div class="grid-4">
+                    <div class="card" style="text-align: center; border-top: 3px solid var(--cyan);">
+                        <p style="font-size: 1.3em; margin: 0;">📦</p>
+                        <h4 style="font-size: 0.6em;">Orders &amp; Returns</h4>
+                        <p style="font-size: 0.5em;">🔵 Customer</p>
+                    </div>
+                    <div class="card" style="text-align: center; border-top: 3px solid var(--cyan);">
+                        <p style="font-size: 1.3em; margin: 0;">💷</p>
+                        <h4 style="font-size: 0.6em;">Billing &amp; Payments</h4>
+                        <p style="font-size: 0.5em;">🔵 Customer</p>
+                    </div>
+                    <div class="card" style="text-align: center; border-top: 3px solid var(--cyan);">
+                        <p style="font-size: 1.3em; margin: 0;">🚚</p>
+                        <h4 style="font-size: 0.6em;">Shipping &amp; Delivery</h4>
+                        <p style="font-size: 0.5em;">🔵 Customer</p>
+                    </div>
+                    <div class="card" style="text-align: center; border-top: 3px solid var(--cyan);">
+                        <p style="font-size: 1.3em; margin: 0;">🛍️</p>
+                        <h4 style="font-size: 0.6em;">Product Inquiries</h4>
+                        <p style="font-size: 0.5em;">🔵 Customer</p>
+                    </div>
+                    <div class="card" style="text-align: center; border-top: 3px solid var(--accent2);">
+                        <p style="font-size: 1.3em; margin: 0;">👔</p>
+                        <h4 style="font-size: 0.6em;">Human Resources</h4>
+                        <p style="font-size: 0.5em;">🟣 Employee</p>
+                    </div>
+                    <div class="card" style="text-align: center; border-top: 3px solid var(--accent2);">
+                        <p style="font-size: 1.3em; margin: 0;">💻</p>
+                        <h4 style="font-size: 0.6em;">IT Helpdesk</h4>
+                        <p style="font-size: 0.5em;">🟣 Employee</p>
+                    </div>
+                    <div class="card" style="text-align: center; border-top: 3px solid var(--accent2);">
+                        <p style="font-size: 1.3em; margin: 0;">🏭</p>
+                        <h4 style="font-size: 0.6em;">Operations</h4>
+                        <p style="font-size: 0.5em;">🟣 Employee</p>
+                    </div>
+                    <div class="card" style="text-align: center; border-top: 3px solid var(--accent2);">
+                        <p style="font-size: 1.3em; margin: 0;">⭐</p>
+                        <h4 style="font-size: 0.6em;">Loyalty Programme</h4>
+                        <p style="font-size: 0.5em;">🟣 Employee</p>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top: 0.6em;">
+                    <p style="font-size: 0.62em; text-align: center;">
+                        <strong>External vs Internal guardrails:</strong>
+                        A customer complaining about an order is NEVER routed to HR or IT.
+                        Employee queries about VPN/payroll are never sent to customer departments.
+                        The classifier enforces audience boundaries.
+                    </p>
+                </div>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 12: SECTION DIVIDER — CORE CAPABILITIES               -->
+            <!-- ============================================================ -->
+            <section class="section-slide" data-background-gradient="linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)">
+                <h2 class="gradient-text">Core Capabilities</h2>
+                <p style="color: rgba(255,255,255,0.5); font-size: 0.7em;">RAG, Tools, Reflection, Handoffs &amp; Memory
+                </p>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 13: RAG PIPELINE                                       -->
+            <!-- ============================================================ -->
+            <section>
+                <h2>RAG Pipeline</h2>
+                <div class="grid-2">
+                    <div>
+                        <h4 style="font-size: 0.7em;">Knowledge Base</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Department</th>
+                                    <th>QA Pairs</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Orders &amp; Returns</td>
+                                    <td>25</td>
+                                </tr>
+                                <tr>
+                                    <td>Billing &amp; Payments</td>
+                                    <td>25</td>
+                                </tr>
+                                <tr>
+                                    <td>Shipping &amp; Delivery</td>
+                                    <td>25</td>
+                                </tr>
+                                <tr>
+                                    <td>Product Inquiries</td>
+                                    <td>25</td>
+                                </tr>
+                                <tr>
+                                    <td>Human Resources</td>
+                                    <td>25</td>
+                                </tr>
+                                <tr>
+                                    <td>IT Helpdesk</td>
+                                    <td>25</td>
+                                </tr>
+                                <tr>
+                                    <td>Operations</td>
+                                    <td>25</td>
+                                </tr>
+                                <tr>
+                                    <td>Loyalty Programme</td>
+                                    <td>25</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight:700;">Total</td>
+                                    <td style="font-weight:700;">200</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="small" style="margin-top:0.3em;">Generated by GPT-4o via <code>generate_data.py</code>
+                        </p>
+
+                        <h4 style="font-size: 0.6em; margin-top: 0.3em;">Data Pipeline Commands</h4>
+                        <pre style="font-size:0.65em; margin:0; padding:0.35em 0.5em;"><code style="font-size:0.95em;">python generate_data.py   <span style="opacity:0.5;"># → 8 JSON files (25 QA each)</span>
+python vector_store.py    <span style="opacity:0.5;"># → 200 vectors in ChromaDB</span></code></pre>
+                    </div>
+
+                    <div>
+                        <h4 style="font-size: 0.65em;">Retrieval Flow</h4>
+                        <div style="text-align:left; display:flex; flex-direction:column; gap:0.15em;">
+                            <div style="display:flex; align-items:center; gap:0.35em;">
+                                <span
+                                    style="background:var(--cyan); color:#000; border-radius:50%; width:1.3em; height:1.3em; display:inline-flex; align-items:center; justify-content:center; font-weight:700; font-size:0.7em; flex-shrink:0;">1</span>
+                                <span style="font-size:0.72em;">Query embedded via <code
+                                        style="font-size:0.9em;">text-embedding-3-small</code></span>
+                            </div>
+                            <div style="display:flex; align-items:center; gap:0.35em;">
+                                <span
+                                    style="background:var(--cyan); color:#000; border-radius:50%; width:1.3em; height:1.3em; display:inline-flex; align-items:center; justify-content:center; font-weight:700; font-size:0.7em; flex-shrink:0;">2</span>
+                                <span style="font-size:0.72em;">ChromaDB similarity search (cosine, top-k=3)</span>
+                            </div>
+                            <div style="display:flex; align-items:center; gap:0.35em;">
+                                <span
+                                    style="background:var(--cyan); color:#000; border-radius:50%; width:1.3em; height:1.3em; display:inline-flex; align-items:center; justify-content:center; font-weight:700; font-size:0.7em; flex-shrink:0;">3</span>
+                                <span style="font-size:0.72em;">Filter by department metadata (score ≥ 0.2)</span>
+                            </div>
+                            <div style="display:flex; align-items:center; gap:0.35em;">
+                                <span
+                                    style="background:var(--orange); color:#000; border-radius:50%; width:1.3em; height:1.3em; display:inline-flex; align-items:center; justify-content:center; font-weight:700; font-size:0.7em; flex-shrink:0;">4</span>
+                                <span style="font-size:0.72em;">Fallback: 0 dept results → global search + NOTE
+                                    tag</span>
+                            </div>
+                            <div style="display:flex; align-items:center; gap:0.35em;">
+                                <span
+                                    style="background:var(--green); color:#000; border-radius:50%; width:1.3em; height:1.3em; display:inline-flex; align-items:center; justify-content:center; font-weight:700; font-size:0.7em; flex-shrink:0;">5</span>
+                                <span style="font-size:0.72em;">Context injected into GPT-4o RAG prompt</span>
+                            </div>
+                        </div>
+
+                        <div class="card" style="margin-top:0.35em; padding:0.35em 0.5em;">
+                            <h4 style="font-size:0.58em; margin:0 0 0.15em 0;">💡 Smart Fallback</h4>
+                            <p style="font-size:0.52em; margin:0;">When no results in the target department, searches
+                                <em>all</em> depts and prepends <code
+                                    style="font-size:0.9em;">[NOTE: No results in X...]</code> — prompting the agent to
+                                suggest a department transfer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 14: THE 6 TOOLS                                        -->
+            <!-- ============================================================ -->
+            <section>
+                <h2>The 6 Tools</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tool</th>
+                            <th>Trigger</th>
+                            <th>What it Does</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>search_knowledge_base</code></td>
+                            <td>Every RAG query</td>
+                            <td>Searches ChromaDB for top-k FAQ matches filtered by department</td>
+                        </tr>
+                        <tr>
+                            <td><code>list_departments</code></td>
+                            <td>"What departments…?"</td>
+                            <td>Returns all 8 department names + descriptions</td>
+                        </tr>
+                        <tr>
+                            <td><code>search_product</code></td>
+                            <td>Product queries</td>
+                            <td>Looks up product catalogue (name, price, stock, sizes, colours) — 5 products</td>
+                        </tr>
+                        <tr>
+                            <td><code>check_loyalty_points</code></td>
+                            <td>Loyalty queries (EMP###)</td>
+                            <td>Returns member tier, points balance, discount percentage</td>
+                        </tr>
+                        <tr>
+                            <td><code>lookup_orders</code></td>
+                            <td>Order-related queries</td>
+                            <td>Fetches order history by customer email or specific order ID — 11 orders</td>
+                        </tr>
+                        <tr>
+                            <td><code>escalate_to_human</code></td>
+                            <td>Negative sentiment (HIGH)</td>
+                            <td>Generates ESC-XXXXX reference + triggers CrewAI crew</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="small" style="margin-top:0.5em;">All tools are LangChain <code>@tool</code> decorated
+                    functions invoked dynamically by the orchestrator based on query context.</p>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 15: CREWAI ESCALATION                                  -->
+            <!-- ============================================================ -->
+            <section>
+                <h2>CrewAI Escalation Crew</h2>
+                <p style="font-size: 0.65em; color: rgba(255,255,255,0.6); margin-bottom: 0.8em;">
+                    Triggered when: <span class="hlr">negative sentiment + HIGH severity</span> OR <span
+                        class="hlo">unknown department</span>
+                </p>
+
+                <div style="display: flex; gap: 0.4em; align-items: stretch;">
+                    <div class="card" style="flex: 1; border-top: 3px solid var(--red);">
+                        <h4>🔍 Agent 5<br>complaint_analyst_agent</h4>
+                        <p>• Core issue in 1-2 sentences</p>
+                        <p>• Extract order IDs, dates, amounts</p>
+                        <p>• Rate urgency (low → critical)</p>
+                        <p>• Identify emotional state</p>
+                        <p>• List unanswered questions</p>
+                    </div>
+                    <div style="display: flex; align-items: center; font-size: 1.2em; color: var(--accent);">→</div>
+                    <div class="card" style="flex: 1; border-top: 3px solid var(--orange);">
+                        <h4>🕵️ Agent 6<br>account_investigator_agent</h4>
+                        <p>• Which dept(s) should handle</p>
+                        <p>• Flag VIP / repeat customer</p>
+                        <p>• Check for fraud / policy issues</p>
+                        <p>• Recommend first-look items</p>
+                    </div>
+                    <div style="display: flex; align-items: center; font-size: 1.2em; color: var(--accent);">→</div>
+                    <div class="card" style="flex: 1; border-top: 3px solid var(--green);">
+                        <h4>✅ Agent 7<br>resolution_specialist_agent</h4>
+                        <p>• Primary resolution (refund, replacement…)</p>
+                        <p>• Goodwill gesture (discount, points…)</p>
+                        <p>• Follow-up steps for human agent</p>
+                        <p>• Response time SLA</p>
+                        <p>• Full escalation report</p>
+                    </div>
+                </div>
+
+                <p style="font-size: 0.6em; margin-top: 0.6em; text-align: center;">
+                    <span class="badge badge-orange">Process: Sequential</span>
+                    <span class="badge badge-purple">LLM: GPT-4o</span>
+                    <span class="badge badge-blue">Output: Structured Report + ESC-XXXXX Reference</span>
+                </p>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 16: REFLECTION LOOP                                    -->
+            <!-- ============================================================ -->
+            <section>
+                <h2>Reflection &amp; Self-Correction</h2>
+                <div class="grid-2">
+                    <div>
+                        <h4 style="font-size: 0.7em;">Quality Assessment Criteria</h4>
+                        <div class="card">
+                            <p>1️⃣ <strong>Relevance</strong> — Does it address the query?</p>
+                            <p>2️⃣ <strong>Groundedness</strong> — Based on context only? (No hallucination)</p>
+                            <p>3️⃣ <strong>Completeness</strong> — Fully answers the question?</p>
+                            <p>4️⃣ <strong>Tone</strong> — Appropriate for the situation?</p>
+                            <p>5️⃣ <strong>Actionability</strong> — Clear next steps for user?</p>
+                        </div>
+
+                        <pre style="margin-top:0.5em"><code class="language-python" style="font-size: 0.9em;">class QualityCheck(BaseModel):
+    is_relevant: bool
+    is_grounded: bool
+    is_complete: bool
+    quality_score: int  # 1-10
+    feedback: str</code></pre>
+                    </div>
+
+                    <div>
+                        <h4 style="font-size: 0.7em;">Reflection Loop Flow</h4>
+                        <div class="diagram" style="font-size: 0.48em;">
+                            department_rag_agent
+                            │ generates answer
+                            ▼
+                            ┌──────────────┐
+                            │ reflect │
+                            │ │
+                            │ GPT-4o runs │
+                            │ quality check│
+                            │ │
+                            │ score ≥ 7? │
+                            │ ┌─────────┐ │
+                            │ │ YES │──┼──▶ END ✅
+                            │ └─────────┘ │
+                            │ ┌─────────┐ │
+                            │ │ NO │──┼──▶ regenerate
+                            │ └─────────┘ │ with feedback
+                            │ │ │
+                            │ retries < 3? │ │ │ YES → loop ◄─┼────────┘ │ NO → accept │ └──────────────┘ </div>
+
+                                <div class="card" style="margin-top: 0.4em;">
+                                    <h4 style="font-size: 0.65em;">⚙️ Configuration</h4>
+                                    <p><code>MAX_REFLECTION_ATTEMPTS = 3</code></p>
+                                    <p><code>quality_score threshold = 7</code></p>
+                                    <p>Uses <code>REGENERATION_PROMPT</code> with feedback</p>
+                                </div>
+                        </div>
+                    </div>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 17: CROSS-DEPARTMENT HANDOFFS                          -->
+            <!-- ============================================================ -->
+            <section>
+                <h2>Cross-Department Handoffs</h2>
+
+                <div class="grid-2">
+                    <div>
+                        <h4 style="font-size: 0.7em;">How Transfer Detection Works</h4>
+                        <div class="numbered-step">
+                            <div class="step-num">1</div>
+                            <div style="font-size: 0.8em;"><strong>SUGGEST_TRANSFER tag</strong> — Agent embeds
+                                <code>[SUGGEST_TRANSFER: dept_key]</code> in response
+                            </div>
+                        </div>
+                        <div class="numbered-step">
+                            <div class="step-num">2</div>
+                            <div style="font-size: 0.8em;"><strong>Tag parsing</strong> — Orchestrator strips tag,
+                                populates <code>suggested_transfer</code></div>
+                        </div>
+                        <div class="numbered-step">
+                            <div class="step-num">3</div>
+                            <div style="font-size: 0.8em;"><strong>Fallback detection</strong> — If no tag but response
+                                says "reach out to Shipping", best-match scoring finds the dept</div>
+                        </div>
+                        <div class="numbered-step">
+                            <div class="step-num">4</div>
+                            <div style="font-size: 0.8em;"><strong>User confirms</strong> — Streamlit shows transfer
+                                button; API uses <code>/transfer</code> endpoint</div>
+                        </div>
+                        <div class="numbered-step">
+                            <div class="step-num">5</div>
+                            <div style="font-size: 0.8em;"><strong>Re-run</strong> —
+                                <code>run_query_for_department()</code> skips classification, goes straight to RAG
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 style="font-size: 0.7em;">Transfer Keyword Detection</h4>
+                        <div class="card">
+                            <p style="font-size: 0.58em; line-height: 1.8;">
+                                <code>connect me</code> · <code>transfer me</code> · <code>speak to</code> ·
+                                <code>talk to</code> · <code>chat with</code> · <code>put me through</code> ·
+                                <code>redirect me</code> · <code>route me</code> · <code>switch me</code> ·
+                                <code>can i speak</code> · <code>can i talk</code> · <code>can i chat</code> ·
+                                <code>let me talk</code> · <code>i need to speak</code> · <code>i want to speak</code> ·
+                                <code>i want to talk</code> · <code>connect to</code> · <code>transfer to</code> ·
+                                <code>pass me to</code> · <code>pass me</code> · <code>customer service</code> ·
+                                <code>speak with</code> · <code>talk with</code>
+                            </p>
+                            <p class="small" style="margin-top:0.3em;">22 phrases — when detected, agent introduces
+                                itself as the department and asks how to help</p>
+                        </div>
+
+                        <h4 style="font-size: 0.7em; margin-top: 0.5em;">Conversation-Aware Context</h4>
+                        <div class="card">
+                            <p style="font-size: 0.6em;">
+                                The classifier feeds the <strong>last 3 conversation turns</strong> so that
+                                "pass me to customer service" after a shipping conversation → routes to
+                                <span class="hlc">shipping_delivery</span>, not unknown.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 18: MEMORY & USER MANAGEMENT                           -->
+            <!-- ============================================================ -->
+            <section>
+                <h2>Memory &amp; User Management</h2>
+
+                <div class="grid-2">
+                    <div>
+                        <h4 style="font-size: 0.7em;">Persistent Memory</h4>
+                        <div class="card">
+                            <p>• <strong>SqliteSaver</strong> from LangGraph — file-backed checkpointer</p>
+                            <p>• Each user gets isolated thread: <code>user_{email}</code></p>
+                            <p>• Survives server restarts</p>
+                            <p>• Conversations recalled on return</p>
+                            <p>• Different users never see each other's history</p>
+                        </div>
+
+                        <h4 style="font-size: 0.7em; margin-top: 0.5em;">Farewell Handling</h4>
+                        <div class="card">
+                            <p>25+ farewell phrases detected ("bye", "no thanks", "that's all", etc.)</p>
+                            <p>Friendly sign-off without triggering agent pipeline</p>
+                            <p>Avoids misrouting "no" as a negative sentiment query</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 style="font-size: 0.7em;">Demo Users</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Email</th>
+                                    <th>Name</th>
+                                    <th>Role</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>sarah@gmail.com</code></td>
+                                    <td>Sarah Ahmed</td>
+                                    <td>Customer (Gold)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>james@outlook.com</code></td>
+                                    <td>James Wilson</td>
+                                    <td>Customer (Silver)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>emma@yahoo.com</code></td>
+                                    <td>Emma Chen</td>
+                                    <td>Customer (Bronze)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>ali@hotmail.com</code></td>
+                                    <td>Ali Khan</td>
+                                    <td>Customer (Standard)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>maria@gmail.com</code></td>
+                                    <td>Maria Lopez</td>
+                                    <td>Customer (Gold)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>priya@shop4you.com</code></td>
+                                    <td>Priya Sharma</td>
+                                    <td>Employee (HR)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>mike@shop4you.com</code></td>
+                                    <td>Mike Thompson</td>
+                                    <td>Employee (IT)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>fatima@shop4you.com</code></td>
+                                    <td>Fatima Noor</td>
+                                    <td>Employee (Loyalty)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="small" style="margin-top:0.3em;">Unknown emails auto-register: @shop4you.com →
+                            employee, anything else → customer</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 19: SECTION DIVIDER — DEPLOYMENT                       -->
+            <!-- ============================================================ -->
+            <section class="section-slide" data-background-gradient="linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)">
+                <h2 class="gradient-text">Deployment &amp; Interfaces</h2>
+                <p style="color: rgba(255,255,255,0.5); font-size: 0.7em;">Streamlit · FastAPI · CLI · Jupyter</p>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 20: STREAMLIT UI                                       -->
+            <!-- ============================================================ -->
+            <section>
+                <h2>Streamlit Chat Interface</h2>
+
+                <div style="margin-bottom: 0.4em;">
+                    <h4 style="font-size: 0.65em; margin-bottom: 0.2em;">▶ Launch Command</h4>
+                    <pre style="margin: 0;"><code>conda activate shop4you
+streamlit run streamlit_app.py --server.port 8501
+# Opens at → http://localhost:8501</code></pre>
+                </div>
+
+                <div class="grid-2">
+                    <div>
+                        <h4 style="font-size: 0.7em;">Features</h4>
+                        <div class="card">
+                            <p>✅ Email-based login (try: <code>sarah@gmail.com</code> or
+                                <code>priya@shop4you.com</code>)
+                            </p>
+                            <p>✅ ChatGPT-style chat bubbles with metadata row</p>
+                            <p>✅ Real-time department, sentiment, severity, quality score display</p>
+                            <p>✅ Expandable CrewAI investigation reports</p>
+                            <p>✅ One-click cross-department transfer buttons</p>
+                            <p>✅ Farewell detection (no agent call for goodbyes)</p>
+                            <p>✅ New Chat / Logout / Switch User controls</p>
+                            <p>✅ Sidebar user badge (name, tier/dept, email)</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 0.7em;">User Journey</h4>
+                        <div style="margin-top: 0.3em;">
+                            <div class="numbered-step" style="font-size: 0.65em;">
+                                <div class="step-num" style="width:24px; height:24px; font-size:0.7em;">1</div>
+                                <div>User enters email → system identifies role + tier</div>
+                            </div>
+                            <div class="numbered-step" style="font-size: 0.65em;">
+                                <div class="step-num" style="width:24px; height:24px; font-size:0.7em;">2</div>
+                                <div>User types question → spinner "Thinking..."</div>
+                            </div>
+                            <div class="numbered-step" style="font-size: 0.65em;">
+                                <div class="step-num" style="width:24px; height:24px; font-size:0.7em;">3</div>
+                                <div>Response + metadata row appears (dept, sentiment, score)</div>
+                            </div>
+                            <div class="numbered-step" style="font-size: 0.65em;">
+                                <div class="step-num" style="width:24px; height:24px; font-size:0.7em;">4</div>
+                                <div>If escalated → CrewAI report expandable + ESC-# shown</div>
+                            </div>
+                            <div class="numbered-step" style="font-size: 0.65em;">
+                                <div class="step-num" style="width:24px; height:24px; font-size:0.7em;">5</div>
+                                <div>If cross-dept → "Transfer to X" button appears</div>
+                            </div>
+                            <div class="numbered-step" style="font-size: 0.65em;">
+                                <div class="step-num" style="width:24px; height:24px; font-size:0.7em;">6</div>
+                                <div>Follow-up: "Anything else I can help with?"</div>
+                            </div>
+                            <div class="numbered-step" style="font-size: 0.65em;">
+                                <div class="step-num" style="width:24px; height:24px; font-size:0.7em;">7</div>
+                                <div>"Bye" / "No thanks" → graceful farewell, no agent call</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 21: FASTAPI + CLI                                      -->
+            <!-- ============================================================ -->
+            <section>
+                <h2>FastAPI REST API &amp; CLI</h2>
+
+                <div style="margin-bottom: 0.4em;">
+                    <h4 style="font-size: 0.65em; margin-bottom: 0.2em;">▶ Launch Commands</h4>
+                    <pre style="margin: 0;"><code># FastAPI server                         # CLI REPL
+conda activate shop4you                  conda activate shop4you
+uvicorn app:app --reload                 python main.py
+# Swagger UI → http://localhost:8000/docs
+# Jupyter demo → open demo.ipynb in VS Code / Jupyter</code></pre>
+                </div>
+
+                <div class="grid-2">
+                    <div>
+                        <h4 style="font-size: 0.7em;">6 API Endpoints</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Method</th>
+                                    <th>Path</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>POST</code></td>
+                                    <td><code>/chat</code></td>
+                                    <td>Send query → get response + metadata</td>
+                                </tr>
+                                <tr>
+                                    <td><code>POST</code></td>
+                                    <td><code>/transfer</code></td>
+                                    <td>Cross-dept handoff to specific dept</td>
+                                </tr>
+                                <tr>
+                                    <td><code>GET</code></td>
+                                    <td><code>/departments</code></td>
+                                    <td>List all 8 departments</td>
+                                </tr>
+                                <tr>
+                                    <td><code>GET</code></td>
+                                    <td><code>/history/{uid}</code></td>
+                                    <td>Get user's conversation</td>
+                                </tr>
+                                <tr>
+                                    <td><code>DELETE</code></td>
+                                    <td><code>/history/{uid}</code></td>
+                                    <td>Clear user's history</td>
+                                </tr>
+                                <tr>
+                                    <td><code>GET</code></td>
+                                    <td><code>/health</code></td>
+                                    <td>Liveness check</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="card" style="margin-top: 0.5em;">
+                            <h4 style="font-size: 0.65em;">Example <code>curl</code> Commands</h4>
+                            <pre style="margin:0;"><code style="font-size:0.85em;"># Chat
+curl -X POST http://localhost:8000/chat \
+  -H "Content-Type: application/json" \
+  -d '{"query": "Return policy?",
+       "user_id": "sarah@gmail.com"}'
+
+# Transfer to Shipping
+curl -X POST http://localhost:8000/transfer \
+  -d '{"query": "Track my parcel",
+       "target_department": "shipping_delivery",
+       "user_id": "sarah@gmail.com"}'
+
+# Health check
+curl http://localhost:8000/health</code></pre>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 style="font-size: 0.7em;">CLI Interface (Rich)</h4>
+                        <div class="card">
+                            <p>Launch: <code>python main.py</code></p>
+                            <p>• Prompts for user ID → persistent SQLite memory</p>
+                            <p>• Rich panels &amp; coloured output (dept, sentiment, quality)</p>
+                            <p>• Shows escalation ref# for CrewAI cases</p>
+                            <p>• Type <code>quit</code> / <code>exit</code> to end session</p>
+                        </div>
+
+                        <h4 style="font-size: 0.7em; margin-top: 0.5em;">Jupyter <code>demo.ipynb</code> — 9 Cells</h4>
+                        <div class="card">
+                            <p>1️⃣ Customer RAG: <code>"What payment methods do you accept?"</code></p>
+                            <p>2️⃣ Employee RAG: <code>"How do I apply for annual leave?"</code></p>
+                            <p>3️⃣ Product tool: <code>"Do you have running shoes in stock?"</code></p>
+                            <p>4️⃣ Loyalty tool: <code>"Check loyalty points for EMP003"</code></p>
+                            <p>5️⃣ Escalation (angry): <code>"Terrible! Waiting 3 weeks!"</code></p>
+                            <p>6️⃣ Escalation (unknown): <code>"Help me file my taxes"</code></p>
+                            <p>7️⃣ Multi-turn memory (Alice + ORD-12345)</p>
+                            <p>8️⃣ Memory isolation (User X vs Y)</p>
+                            <p>9️⃣ REST API test (<code>requests</code> to /health, /chat)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 22: PROMPT ENGINEERING                                 -->
+            <!-- ============================================================ -->
+            <section>
+                <h2>Prompt Engineering</h2>
+                <div class="grid-2">
+                    <div>
+                        <h4 style="font-size: 0.7em;">5 Prompt Templates</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Prompt</th>
+                                    <th>Purpose</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>CLASSIFICATION_PROMPT</code></td>
+                                    <td>Routes query to dept + sentiment + severity</td>
+                                </tr>
+                                <tr>
+                                    <td><code>RAG_PROMPT</code></td>
+                                    <td>Generates answer from KB context + tools</td>
+                                </tr>
+                                <tr>
+                                    <td><code>REFLECTION_PROMPT</code></td>
+                                    <td>Quality-checks the generated response</td>
+                                </tr>
+                                <tr>
+                                    <td><code>REGENERATION_PROMPT</code></td>
+                                    <td>Improves response using quality feedback</td>
+                                </tr>
+                                <tr>
+                                    <td><code>ESCALATION_MESSAGE</code></td>
+                                    <td>User-facing escalation + contact form</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div>
+                        <h4 style="font-size: 0.7em;">Key Prompt Design Decisions</h4>
+                        <div class="card">
+                            <p>🔒 <strong>No hallucination:</strong> "Answer using ONLY the knowledge base context"</p>
+                        </div>
+                        <div class="card">
+                            <p>🔀 <strong>Cross-dept tags:</strong> Agent told to embed
+                                <code>[SUGGEST_TRANSFER: dept]</code>
+                            </p>
+                        </div>
+                        <div class="card">
+                            <p>🤝 <strong>"You ARE customer service" override:</strong> Rewrites KB phrases like
+                                "contact our team" into first-person</p>
+                        </div>
+                        <div class="card">
+                            <p>🏢 <strong>External/Internal guardrails:</strong> Explicit rules preventing customer → HR
+                                routing</p>
+                        </div>
+                        <div class="card">
+                            <p>💬 <strong>Conversation history:</strong> Last 3 turns injected for follow-up
+                                understanding</p>
+                        </div>
+                        <div class="card">
+                            <p>🇬🇧 <strong>British English:</strong> "colour", "organisation", "programme"</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 23: SECTION DIVIDER — TESTING                          -->
+            <!-- ============================================================ -->
+            <section class="section-slide" data-background-gradient="linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)">
+                <h2 class="gradient-text">Testing &amp; Results</h2>
+                <p style="color: rgba(255,255,255,0.5); font-size: 0.7em;">70/70 orchestration · 13/13 pytest · 10/10
+                    demo scenarios</p>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 24: TEST RESULTS                                       -->
+            <!-- ============================================================ -->
+            <section>
+                <h2>Test Results</h2>
+
+                <div class="stats-row" style="margin-bottom: 0.8em;">
+                    <div class="stat-card" style="border: 1px solid var(--green);">
+                        <div class="number" style="color: var(--green);">70/70</div>
+                        <div class="label">Orchestration Tests</div>
+                    </div>
+                    <div class="stat-card" style="border: 1px solid var(--green);">
+                        <div class="number" style="color: var(--green);">13/13</div>
+                        <div class="label">Pytest (RAG+Agent+Memory)</div>
+                    </div>
+                </div>
+
+                <h4 style="font-size: 0.7em;">Orchestration Test Breakdown</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th style="text-align:center;">Tests</th>
+                            <th style="text-align:center;">Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Normal routing (all 8 departments)</td>
+                            <td style="text-align:center;">8</td>
+                            <td style="text-align:center;"><span class="hlg">8/8</span></td>
+                        </tr>
+                        <tr>
+                            <td>Cross-department forced transfers</td>
+                            <td style="text-align:center;">6</td>
+                            <td style="text-align:center;"><span class="hlg">6/6</span></td>
+                        </tr>
+                        <tr>
+                            <td>Escalation severity boundary</td>
+                            <td style="text-align:center;">8</td>
+                            <td style="text-align:center;"><span class="hlg">8/8</span></td>
+                        </tr>
+                        <tr>
+                            <td>Transfer keyword detection (22 phrases)</td>
+                            <td style="text-align:center;">8</td>
+                            <td style="text-align:center;"><span class="hlg">8/8</span></td>
+                        </tr>
+                        <tr>
+                            <td>Generic "customer service" (no history)</td>
+                            <td style="text-align:center;">3</td>
+                            <td style="text-align:center;"><span class="hlg">3/3</span></td>
+                        </tr>
+                        <tr>
+                            <td>Chain transfers (A → B → C)</td>
+                            <td style="text-align:center;">3</td>
+                            <td style="text-align:center;"><span class="hlg">3/3</span></td>
+                        </tr>
+                        <tr>
+                            <td>Ambiguous/tricky queries</td>
+                            <td style="text-align:center;">7</td>
+                            <td style="text-align:center;"><span class="hlg">7/7</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>run_query_for_department()</code> forced</td>
+                            <td style="text-align:center;">4</td>
+                            <td style="text-align:center;"><span class="hlg">4/4</span></td>
+                        </tr>
+                        <tr>
+                            <td>No "contact customer service" leaks</td>
+                            <td style="text-align:center;">5</td>
+                            <td style="text-align:center;"><span class="hlg">5/5</span></td>
+                        </tr>
+                        <tr>
+                            <td>Multi-turn follow-ups</td>
+                            <td style="text-align:center;">5</td>
+                            <td style="text-align:center;"><span class="hlg">5/5</span></td>
+                        </tr>
+                        <tr>
+                            <td>Escalation + edge cases</td>
+                            <td style="text-align:center;">10</td>
+                            <td style="text-align:center;"><span class="hlg">10/10</span></td>
+                        </tr>
+                        <tr>
+                            <td>Product → Orders retry (3 runs)</td>
+                            <td style="text-align:center;">3</td>
+                            <td style="text-align:center;"><span class="hlg">3/3</span></td>
+                        </tr>
+                        <tr style="font-weight:700; border-top: 2px solid var(--green);">
+                            <td>TOTAL</td>
+                            <td style="text-align:center;">70</td>
+                            <td style="text-align:center;"><span class="hlg">70/70 ✅</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div style="margin-top: 0.4em;">
+                    <h4 style="font-size: 0.65em;">Run Tests Yourself</h4>
+                    <pre style="margin: 0;"><code>conda activate shop4you
+cd capstone_projects/shop4you
+
+# All 13 pytest tests in one command
+python -m pytest test_rag.py test_agent.py test_memory_isolation.py -v --tb=short
+
+# 70 orchestration tests (needs OpenAI API key, ~5 min)
+python test_orchestration.py
+
+# 10-scenario Rich demo (all should score 9-10/10)
+python demo_customer_showcase.py</code></pre>
+                </div>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 25: TECH STACK                                         -->
+            <!-- ============================================================ -->
+            <section>
+                <h2>Tech Stack</h2>
+                <div class="grid-3">
+                    <div class="card" style="text-align: center;">
+                        <p style="font-size: 1.4em; margin: 0;">🧠</p>
+                        <h4 style="font-size: 0.65em;">LLM</h4>
+                        <p>GPT-4o (OpenAI)<br>via <code>langchain-openai</code></p>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <p style="font-size: 1.4em; margin: 0;">🔗</p>
+                        <h4 style="font-size: 0.65em;">Orchestration</h4>
+                        <p>LangGraph 1.0<br>Stateful graph + conditional routing</p>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <p style="font-size: 1.4em; margin: 0;">🤖</p>
+                        <h4 style="font-size: 0.65em;">Multi-Agent</h4>
+                        <p>CrewAI 1.9<br>Sequential 3-agent crew</p>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <p style="font-size: 1.4em; margin: 0;">🔍</p>
+                        <h4 style="font-size: 0.65em;">Embeddings</h4>
+                        <p><code>text-embedding-3-small</code><br>ChromaDB (cosine similarity)</p>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <p style="font-size: 1.4em; margin: 0;">💾</p>
+                        <h4 style="font-size: 0.65em;">Memory</h4>
+                        <p>SqliteSaver<br>Persistent per-user threads</p>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <p style="font-size: 1.4em; margin: 0;">🖥️</p>
+                        <h4 style="font-size: 0.65em;">Chat UI</h4>
+                        <p>Streamlit 1.54<br>Custom CSS theme</p>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <p style="font-size: 1.4em; margin: 0;">⚡</p>
+                        <h4 style="font-size: 0.65em;">API</h4>
+                        <p>FastAPI + Uvicorn<br>6 REST endpoints + Swagger</p>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <p style="font-size: 1.4em; margin: 0;">🐍</p>
+                        <h4 style="font-size: 0.65em;">Runtime</h4>
+                        <p>Python 3.12<br>Conda (<code>shop4you</code> env)</p>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <p style="font-size: 1.4em; margin: 0;">📊</p>
+                        <h4 style="font-size: 0.65em;">CLI</h4>
+                        <p>Rich<br>Panels, tables, markdown</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 26: FILE STRUCTURE                                     -->
+            <!-- ============================================================ -->
+            <section>
+                <h2>Project File Structure</h2>
+                <div class="grid-2">
+                    <div>
+                        <h4 style="font-size: 0.7em;">Core Code</h4>
+                        <pre style="font-size: 0.45em;"><code>shop4you/
+├── agents.py ──────────── LangGraph graph (701 lines)
+├── escalation_crew.py ─── CrewAI 3-agent crew (256 lines)
+├── prompts.py ─────────── 5 prompt templates (275 lines)
+├── tools.py ───────────── 6 @tool functions
+├── config.py ──────────── Settings + 8 dept definitions
+├── vector_store.py ────── ChromaDB ingestion + retrieval
+├── users.py ───────────── 10 demo users + auto-register
+├── orders_db.py ───────── 11 demo orders</code></pre>
+
+                        <h4 style="font-size: 0.7em; margin-top: 0.4em;">Interfaces</h4>
+                        <pre style="font-size: 0.45em;"><code>├── streamlit_app.py ──── Streamlit Chat UI (463 lines)
+├── app.py ────────────── FastAPI REST API (187 lines)
+├── main.py ───────────── CLI with Rich
+├── demo.ipynb ────────── Jupyter demo walkthrough</code></pre>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 0.7em;">Data &amp; Storage</h4>
+                        <pre style="font-size: 0.45em;"><code>├── data/
+│   ├── billing_payments.json (25 QA)
+│   ├── hr.json (25 QA)
+│   ├── it_helpdesk.json (25 QA)
+│   ├── loyalty_programme.json (25 QA)
+│   ├── operations.json (25 QA)
+│   ├── orders_returns.json (25 QA)
+│   ├── product_inquiries.json (25 QA)
+│   └── shipping_delivery.json (25 QA)
+├── knowledge_base/chroma/ ── 200 vectors
+├── shop4you_memory.db ────── SQLite memory</code></pre>
+
+                        <h4 style="font-size: 0.7em; margin-top: 0.4em;">Tests &amp; Docs</h4>
+                        <pre style="font-size: 0.45em;"><code>├── conftest.py ───────── Shared pytest fixtures (vs, agent)
+├── test_rag.py ───────── 5 RAG tests
+├── test_agent.py ─────── 7 E2E tests
+├── test_memory_isolation.py ── isolation test
+├── test_orchestration.py ──── 70 routing/orchestration tests
+├── demo_customer_showcase.py ── 10-scenario Rich demo
+├── docs/
+│   ├── TESTING_GUIDE.md
+│   ├── PROJECT_STEPS.md/.html
+│   └── shop4you_data_reference.html</code></pre>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 27: SETUP & PREREQUISITES                              -->
+            <!-- ============================================================ -->
+            <section>
+                <h2 style="font-size:1.15em;">Setup &amp; Prerequisites</h2>
+                <p style="font-size:0.42em; color:rgba(255,255,255,0.4); margin-bottom:0.25em;">4 steps from clone →
+                    running demo &nbsp;·&nbsp; Requires: Python 3.12, Conda, OpenAI API key</p>
+
+                <div
+                    style="display:grid; grid-template-columns:1fr 1fr; gap:0.35em 0.5em; max-width:96%; margin:0 auto;">
+                    <!-- Step 1 -->
+                    <div
+                        style="background:rgba(255,255,255,0.04); border-left:3px solid var(--accent); border-radius:8px; padding:0.3em 0.5em;">
+                        <div style="display:flex; align-items:center; gap:0.3em; margin-bottom:0.15em;">
+                            <span
+                                style="background:var(--accent); color:#fff; border-radius:50%; min-width:1.3em; height:1.3em; display:inline-flex; align-items:center; justify-content:center; font-size:0.4em; font-weight:700;">1</span>
+                            <strong style="font-size:0.48em;">Environment Setup</strong>
+                        </div>
+                        <pre
+                            style="font-size:0.52em; margin:0; padding:0.25em 0.35em; background:rgba(0,0,0,0.3); border-radius:6px;"><code style="font-size:0.95em;">cd capstone_projects/shop4you
+conda create -n shop4you python=3.12 -y
+conda activate shop4you
+pip install -r requirements.txt  # 80 pkgs</code></pre>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div
+                        style="background:rgba(255,255,255,0.04); border-left:3px solid var(--orange); border-radius:8px; padding:0.3em 0.5em;">
+                        <div style="display:flex; align-items:center; gap:0.3em; margin-bottom:0.15em;">
+                            <span
+                                style="background:var(--orange); color:#fff; border-radius:50%; min-width:1.3em; height:1.3em; display:inline-flex; align-items:center; justify-content:center; font-size:0.4em; font-weight:700;">2</span>
+                            <strong style="font-size:0.48em;">API Key</strong>
+                        </div>
+                        <pre
+                            style="font-size:0.52em; margin:0; padding:0.25em 0.35em; background:rgba(0,0,0,0.3); border-radius:6px;"><code style="font-size:0.95em;">echo OPENAI_API_KEY=your_openai_api_key > .env
+# → GPT-4o (LLM) + text-embedding-3-small</code></pre>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div
+                        style="background:rgba(255,255,255,0.04); border-left:3px solid var(--cyan); border-radius:8px; padding:0.3em 0.5em;">
+                        <div style="display:flex; align-items:center; gap:0.3em; margin-bottom:0.15em;">
+                            <span
+                                style="background:var(--cyan); color:#fff; border-radius:50%; min-width:1.3em; height:1.3em; display:inline-flex; align-items:center; justify-content:center; font-size:0.4em; font-weight:700;">3</span>
+                            <strong style="font-size:0.48em;">Build Knowledge Base</strong>
+                        </div>
+                        <pre
+                            style="font-size:0.52em; margin:0; padding:0.25em 0.35em; background:rgba(0,0,0,0.3); border-radius:6px;"><code style="font-size:0.95em;">python generate_data.py   # 200 QA pairs → 8 JSON
+python vector_store.py    # embed → ChromaDB</code></pre>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div
+                        style="background:rgba(255,255,255,0.04); border-left:3px solid var(--green); border-radius:8px; padding:0.3em 0.5em;">
+                        <div style="display:flex; align-items:center; gap:0.3em; margin-bottom:0.15em;">
+                            <span
+                                style="background:var(--green); color:#fff; border-radius:50%; min-width:1.3em; height:1.3em; display:inline-flex; align-items:center; justify-content:center; font-size:0.4em; font-weight:700;">4</span>
+                            <strong style="font-size:0.48em;">Launch Interfaces</strong>
+                        </div>
+                        <pre
+                            style="font-size:0.52em; margin:0; padding:0.25em 0.35em; background:rgba(0,0,0,0.3); border-radius:6px;"><code style="font-size:0.95em;">streamlit run streamlit_app.py  # :8501
+uvicorn app:app --reload        # :8000/docs
+python main.py                  # CLI REPL
+# demo.ipynb                    # Jupyter</code></pre>
+                    </div>
+                </div>
+
+                <!-- Verify bar -->
+                <div
+                    style="margin-top:0.3em; background:rgba(102,126,234,0.1); border:1px solid rgba(102,126,234,0.3); border-radius:8px; padding:0.2em 0.5em; text-align:center;">
+                    <p style="font-size:0.44em; margin:0;">✅ <strong>Verify:</strong> <code
+                            style="font-size:0.9em;">python -c "from agents import compile_graph, run_query; print('All imports OK')"</code>
+                    </p>
+                </div>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 28: DEMO FLOW                                          -->
+            <!-- ============================================================ -->
+            <section>
+                <h2 style="font-size:1.15em;">Demo Walkthrough &amp; Exact Queries</h2>
+                <p style="font-size:0.44em; color:rgba(255,255,255,0.4); margin-bottom:0.2em;">
+                    <code style="font-size:0.9em;">streamlit run streamlit_app.py</code> &nbsp;·&nbsp;
+                    <code style="font-size:0.9em;">python main.py</code> &nbsp;·&nbsp;
+                    <code style="font-size:0.9em;">demo.ipynb</code>
+                </p>
+                <div
+                    style="display:grid; grid-template-columns:1fr 1fr; gap:0.25em 0.45em; text-align:left; max-width:96%; margin:0 auto;">
+                    <!-- Step 1 -->
+                    <div
+                        style="display:flex; align-items:flex-start; gap:0.3em; background:rgba(255,255,255,0.04); border-radius:8px; padding:0.22em 0.4em;">
+                        <span
+                            style="background:var(--accent); color:#fff; border-radius:50%; min-width:1.4em; height:1.4em; display:inline-flex; align-items:center; justify-content:center; font-size:0.42em; font-weight:700; flex-shrink:0; margin-top:0.15em;">1</span>
+                        <div style="font-size:0.42em; line-height:1.35;">
+                            <strong>Login</strong> — <code>sarah@gmail.com</code><br>
+                            <span style="opacity:0.55;">→ "Welcome Sarah Ahmed (Gold)" + 3 orders</span>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div
+                        style="display:flex; align-items:flex-start; gap:0.3em; background:rgba(255,255,255,0.04); border-radius:8px; padding:0.22em 0.4em;">
+                        <span
+                            style="background:var(--accent); color:#fff; border-radius:50%; min-width:1.4em; height:1.4em; display:inline-flex; align-items:center; justify-content:center; font-size:0.42em; font-weight:700; flex-shrink:0; margin-top:0.15em;">2</span>
+                        <div style="font-size:0.42em; line-height:1.35;">
+                            <strong>RAG</strong> — <code>What is your return policy?</code><br>
+                            <span style="opacity:0.55;">→ <span class="hlc">orders_returns</span> · Score 9-10</span>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div
+                        style="display:flex; align-items:flex-start; gap:0.3em; background:rgba(255,255,255,0.04); border-radius:8px; padding:0.22em 0.4em;">
+                        <span
+                            style="background:var(--accent); color:#fff; border-radius:50%; min-width:1.4em; height:1.4em; display:inline-flex; align-items:center; justify-content:center; font-size:0.42em; font-weight:700; flex-shrink:0; margin-top:0.15em;">3</span>
+                        <div style="font-size:0.42em; line-height:1.35;">
+                            <strong>Order Lookup</strong> — <code>Look up order ORD-4290</code><br>
+                            <span style="opacity:0.55;">→ <span class="hlc">orders_returns</span> +
+                                <code>lookup_orders</code></span>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div
+                        style="display:flex; align-items:flex-start; gap:0.3em; background:rgba(255,255,255,0.04); border-radius:8px; padding:0.22em 0.4em;">
+                        <span
+                            style="background:var(--accent); color:#fff; border-radius:50%; min-width:1.4em; height:1.4em; display:inline-flex; align-items:center; justify-content:center; font-size:0.42em; font-weight:700; flex-shrink:0; margin-top:0.15em;">4</span>
+                        <div style="font-size:0.42em; line-height:1.35;">
+                            <strong>Product Search</strong> — <code>Blue wool jumper in medium?</code><br>
+                            <span style="opacity:0.55;">→ <span class="hlc">product_inquiries</span> +
+                                <code>search_product</code></span>
+                        </div>
+                    </div>
+                    <!-- Step 5 -->
+                    <div
+                        style="display:flex; align-items:flex-start; gap:0.3em; background:rgba(255,255,255,0.04); border-radius:8px; padding:0.22em 0.4em;">
+                        <span
+                            style="background:var(--accent); color:#fff; border-radius:50%; min-width:1.4em; height:1.4em; display:inline-flex; align-items:center; justify-content:center; font-size:0.42em; font-weight:700; flex-shrink:0; margin-top:0.15em;">5</span>
+                        <div style="font-size:0.42em; line-height:1.35;">
+                            <strong>Billing RAG</strong> — <code>Charged twice, how do refunds work?</code><br>
+                            <span style="opacity:0.55;">→ <span class="hlc">billing_payments</span> · Score 9-10</span>
+                        </div>
+                    </div>
+                    <!-- Step 6 -->
+                    <div
+                        style="display:flex; align-items:flex-start; gap:0.3em; background:rgba(255,255,255,0.04); border-radius:8px; padding:0.22em 0.4em;">
+                        <span
+                            style="background:var(--orange); color:#fff; border-radius:50%; min-width:1.4em; height:1.4em; display:inline-flex; align-items:center; justify-content:center; font-size:0.42em; font-weight:700; flex-shrink:0; margin-top:0.15em;">6</span>
+                        <div style="font-size:0.42em; line-height:1.35;">
+                            <strong>Cross-Dept Transfer</strong> —
+                            <code>ORD-4821 says delivered but not received</code><br>
+                            <span style="opacity:0.55;">→ suggests <span class="hlo">shipping_delivery</span> →
+                                Transfer</span>
+                        </div>
+                    </div>
+                    <!-- Step 7 -->
+                    <div
+                        style="display:flex; align-items:flex-start; gap:0.3em; background:rgba(255,255,255,0.04); border-radius:8px; padding:0.22em 0.4em;">
+                        <span
+                            style="background:var(--orange); color:#fff; border-radius:50%; min-width:1.4em; height:1.4em; display:inline-flex; align-items:center; justify-content:center; font-size:0.42em; font-weight:700; flex-shrink:0; margin-top:0.15em;">7</span>
+                        <div style="font-size:0.42em; line-height:1.35;">
+                            <strong>Mild Negative</strong> — <code>Disappointed with t-shirt quality</code><br>
+                            <span style="opacity:0.55;">→ medium severity → RAG with empathy (not escalated)</span>
+                        </div>
+                    </div>
+                    <!-- Step 8 -->
+                    <div
+                        style="display:flex; align-items:flex-start; gap:0.3em; background:rgba(244,67,54,0.08); border-left:3px solid var(--red); border-radius:8px; padding:0.22em 0.4em;">
+                        <span
+                            style="background:var(--red); color:#fff; border-radius:50%; min-width:1.4em; height:1.4em; display:inline-flex; align-items:center; justify-content:center; font-size:0.42em; font-weight:700; flex-shrink:0; margin-top:0.15em;">8</span>
+                        <div style="font-size:0.42em; line-height:1.35;">
+                            <strong>🔥 HIGH → CrewAI</strong> — <code>Unacceptable! £80 shoes never received!</code><br>
+                            <span style="opacity:0.55;">→ <span class="hlr">HIGH</span> → 3-agent CrewAI report +
+                                ESC-XXXXX</span>
+                        </div>
+                    </div>
+                    <!-- Step 9 -->
+                    <div
+                        style="display:flex; align-items:flex-start; gap:0.3em; background:rgba(255,255,255,0.04); border-radius:8px; padding:0.22em 0.4em;">
+                        <span
+                            style="background:var(--accent2); color:#fff; border-radius:50%; min-width:1.4em; height:1.4em; display:inline-flex; align-items:center; justify-content:center; font-size:0.42em; font-weight:700; flex-shrink:0; margin-top:0.15em;">9</span>
+                        <div style="font-size:0.42em; line-height:1.35;">
+                            <strong>Memory Recall</strong> — <code>What about that blue jumper earlier?</code><br>
+                            <span style="opacity:0.55;">→ recalls context from turn 4</span>
+                        </div>
+                    </div>
+                    <!-- Step 10 -->
+                    <div
+                        style="display:flex; align-items:flex-start; gap:0.3em; background:rgba(255,255,255,0.04); border-radius:8px; padding:0.22em 0.4em;">
+                        <span
+                            style="background:var(--green); color:#fff; border-radius:50%; min-width:1.4em; height:1.4em; display:inline-flex; align-items:center; justify-content:center; font-size:0.42em; font-weight:700; flex-shrink:0; margin-top:0.15em;">10</span>
+                        <div style="font-size:0.42em; line-height:1.35;">
+                            <strong>Farewell</strong> — <code>That's everything, thank you! Bye!</code><br>
+                            <span style="opacity:0.55;">→ Friendly sign-off</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 28b: LIVE DEMO CHEAT SHEET - ALL COMMANDS              -->
+            <!-- ============================================================ -->
+            <section>
+                <h2 style="font-size:1.3em;">Live Demo Cheat Sheet</h2>
+                <p style="font-size:0.48em; color:rgba(255,255,255,0.45); margin-bottom:0.25em;">All commands and
+                    queries prepared — ready to paste.</p>
+                <div class="grid-2" style="gap:0.3em;">
+                    <div>
+                        <h4 style="font-size:0.58em; margin-bottom:0.15em;">🧪 Terminal 1 — Run All Tests</h4>
+                        <pre style="font-size:0.55em; margin:0; padding:0.3em 0.45em;"><code style="font-size:0.95em;">conda activate shop4you
+cd capstone_projects/shop4you
+
+# 13 pytest tests (RAG + Agent + Memory)
+python -m pytest test_rag.py test_agent.py \
+  test_memory_isolation.py -v --tb=short
+
+# 70 orchestration tests (~5 min)
+python test_orchestration.py
+
+# 10-scenario Rich demo
+python demo_customer_showcase.py</code></pre>
+
+                        <h4 style="font-size:0.58em; margin-top:0.25em; margin-bottom:0.15em;">🖥️ Terminal 2 —
+                            Streamlit</h4>
+                        <pre style="font-size:0.55em; margin:0; padding:0.3em 0.45em;"><code style="font-size:0.95em;">conda activate shop4you
+cd capstone_projects/shop4you
+streamlit run streamlit_app.py
+<span style="opacity:0.5;"># → http://localhost:8501</span></code></pre>
+
+                        <h4 style="font-size:0.58em; margin-top:0.25em; margin-bottom:0.15em;">⚡ Terminal 3 — FastAPI
+                        </h4>
+                        <pre style="font-size:0.55em; margin:0; padding:0.3em 0.45em;"><code style="font-size:0.95em;">uvicorn app:app --reload
+<span style="opacity:0.5;"># → http://localhost:8000/docs</span></code></pre>
+                    </div>
+                    <div>
+                        <h4 style="font-size:0.58em; margin-bottom:0.15em;">💬 Streamlit Demo Messages (login: <code
+                                style="font-size:0.9em;">sarah@gmail.com</code>)</h4>
+                        <div
+                            style="background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:0.3em 0.45em; font-size:0.48em; line-height:1.55; font-family:'Fira Code',monospace;">
+                            <div><span class="hlc">1.</span> What is your return policy? I bought something last week
+                                and it doesn't fit.</div>
+                            <div style="margin-top:0.2em;"><span class="hlc">2.</span> Could you look up my order
+                                ORD-4290 and tell me its current status and delivery date?</div>
+                            <div style="margin-top:0.2em;"><span class="hlc">3.</span> I'm looking for the blue wool
+                                jumper — is it available in medium size?</div>
+                            <div style="margin-top:0.2em;"><span class="hlc">4.</span> I was charged twice for my last
+                                order. Can you explain how refunds work?</div>
+                            <div style="margin-top:0.2em;"><span class="hlc">5.</span> My order ORD-4821 says delivered
+                                but I haven't received it. Can I track the parcel? <span style="color:var(--orange);">[→
+                                    Transfer]</span></div>
+                            <div style="margin-top:0.2em;"><span class="hlo">6.</span> I'm a bit disappointed with the
+                                quality of the t-shirt I received. The stitching looks poor.</div>
+                            <div style="margin-top:0.2em;"><span class="hlr">7.</span> This is absolutely unacceptable!
+                                I ordered a £80 pair of shoes THREE WEEKS AGO, order ORD-4821, and your website still
+                                says 'delivered' but I NEVER received them! <span style="color:var(--red);">[→
+                                    CrewAI]</span></div>
+                            <div style="margin-top:0.2em;"><span class="hlc">8.</span> Earlier I asked about the blue
+                                wool jumper. Can you remind me which order number that was and its status?</div>
+                            <div style="margin-top:0.2em;"><span class="hlc">9.</span> That's everything, thank you for
+                                your help! Bye!</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 29: API DEMO (self-sufficient)                         -->
+            <!-- ============================================================ -->
+            <section>
+                <h2 style="font-size:1.15em;">API Demo — Full Request &amp; Response</h2>
+                <p style="font-size:0.42em; color:rgba(255,255,255,0.4); margin-bottom:0.2em;">
+                    <code style="font-size:0.9em;">uvicorn app:app --reload</code> &nbsp;→&nbsp; Swagger at <code
+                        style="font-size:0.9em;">localhost:8000/docs</code>
+                </p>
+
+                <div
+                    style="display:grid; grid-template-columns:1fr 1fr; gap:0.3em 0.45em; max-width:96%; margin:0 auto;">
+                    <!-- POST /chat -->
+                    <div
+                        style="background:rgba(255,255,255,0.04); border-left:3px solid var(--accent); border-radius:8px; padding:0.25em 0.45em;">
+                        <div style="display:flex; align-items:center; gap:0.3em; margin-bottom:0.12em;">
+                            <span
+                                style="background:var(--accent); color:#fff; border-radius:4px; padding:0.05em 0.35em; font-size:0.36em; font-weight:700; font-family:'Fira Code',monospace;">POST</span>
+                            <strong style="font-size:0.44em; font-family:'Fira Code',monospace;">/chat</strong>
+                            <span style="font-size:0.38em; opacity:0.5; margin-left:auto;">Send Query</span>
+                        </div>
+                        <pre
+                            style="font-size:0.44em; margin:0; padding:0.2em 0.3em; background:rgba(0,0,0,0.3); border-radius:6px; line-height:1.35;"><code>curl -X POST localhost:8000/chat \
+  -H "Content-Type: application/json" \
+  -d '{"query": "What is your return policy?",
+       "user_id": "sarah@gmail.com"}'</code></pre>
+                    </div>
+
+                    <!-- Response -->
+                    <div
+                        style="background:rgba(255,255,255,0.04); border-left:3px solid var(--green); border-radius:8px; padding:0.25em 0.45em;">
+                        <div style="display:flex; align-items:center; gap:0.3em; margin-bottom:0.12em;">
+                            <span
+                                style="background:var(--green); color:#fff; border-radius:4px; padding:0.05em 0.35em; font-size:0.36em; font-weight:700;">200</span>
+                            <strong style="font-size:0.44em;">JSON Response</strong>
+                        </div>
+                        <pre
+                            style="font-size:0.44em; margin:0; padding:0.2em 0.3em; background:rgba(0,0,0,0.3); border-radius:6px; line-height:1.35;"><code>{ "response": "At Shop4You we offer a 30-day...",
+  "department": "orders_returns",
+  "sentiment": "neutral", "severity": "low",
+  "quality_score": 9, "escalated": false,
+  "reference_number": null }</code></pre>
+                    </div>
+
+                    <!-- POST /transfer -->
+                    <div
+                        style="background:rgba(255,255,255,0.04); border-left:3px solid var(--orange); border-radius:8px; padding:0.25em 0.45em;">
+                        <div style="display:flex; align-items:center; gap:0.3em; margin-bottom:0.12em;">
+                            <span
+                                style="background:var(--orange); color:#fff; border-radius:4px; padding:0.05em 0.35em; font-size:0.36em; font-weight:700; font-family:'Fira Code',monospace;">POST</span>
+                            <strong style="font-size:0.44em; font-family:'Fira Code',monospace;">/transfer</strong>
+                            <span style="font-size:0.38em; opacity:0.5; margin-left:auto;">Dept Handoff</span>
+                        </div>
+                        <pre
+                            style="font-size:0.44em; margin:0; padding:0.2em 0.3em; background:rgba(0,0,0,0.3); border-radius:6px; line-height:1.35;"><code>curl -X POST localhost:8000/transfer \
+  -d '{"query": "Track my parcel",
+       "target_department": "shipping_delivery",
+       "user_id": "sarah@gmail.com"}'</code></pre>
+                    </div>
+
+                    <!-- Other endpoints -->
+                    <div
+                        style="background:rgba(255,255,255,0.04); border-left:3px solid var(--cyan); border-radius:8px; padding:0.25em 0.45em;">
+                        <div style="display:flex; align-items:center; gap:0.3em; margin-bottom:0.12em;">
+                            <span
+                                style="background:var(--cyan); color:#fff; border-radius:4px; padding:0.05em 0.35em; font-size:0.36em; font-weight:700;">GET</span>
+                            <strong style="font-size:0.44em;">Other Endpoints</strong>
+                        </div>
+                        <pre
+                            style="font-size:0.44em; margin:0; padding:0.2em 0.3em; background:rgba(0,0,0,0.3); border-radius:6px; line-height:1.35;"><code>/health          → {"status":"healthy"}
+/departments     → [{key, name, audience}]
+/history/{uid}   → conversation history
+DELETE /history/{uid} → clear history</code></pre>
+                    </div>
+                </div>
+
+                <!-- Swagger note -->
+                <div
+                    style="margin-top:0.25em; background:rgba(102,126,234,0.08); border:1px solid rgba(102,126,234,0.25); border-radius:8px; padding:0.15em 0.5em; text-align:center;">
+                    <p style="font-size:0.4em; margin:0;">📖 Interactive docs with "Try it out" at
+                        <strong>localhost:8000/docs</strong> &nbsp;·&nbsp; All endpoints return structured JSON
+                    </p>
+                </div>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 30: KEY DESIGN DECISIONS                                -->
+            <!-- ============================================================ -->
+            <section>
+                <h2 style="font-size:1.3em;">Key Design Decisions</h2>
+                <div class="grid-2" style="gap:0.35em; margin-top:0.4em;">
+                    <div class="card" style="border-left:3px solid var(--accent); padding:0.45em 0.6em;">
+                        <h4 style="font-size:0.62em; margin:0 0 0.2em 0;">🎯 Why severity-based escalation?</h4>
+                        <p style="font-size:0.5em; margin:0; line-height:1.45;">Early testing showed
+                            <strong>all</strong> negative queries hit CrewAI — even mild "could be better" ones. Added 3
+                            severity tiers so only <span class="hlr">HIGH</span> queries escalate. Mild complaints get
+                            direct RAG help.
+                        </p>
+                    </div>
+                    <div class="card" style="border-left:3px solid var(--orange); padding:0.45em 0.6em;">
+                        <h4 style="font-size:0.62em; margin:0 0 0.2em 0;">🔀 Why SUGGEST_TRANSFER tags?</h4>
+                        <p style="font-size:0.5em; margin:0; line-height:1.45;">Agent <em>suggests</em> a transfer —
+                            user confirms. No surprise auto-routing. The machine-readable <code
+                                style="font-size:0.85em;">[SUGGEST_TRANSFER]</code> tag is stripped from the visible
+                            response — clean UX.</p>
+                    </div>
+                    <div class="card" style="border-left:3px solid var(--red); padding:0.45em 0.6em;">
+                        <h4 style="font-size:0.62em; margin:0 0 0.2em 0;">🤖 Why "You ARE customer service" override?
+                        </h4>
+                        <p style="font-size:0.5em; margin:0; line-height:1.45;">KB data had <strong>47</strong>
+                            instances of "contact our customer service team" — the agent was telling users to contact
+                            <em>itself</em>. Fixed in KB data <strong>and</strong> RAG prompt (defence-in-depth).
+                        </p>
+                    </div>
+                    <div class="card" style="border-left:3px solid var(--cyan); padding:0.45em 0.6em;">
+                        <h4 style="font-size:0.62em; margin:0 0 0.2em 0;">💬 Why conversation-aware classification?</h4>
+                        <p style="font-size:0.5em; margin:0; line-height:1.45;">Follow-ups like "yes, transfer me" need
+                            context. Feeding the <strong>last 3 turns</strong> prevents "unknown department" misroutes
+                            and enables coherent multi-turn conversations.</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 31: CHALLENGES & LEARNINGS                              -->
+            <!-- ============================================================ -->
+            <section>
+                <h2 style="font-size:1.15em;">Challenges &amp; Learnings</h2>
+                <p style="font-size:0.42em; color:rgba(255,255,255,0.4); margin-bottom:0.2em;">Each real bug → concrete
+                    fix shipped in the final build</p>
+
+                <div
+                    style="display:grid; grid-template-columns:1fr 1fr; gap:0.3em 0.45em; max-width:96%; margin:0 auto;">
+                    <!-- Row 1 -->
+                    <div
+                        style="display:flex; align-items:flex-start; gap:0.35em; background:rgba(244,67,54,0.06); border-left:3px solid var(--red); border-radius:8px; padding:0.25em 0.45em;">
+                        <span style="color:var(--red); font-size:0.55em; flex-shrink:0; margin-top:0.05em;">✗</span>
+                        <div style="font-size:0.42em; line-height:1.35;">
+                            <strong>Over-escalation</strong><br>
+                            <span style="opacity:0.6;">All negative sentiment → CrewAI, even mild complaints</span>
+                        </div>
+                    </div>
+                    <div
+                        style="display:flex; align-items:flex-start; gap:0.35em; background:rgba(76,175,80,0.06); border-left:3px solid var(--green); border-radius:8px; padding:0.25em 0.45em;">
+                        <span style="color:var(--green); font-size:0.55em; flex-shrink:0; margin-top:0.05em;">✓</span>
+                        <div style="font-size:0.42em; line-height:1.35;">
+                            <strong>3-tier severity model</strong><br>
+                            <span style="opacity:0.6;">Only <span class="hlr">HIGH</span> escalates → CrewAI crew</span>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div
+                        style="display:flex; align-items:flex-start; gap:0.35em; background:rgba(244,67,54,0.06); border-left:3px solid var(--red); border-radius:8px; padding:0.25em 0.45em;">
+                        <span style="color:var(--red); font-size:0.55em; flex-shrink:0; margin-top:0.05em;">✗</span>
+                        <div style="font-size:0.42em; line-height:1.35;">
+                            <strong>External / internal misrouting</strong><br>
+                            <span style="opacity:0.6;">Customer order complaints sometimes routed to HR</span>
+                        </div>
+                    </div>
+                    <div
+                        style="display:flex; align-items:flex-start; gap:0.35em; background:rgba(76,175,80,0.06); border-left:3px solid var(--green); border-radius:8px; padding:0.25em 0.45em;">
+                        <span style="color:var(--green); font-size:0.55em; flex-shrink:0; margin-top:0.05em;">✓</span>
+                        <div style="font-size:0.42em; line-height:1.35;">
+                            <strong>Audience-boundary guardrails</strong><br>
+                            <span style="opacity:0.6;">Classification prompt with explicit examples</span>
+                        </div>
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div
+                        style="display:flex; align-items:flex-start; gap:0.35em; background:rgba(244,67,54,0.06); border-left:3px solid var(--red); border-radius:8px; padding:0.25em 0.45em;">
+                        <span style="color:var(--red); font-size:0.55em; flex-shrink:0; margin-top:0.05em;">✗</span>
+                        <div style="font-size:0.42em; line-height:1.35;">
+                            <strong>"Contact customer service" loop</strong><br>
+                            <span style="opacity:0.6;">KB told users to contact the team they were already in</span>
+                        </div>
+                    </div>
+                    <div
+                        style="display:flex; align-items:flex-start; gap:0.35em; background:rgba(76,175,80,0.06); border-left:3px solid var(--green); border-radius:8px; padding:0.25em 0.45em;">
+                        <span style="color:var(--green); font-size:0.55em; flex-shrink:0; margin-top:0.05em;">✓</span>
+                        <div style="font-size:0.42em; line-height:1.35;">
+                            <strong>KB data fix + prompt override</strong><br>
+                            <span style="opacity:0.6;">47 replacements + "You ARE the agent"</span>
+                        </div>
+                    </div>
+
+                    <!-- Row 4 -->
+                    <div
+                        style="display:flex; align-items:flex-start; gap:0.35em; background:rgba(244,67,54,0.06); border-left:3px solid var(--red); border-radius:8px; padding:0.25em 0.45em;">
+                        <span style="color:var(--red); font-size:0.55em; flex-shrink:0; margin-top:0.05em;">✗</span>
+                        <div style="font-size:0.42em; line-height:1.35;">
+                            <strong>Follow-up context loss</strong><br>
+                            <span style="opacity:0.6;">"yes" or "transfer me" → classified as unknown</span>
+                        </div>
+                    </div>
+                    <div
+                        style="display:flex; align-items:flex-start; gap:0.35em; background:rgba(76,175,80,0.06); border-left:3px solid var(--green); border-radius:8px; padding:0.25em 0.45em;">
+                        <span style="color:var(--green); font-size:0.55em; flex-shrink:0; margin-top:0.05em;">✓</span>
+                        <div style="font-size:0.42em; line-height:1.35;">
+                            <strong>Last 3 turns fed to classifier</strong><br>
+                            <span style="opacity:0.6;">+ explicit follow-up handling rules</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 32: CONFIGURATION                                      -->
+            <!-- ============================================================ -->
+            <section>
+                <h2>Configuration</h2>
+                <p style="font-size: 0.65em; color: rgba(255,255,255,0.5);">All tuneable values in
+                    <code>config.py</code>
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Setting</th>
+                            <th>Default</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>LLM_MODEL</code></td>
+                            <td>gpt-4o</td>
+                            <td>Primary model</td>
+                        </tr>
+                        <tr>
+                            <td><code>LLM_MODEL_FALLBACK</code></td>
+                            <td>gpt-4.1</td>
+                            <td>Fallback option</td>
+                        </tr>
+                        <tr>
+                            <td><code>LLM_TEMPERATURE</code></td>
+                            <td>0</td>
+                            <td>Deterministic outputs</td>
+                        </tr>
+                        <tr>
+                            <td><code>EMBEDDING_MODEL</code></td>
+                            <td>text-embedding-3-small</td>
+                            <td>Embedding model</td>
+                        </tr>
+                        <tr>
+                            <td><code>MAX_REFLECTION_ATTEMPTS</code></td>
+                            <td>3</td>
+                            <td>Quality-check retries</td>
+                        </tr>
+                        <tr>
+                            <td><code>CREWAI_ESCALATION_ENABLED</code></td>
+                            <td>true</td>
+                            <td>Toggle CrewAI crew on/off</td>
+                        </tr>
+                        <tr>
+                            <td><code>RAG_TOP_K</code></td>
+                            <td>3</td>
+                            <td>Docs per retrieval</td>
+                        </tr>
+                        <tr>
+                            <td><code>RAG_SCORE_THRESHOLD</code></td>
+                            <td>0.2</td>
+                            <td>Minimum similarity</td>
+                        </tr>
+                        <tr>
+                            <td><code>SQLITE_MEMORY_DB</code></td>
+                            <td>shop4you_memory.db</td>
+                            <td>Persistent memory file</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+
+            <!-- ============================================================ -->
+            <!--  SLIDE 33: THANK YOU / Q&A                                    -->
+            <!-- ============================================================ -->
+            <section data-background-gradient="linear-gradient(135deg, #667eea 0%, #764ba2 100%)">
+                <h1 style="color: white; font-size: 2.5em;">Thank You!</h1>
+                <h3 style="color: rgba(255,255,255,0.9); font-weight: 400;">Questions &amp; Discussion</h3>
+
+                <div style="margin-top: 2em; display: flex; gap: 1em; justify-content: center; flex-wrap: wrap;">
+                    <div class="stat-card"
+                        style="background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);">
+                        <div class="number" style="color: white;">7</div>
+                        <div class="label" style="color: rgba(255,255,255,0.7);">AI Agents</div>
+                    </div>
+                    <div class="stat-card"
+                        style="background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);">
+                        <div class="number" style="color: white;">6</div>
+                        <div class="label" style="color: rgba(255,255,255,0.7);">Tools</div>
+                    </div>
+                    <div class="stat-card"
+                        style="background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);">
+                        <div class="number" style="color: white;">200</div>
+                        <div class="label" style="color: rgba(255,255,255,0.7);">FAQ Vectors</div>
+                    </div>
+                    <div class="stat-card"
+                        style="background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);">
+                        <div class="number" style="color: white;">70/70</div>
+                        <div class="label" style="color: rgba(255,255,255,0.7);">Orchestration Tests</div>
+                    </div>
+                    <div class="stat-card"
+                        style="background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);">
+                        <div class="number" style="color: white;">8</div>
+                        <div class="label" style="color: rgba(255,255,255,0.7);">Departments</div>
+                    </div>
+                </div>
+
+                <p style="margin-top: 2em; color: rgba(255,255,255,0.7); font-size: 0.6em;">
+                    Mohammed Emran &nbsp;|&nbsp; February 2026 &nbsp;|&nbsp; Agentic AI Capstone Project
+                </p>
+            </section>
+
+
+        </div><!-- /slides -->
+    </div><!-- /reveal -->
+
+    <!-- Reveal.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: 'c/t',
+            showSlideNumber: 'all',
+            progress: true,
+            transition: 'slide',
+            transitionSpeed: 'default',
+            backgroundTransition: 'fade',
+            center: true,
+            width: 1200,
+            height: 800,
+            margin: 0.03,
+            minScale: 0.2,
+            maxScale: 2.0,
+
+            // Keyboard shortcuts
+            keyboard: {
+                // F key toggles fullscreen
+                70: () => {
+                    if (!document.fullscreenElement) {
+                        document.documentElement.requestFullscreen();
+                    } else {
+                        document.exitFullscreen();
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

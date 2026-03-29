@@ -1,0 +1,285 @@
+{
+  "department": "Product Inquiries",
+  "department_key": "product_inquiries",
+  "audience": "external",
+  "doc_id": "product_inquiries_faq_v1",
+  "generated_date": "2026-02-21T21:20:50.529079+00:00",
+  "num_entries": 25,
+  "entries": [
+    {
+      "question": "What sizes are available for the latest trainers on Shop4You?",
+      "answer": "The latest trainers on Shop4You are available in UK sizes 4 to 12 for adults, and sizes 1 to 6 for children. We recommend checking the specific product page for detailed sizing information, including width and fit recommendations. If you need further assistance, our team is happy to help!",
+      "tags": [
+        "size guide",
+        "trainers",
+        "product availability"
+      ],
+      "last_updated": "2026-02-21T21:20:50.529079+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How can I find out if a product is back in stock?",
+      "answer": "If a product you're interested in is out of stock, you can sign up for a stock alert on the product page. Simply enter your email address, and we’ll notify you as soon as the item is back in stock. Additionally, you can check our website regularly as stock levels are updated daily.",
+      "tags": [
+        "stock alert",
+        "product availability",
+        "notifications"
+      ],
+      "last_updated": "2026-02-21T21:20:50.529079+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What materials are used in the Shop4You eco-friendly clothing line?",
+      "answer": "Our eco-friendly clothing line is crafted from sustainable materials such as organic cotton, recycled polyester, and Tencel. Each product page provides detailed information about the materials used. We are committed to offering environmentally responsible options without compromising style or quality.",
+      "tags": [
+        "product specifications",
+        "eco-friendly",
+        "clothing"
+      ],
+      "last_updated": "2026-02-21T21:20:50.529079+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "I ordered a size 10 jacket but received a size 12. What should I do?",
+      "answer": "We apologise for the inconvenience. please let us know and we will assist you with your order number, and they will assist you with the return process and ensure you receive the correct size. You can contact them via email or our live chat service for a swift resolution.",
+      "tags": [
+        "order issue",
+        "size guide",
+        "customer service"
+      ],
+      "last_updated": "2026-02-21T21:20:50.529079+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What is the warranty period for electronics purchased on Shop4You?",
+      "answer": "Most electronics purchased on Shop4You come with a 12-month warranty. Some brands may offer extended warranties, which will be detailed on the product page. If you have any warranty-related questions, do not hesitate to reach out to us for more information.",
+      "tags": [
+        "warranty info",
+        "electronics",
+        "product specifications"
+      ],
+      "last_updated": "2026-02-21T21:20:50.529079+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How do I choose the right size for a bicycle from Shop4You?",
+      "answer": "Choosing the right bicycle size involves considering your height and the bike's frame size. Our product pages include a detailed size guide to help you make the best choice. If you’re unsure, our experts are available to provide personalised sizing advice.",
+      "tags": [
+        "size guide",
+        "bicycles",
+        "product recommendations"
+      ],
+      "last_updated": "2026-02-21T21:20:50.529079+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can Shop4You recommend products for a vegan lifestyle?",
+      "answer": "Absolutely! We offer a range of vegan-friendly products clearly labelled in our store. Whether you're looking for fashion, beauty, or food items, use the 'vegan' filter on our website to easily find products that suit your lifestyle.",
+      "tags": [
+        "product recommendations",
+        "vegan",
+        "lifestyle"
+      ],
+      "last_updated": "2026-02-21T21:20:50.529079+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What should I do if the product I want is not available in my size?",
+      "answer": "If your desired size is not available, we suggest signing up for a stock alert on the product page. Alternatively, you can check out similar products in related sizes or let us know and we will assist you for further assistance and recommendations.",
+      "tags": [
+        "product availability",
+        "size guide",
+        "customer service"
+      ],
+      "last_updated": "2026-02-21T21:20:50.529079+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How can I compare different smartphone models on Shop4You?",
+      "answer": "You can easily compare smartphone models by selecting the 'compare' option on the product page. This feature allows you to view specifications, features, and reviews side by side, helping you make an informed decision. our team is also on hand to answer any specific queries you may have.",
+      "tags": [
+        "product comparison",
+        "smartphones",
+        "product specifications"
+      ],
+      "last_updated": "2026-02-21T21:20:50.529079+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What happens if I miss the warranty claim deadline on my purchase?",
+      "answer": "If you miss the warranty claim deadline, unfortunately, we may not be able to process your request under the warranty terms. However, we encourage you to let us know and we will assist you, who may be able to offer alternatives or solutions depending on the situation.",
+      "tags": [
+        "warranty info",
+        "policy clarification",
+        "customer service"
+      ],
+      "last_updated": "2026-02-21T21:20:50.529079+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can I change my product order after it has been placed?",
+      "answer": "Once an order is placed, we process it quickly to ensure prompt delivery. If you need to make changes, please let us know and we will help immediately. While we can't guarantee modifications, we will do our best to accommodate your request if the order hasn't been shipped.",
+      "tags": [
+        "order modification",
+        "customer service",
+        "process"
+      ],
+      "last_updated": "2026-02-21T21:20:50.529079+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What are the steps to return a product to Shop4You?",
+      "answer": "To return a product, please log into your account and navigate to the 'Order History' section. Select the order you wish to return and follow the provided instructions. You will receive a return label and further details via email. If you need assistance, our team is here to help.",
+      "tags": [
+        "returns",
+        "process",
+        "customer service"
+      ],
+      "last_updated": "2026-02-21T21:20:50.529079+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Who do I contact for technical support on electronics bought from Shop4You?",
+      "answer": "For technical support on electronics, you can reach out to our dedicated tech support team via email or phone. Our experts are fully equipped to assist with troubleshooting and provide guidance on product usage. Details can be found on our 'Contact Us' page.",
+      "tags": [
+        "technical support",
+        "electronics",
+        "customer service"
+      ],
+      "last_updated": "2026-02-21T21:20:50.529079+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Are there any exclusive discounts for students shopping on Shop4You?",
+      "answer": "Yes, Shop4You offers a 10% discount for students. To avail of this, register with a valid student ID through our website. Once verified, you'll receive a discount code to use at checkout. Keep an eye out for additional student promotions throughout the year.",
+      "tags": [
+        "discounts",
+        "students",
+        "policy clarification"
+      ],
+      "last_updated": "2026-02-21T21:20:50.529079+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What should I do if I receive a faulty product from Shop4You?",
+      "answer": "If you receive a faulty product, please let us know and we will assist you as soon as possible. Provide your order number and a description of the issue. We will arrange for a replacement or refund and guide you through the return process if needed.",
+      "tags": [
+        "faulty product",
+        "returns",
+        "customer service"
+      ],
+      "last_updated": "2026-02-21T21:20:50.529079+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How can I find out the dimensions of a furniture item on Shop4You?",
+      "answer": "The dimensions of each furniture item are listed on the product page under 'Specifications'. This includes width, height, and depth measurements. If you need further clarification or assistance, please feel free to contact our support team.",
+      "tags": [
+        "product specifications",
+        "furniture",
+        "dimensions"
+      ],
+      "last_updated": "2026-02-21T21:20:50.529079+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What if a product I want is sold out in the colour I prefer?",
+      "answer": "If a product is sold out in your preferred colour, we recommend signing up for a stock alert. Alternatively, you can explore similar products in different colours or let us know and we will assist you for advice on comparable items that meet your preferences.",
+      "tags": [
+        "product availability",
+        "colour options",
+        "customer service"
+      ],
+      "last_updated": "2026-02-21T21:20:50.529079+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can I get assistance in choosing the right laptop for my needs?",
+      "answer": "Absolutely! Our team is more than happy to help you find the perfect laptop. Consider factors like usage, specifications, and budget, then contact us via live chat or email for personalised recommendations. Be sure to check our online guides and product comparisons as well.",
+      "tags": [
+        "product recommendations",
+        "laptops",
+        "customer service"
+      ],
+      "last_updated": "2026-02-21T21:20:50.529079+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Do Shop4You products come with a satisfaction guarantee?",
+      "answer": "Yes, we offer a satisfaction guarantee on most products. If for any reason you're not satisfied with your purchase, you can return it within 30 days for a full refund or exchange. Please check the specific product page for any exceptions or additional information.",
+      "tags": [
+        "satisfaction guarantee",
+        "returns",
+        "policy clarification"
+      ],
+      "last_updated": "2026-02-21T21:20:50.529079+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How can I ensure the shoes I buy from Shop4You will fit perfectly?",
+      "answer": "To ensure a perfect fit, refer to our comprehensive size guide available on each shoe's product page. You can also measure your foot and compare it to the size chart. If you need further help, our team can provide guidance based on your preferences.",
+      "tags": [
+        "size guide",
+        "shoes",
+        "product recommendations"
+      ],
+      "last_updated": "2026-02-21T21:20:50.529079+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Am I eligible for free delivery on my Shop4You order?",
+      "answer": "We offer free delivery on orders over £50. If your order doesn't qualify, delivery costs will be calculated at checkout based on your location and order size. Keep an eye out for special promotions that may provide free delivery regardless of order value.",
+      "tags": [
+        "delivery",
+        "policy clarification",
+        "free delivery"
+      ],
+      "last_updated": "2026-02-21T21:20:50.529079+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What are the care instructions for clothing purchased from Shop4You?",
+      "answer": "Each clothing item comes with specific care instructions on the product page and garment label. Generally, we recommend washing at low temperatures and avoiding tumble drying to preserve fabric quality. For any specific queries, our team is here to assist.",
+      "tags": [
+        "product care",
+        "clothing",
+        "instructions"
+      ],
+      "last_updated": "2026-02-21T21:20:50.529079+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can I track my Shop4You order once it's been shipped?",
+      "answer": "Yes, once your order has been shipped, you will receive a tracking number via email. You can use this number on our website or the carrier's site to track your order's progress in real-time. If you encounter any issues, our team is ready to help.",
+      "tags": [
+        "order tracking",
+        "shipping",
+        "process"
+      ],
+      "last_updated": "2026-02-21T21:20:50.529079+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What if I need to change the delivery address after placing my order?",
+      "answer": "If you need to change the delivery address, please let us know and we will assist you immediately. Changes can only be made before the order is dispatched. Once shipped, address modifications may not be possible, but we will do our best to assist you.",
+      "tags": [
+        "delivery",
+        "address change",
+        "customer service"
+      ],
+      "last_updated": "2026-02-21T21:20:50.529079+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How can I provide feedback on a product I purchased from Shop4You?",
+      "answer": "We value customer feedback and encourage you to share your thoughts by leaving a review on the product page. Simply log into your account, navigate to your order history, and select the product you'd like to review. Your input helps us improve and assist other customers in making informed decisions.",
+      "tags": [
+        "feedback",
+        "product review",
+        "customer service"
+      ],
+      "last_updated": "2026-02-21T21:20:50.529079+00:00",
+      "confidence_score": 0.95
+    }
+  ]
+}

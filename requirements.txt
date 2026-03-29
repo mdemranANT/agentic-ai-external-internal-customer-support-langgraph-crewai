@@ -1,0 +1,79 @@
+# ================================================================
+# Shop4You — Agentic AI Retail Assistant
+# Pinned Dependencies (Conda Env: shop4you, Python 3.12)
+# ================================================================
+# Install:  pip install -r requirements.txt
+# Env:      conda activate shop4you
+# ================================================================
+
+# ─── Core LangChain ──────────────────────────────────────────
+langchain==1.2.10                   # Main orchestration framework
+langchain-core==1.2.14              # Base abstractions (messages, prompts, output parsers)
+langchain-text-splitters==1.1.1     # Document chunking utilities
+langchain-openai==1.1.10            # OpenAI chat model & embeddings integration
+langchain-community==0.4.1          # Community integrations (tools, loaders)
+
+# ─── LangGraph (Agentic Workflow Engine) ─────────────────────
+langgraph==1.0.9                    # State-machine graph builder for agents
+langgraph-checkpoint==4.0.0         # Checkpointing / persistence interface
+langgraph-checkpoint-sqlite==3.0.3  # SQLite-based multi-user memory persistence
+langgraph-sdk==0.3.8                # LangGraph client SDK
+langgraph-prebuilt==1.0.8           # Pre-built agent patterns (ToolNode, etc.)
+
+# ─── RAG — Vector Store & Embeddings ─────────────────────────
+langchain-chroma==0.2.6             # Compatible with CrewAI chromadb requirement
+chromadb==1.1.1                     # Shared compatible version (CrewAI + LangChain)
+
+# ─── OpenAI ──────────────────────────────────────────────────
+openai==2.21.0                      # OpenAI Python SDK (GPT-4o, text-embedding-3-small)
+tiktoken==0.8.0                     # Token counting for OpenAI models
+
+# ─── CrewAI (Multi-Agent Escalation Crew) ────────────────────
+crewai==1.12.2                      # CrewAI multi-agent orchestration (OpenAI 2.x compatible)
+crewai-tools==1.12.2                # Built-in tools aligned with CrewAI version
+
+# ─── API Layer (FastAPI) ─────────────────────────────────────
+fastapi==0.129.1                    # Async web framework for REST API
+uvicorn==0.41.0                     # ASGI server for FastAPI
+starlette==0.52.1                   # ASGI toolkit (FastAPI dependency)
+
+# ─── Data Validation & Serialization ─────────────────────────
+pydantic==2.11.10                   # Data validation & structured output schemas
+pydantic-core==2.33.2               # Pydantic Rust core
+orjson==3.11.7                      # Fast JSON serialization
+
+# ─── HTTP & Networking ───────────────────────────────────────
+httpx==0.28.1                       # Async HTTP client
+httpcore==1.0.9                     # HTTP core transport
+aiohttp==3.13.3                     # Async HTTP client/server
+requests==2.32.5                    # Synchronous HTTP client
+
+# ─── Async & Concurrency ─────────────────────────────────────
+anyio==4.12.1                       # Async compatibility layer
+aiosqlite==0.21.0                   # Async SQLite driver (for memory persistence)
+
+# ─── CLI & Display ───────────────────────────────────────────
+rich==14.3.3                        # Rich terminal formatting & tables
+click==8.1.7                        # CLI framework (CrewAI dependency)
+typer==0.23.1                       # CLI framework built on Click
+
+# ─── Utilities ───────────────────────────────────────────────
+python-dotenv==1.1.1                # Load .env files into environment
+typing-extensions==4.15.0           # Backported typing features
+pyyaml==6.0.3                       # YAML parsing
+numpy==2.4.2                        # Numerical computing (embeddings)
+tqdm==4.67.3                        # Progress bars
+tenacity==9.1.4                     # Retry logic for API calls
+jsonpatch==1.33                     # JSON Patch (RFC 6902) for LangChain streaming
+
+# ─── Search / External Tools ─────────────────────────────────
+tavily-python==0.7.21               # Tavily search API integration
+
+# ─── Streamlit (Chat UI) ─────────────────────────────────────
+streamlit==1.54.0                   # Streamlit web app framework (chat interface)
+
+# ─── Notebook & Jupyter ──────────────────────────────────────
+jupyter==1.1.1                      # Jupyter meta-package
+ipykernel==7.2.0                    # IPython kernel for Jupyter
+notebook==7.5.3                     # Jupyter Notebook server
+nbformat==5.10.4                    # Notebook file format handling

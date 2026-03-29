@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop4You — System Architecture Diagram</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    :root {
+      --blue: #4285f4;
+      --green: #34a853;
+      --orange: #f9a825;
+      --red: #ea4335;
+      --purple: #9c27b0;
+      --teal: #00897b;
+      --grey: #6b7280;
+      --bg: #0f172a;
+      --bg-card: rgba(255, 255, 255, 0.05);
+      --border: rgba(255, 255, 255, 0.1);
+      --text: #e2e8f0;
+      --text-dim: rgba(255, 255, 255, 0.5);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 24px 32px;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    header h1 {
+      font-size: 1.65em;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 6px;
+    }
+
+    header p {
+      font-size: 0.82em;
+      color: var(--text-dim);
+    }
+
+    header p span {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2px 10px;
+      margin: 2px 3px;
+      font-size: 0.92em;
+    }
+
+    /* ── Section containers ── */
+    .section {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 22px;
+      margin-bottom: 14px;
+      position: relative;
+    }
+
+    .section-label {
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      font-size: 0.68em;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 2px 12px;
+      border-radius: 20px;
+      color: #fff;
+    }
+
+    /* ── Flow row ── */
+    .flow-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .flow-row.center {
+      justify-content: center;
+    }
+
+    /* ── Arrow between items ── */
+    .arrow {
+      font-size: 1.3em;
+      font-weight: 700;
+      flex-shrink: 0;
+      opacity: 0.6;
+    }
+
+    .arrow-right::after {
+      content: "→";
+    }
+
+    .arrow-down::after {
+      content: "↓";
+    }
+
+    /* ── Cards ── */
+    .card {
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 0.76em;
+      line-height: 1.45;
+      border: 1.5px solid;
+      min-width: 140px;
+      position: relative;
+    }
+
+    .card h4 {
+      font-size: 0.95em;
+      font-weight: 700;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .card p {
+      margin: 2px 0;
+      font-size: 0.92em;
+    }
+
+    .card code {
+      font-family: 'Fira Code', 'Consolas', monospace;
+      font-size: 0.9em;
+      background: rgba(0, 0, 0, 0.25);
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+
+    /* Card colour families */
+    .card-blue {
+      background: rgba(66, 133, 244, 0.10);
+      border-color: rgba(66, 133, 244, 0.4);
+    }
+
+    .card-green {
+      background: rgba(52, 168, 83, 0.10);
+      border-color: rgba(52, 168, 83, 0.4);
+    }
+
+    .card-orange {
+      background: rgba(249, 168, 37, 0.10);
+      border-color: rgba(249, 168, 37, 0.4);
+    }
+
+    .card-red {
+      background: rgba(234, 67, 53, 0.10);
+      border-color: rgba(234, 67, 53, 0.4);
+    }
+
+    .card-purple {
+      background: rgba(156, 39, 176, 0.10);
+      border-color: rgba(156, 39, 176, 0.4);
+    }
+
+    .card-teal {
+      background: rgba(0, 137, 123, 0.10);
+      border-color: rgba(0, 137, 123, 0.4);
+    }
+
+    .card-grey {
+      background: rgba(107, 114, 128, 0.10);
+      border-color: rgba(107, 114, 128, 0.4);
+    }
+
+    /* ── Tags ── */
+    .tag {
+      display: inline-block;
+      font-size: 0.7em;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #fff;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+
+    .tag-blue {
+      background: var(--blue);
+    }
+
+    .tag-green {
+      background: var(--green);
+    }
+
+    .tag-orange {
+      background: var(--orange);
+      color: #333;
+    }
+
+    .tag-red {
+      background: var(--red);
+    }
+
+    .tag-purple {
+      background: var(--purple);
+    }
+
+    .tag-teal {
+      background: var(--teal);
+    }
+
+    /* ── Icon circles ── */
+    .icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      font-size: 0.75em;
+      flex-shrink: 0;
+    }
+
+    .icon-llm {
+      background: linear-gradient(135deg, var(--blue), #7b68ee);
+      color: #fff;
+    }
+
+    .icon-db {
+      background: linear-gradient(135deg, var(--teal), #26a69a);
+      color: #fff;
+      border-radius: 6px;
+    }
+
+    .icon-tool {
+      background: linear-gradient(135deg, var(--orange), #ffca28);
+      color: #333;
+      border-radius: 6px;
+    }
+
+    /* ── Two-column split ── */
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    /* ── Branch header ── */
+    .branch-header {
+      text-align: center;
+      font-size: 0.78em;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .branch-left {
+      background: rgba(52, 168, 83, 0.15);
+      color: var(--green);
+      border: 1px solid rgba(52, 168, 83, 0.3);
+    }
+
+    .branch-right {
+      background: rgba(234, 67, 53, 0.15);
+      color: var(--red);
+      border: 1px solid rgba(234, 67, 53, 0.3);
+    }
+
+    /* ── Decision diamond ── */
+    .diamond {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 110px;
+      height: 70px;
+      background: rgba(249, 168, 37, 0.12);
+      border: 2px solid var(--orange);
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      font-size: 0.65em;
+      font-weight: 700;
+      text-align: center;
+      line-height: 1.15;
+      color: var(--orange);
+      flex-shrink: 0;
+    }
+
+    /* ── Vertical flow wrapper ── */
+    .vflow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .vflow .arrow {
+      font-size: 1.1em;
+    }
+
+    /* ── Crew sequential chain ── */
+    .crew-chain {
+      display: flex;
+      align-items: stretch;
+      gap: 6px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .crew-agent {
+      background: rgba(234, 67, 53, 0.12);
+      border: 1px solid rgba(234, 67, 53, 0.35);
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-size: 0.72em;
+      text-align: center;
+      min-width: 105px;
+      flex: 1;
+    }
+
+    .crew-agent strong {
+      display: block;
+      font-size: 0.85em;
+      color: var(--red);
+      margin-bottom: 2px;
+    }
+
+    /* ── END pill ── */
+    .end-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: linear-gradient(135deg, #1e293b, #334155);
+      border: 1.5px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 6px 18px;
+      font-weight: 700;
+      font-size: 0.82em;
+      color: #fff;
+    }
+
+    /* ── Reflection badge ── */
+    .reflection-badge {
+      font-size: 0.68em;
+      color: var(--red);
+      background: rgba(234, 67, 53, 0.1);
+      border: 1px solid rgba(234, 67, 53, 0.3);
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    /* ── Legend ── */
+    .legend {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 18px;
+      padding: 12px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.72em;
+      color: var(--text-dim);
+    }
+
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── Subtle separator ── */
+    .sep {
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 1.4em;
+      margin: 4px 0;
+      opacity: 0.5;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      margin-top: 24px;
+      color: rgba(255, 255, 255, 0.25);
+      font-size: 0.72em;
+    }
+
+    /* ── Print ── */
+    @media print {
+      body {
+        background: #fff;
+        color: #222;
+      }
+
+      .card {
+        border-width: 1px;
+      }
+
+      header h1 {
+        -webkit-text-fill-color: #2d2d5e;
+      }
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      body {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!--  HEADER                                                   -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <header>
+    <h1>Shop4You — Agentic AI System Architecture</h1>
+    <p>
+      <span>LangGraph Orchestrator</span>
+      <span>7 AI Agents</span>
+      <span>6 Tools</span>
+      <span>ChromaDB · 200 Vectors</span>
+      <span>8 Departments</span>
+      <span>SQLite Memory</span>
+    </p>
+  </header>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!--  LAYER 1: USER INPUT → CLASSIFICATION                     -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <div class="section" style="border-color: rgba(66,133,244,0.3);">
+    <div class="section-label" style="background: var(--blue);">Layer 1 — Classification</div>
+
+    <div class="flow-row center" style="margin-top: 6px;">
+      <!-- User Query -->
+      <div class="card card-grey" style="min-width:130px;">
+        <h4>👤 User Query</h4>
+        <p>Streamlit UI · CLI · REST API</p>
+      </div>
+
+      <span class="arrow arrow-right" style="color:var(--grey);">query</span>
+
+      <!-- classifier_agent -->
+      <div class="card card-blue" style="max-width: 280px;">
+        <h4><span class="icon icon-llm">🧠</span> classifier_agent <span class="tag tag-blue">Agent 1</span></h4>
+        <p>Classifies into:</p>
+        <p>• <strong>department</strong> — 1 of 8 + unknown</p>
+        <p>• <strong>sentiment</strong> — positive · neutral · negative</p>
+        <p>• <strong>severity</strong> — low · medium · high</p>
+        <p>• <strong>reasoning</strong> — explanation</p>
+        <p style="margin-top:4px; color:var(--text-dim); font-size:0.88em;">Uses last 3 turns for follow-up context</p>
+      </div>
+
+      <span class="arrow arrow-right" style="color:var(--blue);"></span>
+
+      <!-- Structured Output -->
+      <div class="card card-orange" style="min-width:160px;">
+        <h4>📋 QueryClassification</h4>
+        <p><code>department</code>: orders_returns</p>
+        <p><code>sentiment</code>: negative</p>
+        <p><code>severity</code>: high</p>
+        <p><code>reasoning</code>: "angry about…"</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!--  ROUTING DECISION                                          -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <div class="sep">↓</div>
+  <div style="text-align: center; margin: 4px 0 10px;">
+    <div class="diamond">route_<br>query</div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!--  LAYER 2: TWO PATHS — RAG vs ESCALATION                   -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <div class="split">
+
+    <!-- ──────── LEFT PATH: RAG ──────── -->
+    <div class="section" style="border-color: rgba(52,168,83,0.35);">
+      <div class="section-label" style="background: var(--green);">Layer 2a — RAG Pipeline</div>
+
+      <div class="branch-header branch-left" style="margin-top: 6px;">
+        ✅ Valid department (or low/medium negative)
+      </div>
+
+      <div class="vflow">
+
+        <!-- ChromaDB + Tools side by side -->
+        <div class="flow-row center">
+          <div class="card card-teal" style="max-width:190px;">
+            <h4><span class="icon icon-db">🗄</span> ChromaDB</h4>
+            <p>200 FAQ vectors · 8 dept collections</p>
+            <p>top-k = 3, score ≥ 0.2</p>
+            <p style="font-size:0.88em; color:var(--text-dim);"><em>text-embedding-3-small</em></p>
+          </div>
+
+          <div class="card card-orange" style="max-width:155px;">
+            <h4><span class="icon icon-tool">🔧</span> 6 Tools</h4>
+            <p>• lookup_orders</p>
+            <p>• search_product</p>
+            <p>• check_loyalty</p>
+            <p>• list_departments</p>
+            <p>• search_kb</p>
+            <p>• get_dept_info</p>
+          </div>
+        </div>
+
+        <span class="arrow arrow-down" style="color:var(--green);"></span>
+
+        <!-- department_rag_agent -->
+        <div class="card card-green" style="max-width:380px;">
+          <h4><span class="icon icon-llm">🧠</span> department_rag_agent <span class="tag tag-green">Agent 2</span></h4>
+          <p>Given query + retrieved context + tool results:</p>
+          <p>• Generate <strong>grounded</strong> answer (no hallucination)</p>
+          <p>• Incorporate feedback if retrying</p>
+          <p>• Inject user context (name, loyalty tier)</p>
+          <p>• Detect transfer requests → hand-off</p>
+        </div>
+
+        <span class="arrow arrow-down" style="color:var(--green);"></span>
+
+        <!-- Generated Answer -->
+        <div class="card card-blue" style="max-width: 200px;">
+          <h4>📄 Generated Answer</h4>
+          <p>Grounded response from RAG pipeline</p>
+        </div>
+
+        <span class="arrow arrow-down" style="color:var(--purple);"></span>
+
+        <!-- ── REFLECTION ── -->
+        <div class="section" style="border-color: rgba(156,39,176,0.35); padding: 14px 16px; width: 100%;">
+          <div class="section-label" style="background: var(--purple);">Layer 3 — Reflection Loop</div>
+
+          <div class="vflow" style="margin-top: 8px;">
+            <div class="card card-purple" style="max-width: 360px;">
+              <h4><span class="icon icon-llm">🧠</span> reflection_agent <span class="tag tag-purple">Agent 3</span>
+              </h4>
+              <p>Quality assessment via GPT-4o:</p>
+              <p>• <strong>is_relevant?</strong> — addresses the query?</p>
+              <p>• <strong>is_grounded?</strong> — based on context only?</p>
+              <p>• <strong>is_complete?</strong> — fully answers the question?</p>
+              <p>• <strong>quality_score</strong> — 1 to 10</p>
+              <p>• <strong>feedback</strong> — why this score</p>
+            </div>
+
+            <!-- Decision -->
+            <div class="flow-row center" style="gap: 14px;">
+              <div class="diamond" style="width: 95px; height: 62px; font-size: 0.62em;">score<br>≥ 7 ?</div>
+            </div>
+
+            <div class="flow-row center" style="gap: 20px;">
+              <div>
+                <span style="color:var(--green); font-weight:700; font-size:0.78em;">✅ YES</span>
+                <span class="arrow arrow-right" style="color:var(--green); font-size:1em;"></span>
+                <span class="end-pill">✅ END</span>
+              </div>
+              <div>
+                <span style="color:var(--red); font-weight:700; font-size:0.78em;">❌ NO</span>
+                <span class="arrow arrow-right" style="color:var(--red); font-size:1em;"></span>
+                <span class="reflection-badge">← FEEDBACK → regenerate (retry up to 3×)</span>
+              </div>
+            </div>
+
+            <p style="font-size: 0.72em; color: var(--text-dim); text-align:center; margin-top: 4px;">
+              <code>MAX_REFLECTION_ATTEMPTS = 3</code> · After 3 retries → accept best answer
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ──────── RIGHT PATH: ESCALATION ──────── -->
+    <div class="section" style="border-color: rgba(234,67,53,0.35);">
+      <div class="section-label" style="background: var(--red);">Layer 2b — Escalation</div>
+
+      <div class="branch-header branch-right" style="margin-top: 6px;">
+        🚨 Negative + HIGH severity OR unknown department
+      </div>
+
+      <div class="vflow">
+
+        <!-- escalation_agent -->
+        <div class="card card-red" style="max-width: 320px;">
+          <h4>🚨 escalation_agent <span class="tag tag-red">Agent 4</span></h4>
+          <p>• Generate escalation ref# <code>ESC-XXXXX</code></p>
+          <p>• Log warning to system</p>
+          <p>• Trigger CrewAI 3-agent sequential crew</p>
+        </div>
+
+        <span class="arrow arrow-down" style="color:var(--red);"></span>
+
+        <!-- CrewAI Crew -->
+        <div class="section" style="border-color: rgba(234,67,53,0.25); padding: 14px 16px;">
+          <div class="section-label" style="background: var(--red);">CrewAI Sequential Crew</div>
+
+          <div class="crew-chain" style="margin-top: 8px;">
+            <div class="crew-agent">
+              <strong>Agent 5</strong>
+              🔍 complaint_analyst_agent
+              <div style="font-size:0.88em; color:var(--text-dim); margin-top:3px;">
+                Issue summary · urgency rating · emotional state
+              </div>
+            </div>
+            <span class="arrow arrow-right" style="color:var(--red); font-size:1em;"></span>
+            <div class="crew-agent">
+              <strong>Agent 6</strong>
+              🕵️ account_investigator_agent
+              <div style="font-size:0.88em; color:var(--text-dim); margin-top:3px;">
+                Dept routing · VIP flag · fraud check
+              </div>
+            </div>
+            <span class="arrow arrow-right" style="color:var(--red); font-size:1em;"></span>
+            <div class="crew-agent">
+              <strong>Agent 7</strong>
+              ✅ resolution_specialist_agent
+              <div style="font-size:0.88em; color:var(--text-dim); margin-top:3px;">
+                Resolution · goodwill · SLA · final report
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <span class="arrow arrow-down" style="color:var(--red);"></span>
+
+        <!-- Escalation Report -->
+        <div class="card card-red" style="max-width: 280px;">
+          <h4>📋 Escalation Report</h4>
+          <p>Structured report with <code>ESC-XXXXX</code> reference</p>
+          <p>Returned to user with empathetic message</p>
+        </div>
+
+        <span class="arrow arrow-down" style="color:var(--red);"></span>
+        <span class="end-pill">✅ END</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!--  PERSISTENT MEMORY & DEPARTMENTS BAR                       -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <div class="section" style="border-color: rgba(107,114,128,0.3); margin-top: 14px;">
+    <div class="section-label" style="background: var(--grey);">Persistent Infrastructure</div>
+
+    <div class="flow-row center" style="margin-top: 4px; gap: 20px;">
+      <div class="card card-grey" style="max-width: 280px;">
+        <h4><span class="icon icon-db" style="background:linear-gradient(135deg,#6b7280,#9ca3af);">💾</span> SqliteSaver
+          (LangGraph)</h4>
+        <p>Per-user thread isolation: <code>thread_id = user_{email}</code></p>
+        <p>Checkpoints + channel writes survive restarts</p>
+        <p>Different users never see each other's history</p>
+      </div>
+
+      <div class="card card-grey" style="max-width: 230px;">
+        <h4>📊 8 Departments</h4>
+        <p><strong>Customer-facing:</strong> Orders &amp; Returns · Shipping · Billing · Product Inquiries</p>
+        <p><strong>Employee-facing:</strong> IT Helpdesk · HR · Operations · Loyalty Programme</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!--  LEGEND                                                    -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <div class="legend">
+    <div class="legend-item">
+      <div class="legend-dot" style="background:var(--blue);"></div> Classification (Agent 1)
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot" style="background:var(--green);"></div> RAG Pipeline (Agent 2)
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot" style="background:var(--purple);"></div> Reflection (Agent 3)
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot" style="background:var(--red);"></div> Escalation (Agents 4–7)
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot" style="background:var(--teal);"></div> Vector Store
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot" style="background:var(--orange);"></div> Tools / Outputs
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot" style="background:var(--grey);"></div> Memory / Infrastructure
+    </div>
+  </div>
+
+  <footer>
+    Shop4You Capstone Project — Architecture Diagram — LangGraph + CrewAI + ChromaDB + GPT-4o
+  </footer>
+
+</body>
+
+</html>

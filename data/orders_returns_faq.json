@@ -1,0 +1,260 @@
+{
+  "department": "Orders & Returns",
+  "department_key": "orders_returns",
+  "audience": "external",
+  "doc_id": "orders_returns_faq_v1",
+  "generated_date": "2026-02-21T21:19:40.787628+00:00",
+  "num_entries": 25,
+  "entries": [
+    {
+      "question": "How can I track my order on Shop4You?",
+      "answer": "To track your order, simply log into your Shop4You account and navigate to 'My Orders'. Click on the order you wish to track, and you will find a tracking link provided by the courier. If you experience any issues, feel free to contact our customer support team.",
+      "tags": [
+        "order tracking",
+        "track order"
+      ],
+      "last_updated": "2026-02-21T21:19:40.787628+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What is the return policy at Shop4You?",
+      "answer": "Shop4You allows returns within 30 days of receipt for most items. The products must be unused, in their original packaging, and accompanied by the purchase receipt. Certain items, like personalised goods, may not be eligible for return. Please check our return policy page for more details.",
+      "tags": [
+        "return policy",
+        "returns"
+      ],
+      "last_updated": "2026-02-21T21:19:40.787628+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "I ordered a blue shirt but received a red one. What should I do?",
+      "answer": "We apologise for the inconvenience. please let us know and we will assist you within 14 days of receiving the wrong item. Provide your order number and a photo of the item received, and we'll arrange for a replacement or refund as soon as possible.",
+      "tags": [
+        "wrong item",
+        "order issue"
+      ],
+      "last_updated": "2026-02-21T21:19:40.787628+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can I cancel my order after it has been dispatched?",
+      "answer": "Unfortunately, once an order has been dispatched, we cannot cancel it. However, you can return the item after it arrives. Please follow our return process to send the item back for a refund.",
+      "tags": [
+        "cancel order",
+        "order cancellation"
+      ],
+      "last_updated": "2026-02-21T21:19:40.787628+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How long does it take to process a refund at Shop4You?",
+      "answer": "Refunds typically take 5-7 business days to process once we receive your returned item. You will receive a confirmation email once the refund has been issued. If you haven’t received your refund after this period, please contact our support team for assistance.",
+      "tags": [
+        "refund process",
+        "refund time"
+      ],
+      "last_updated": "2026-02-21T21:19:40.787628+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What are the steps to exchange an item at Shop4You?",
+      "answer": "To exchange an item, first, ensure it is eligible for exchange. Log into your account, go to 'My Orders', and select the item you wish to exchange. Follow the prompts to request an exchange. Once approved, return the item and order the new one. If you need help, let us know and we will help.",
+      "tags": [
+        "exchange process",
+        "item exchange"
+      ],
+      "last_updated": "2026-02-21T21:19:40.787628+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Who can I contact if my order is missing?",
+      "answer": "If your order hasn’t arrived by the estimated delivery date, please let us know and we will assist you. Provide your order number and details, and we'll investigate the issue with the courier and arrange a solution for you promptly.",
+      "tags": [
+        "missing order",
+        "order issue"
+      ],
+      "last_updated": "2026-02-21T21:19:40.787628+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What happens if I miss the return deadline?",
+      "answer": "If you miss the 30-day return deadline, it may not be possible to return the item. However, please contact our customer support team explaining your situation, and we will do our best to assist you.",
+      "tags": [
+        "return deadline",
+        "late return"
+      ],
+      "last_updated": "2026-02-21T21:19:40.787628+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can I change my delivery address after placing an order?",
+      "answer": "If your order has not yet been dispatched, you may be able to change the delivery address by reaching out to us. Once dispatched, changes cannot be made, so please double-check your details at checkout.",
+      "tags": [
+        "change address",
+        "order modification"
+      ],
+      "last_updated": "2026-02-21T21:19:40.787628+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Am I eligible for free returns at Shop4You?",
+      "answer": "Shop4You offers free returns for most items, excluding sale and clearance items. Please check the return policy on our website or let us know and we will help to confirm if your purchase qualifies for free returns.",
+      "tags": [
+        "free returns",
+        "return eligibility"
+      ],
+      "last_updated": "2026-02-21T21:19:40.787628+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How do I know if my item is eligible for a refund?",
+      "answer": "To be eligible for a refund, the item must be returned within 30 days in its original condition and packaging, with the receipt. Some exclusions apply, such as personalised items. For a detailed list, please visit our refund policy page.",
+      "tags": [
+        "refund eligibility",
+        "return conditions"
+      ],
+      "last_updated": "2026-02-21T21:19:40.787628+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can I return an item bought during a sale?",
+      "answer": "Yes, items purchased during a sale can be returned within 30 days. However, they may not be eligible for free returns. All items must be returned in their original condition with proof of purchase.",
+      "tags": [
+        "sale returns",
+        "return policy"
+      ],
+      "last_updated": "2026-02-21T21:19:40.787628+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "I received a damaged item. What should I do next?",
+      "answer": "We're sorry to hear your item arrived damaged. please let us know and we will assist you immediately with your order number and photos of the damage. We will arrange a replacement or refund for you as soon as possible.",
+      "tags": [
+        "damaged item",
+        "order issue"
+      ],
+      "last_updated": "2026-02-21T21:19:40.787628+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What if I’m not available to receive my delivery?",
+      "answer": "If you're not available, the courier will leave a card with instructions on how to rearrange delivery or collect your parcel from a local depot. Alternatively, you can specify a safe place or neighbour for delivery at checkout.",
+      "tags": [
+        "missed delivery",
+        "delivery options"
+      ],
+      "last_updated": "2026-02-21T21:19:40.787628+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How can I check the status of my return?",
+      "answer": "To check the status of your return, log into your Shop4You account and navigate to 'My Orders'. Click on the returned item to view the current status. You will also receive email updates at each stage of the return process.",
+      "tags": [
+        "return status",
+        "order tracking"
+      ],
+      "last_updated": "2026-02-21T21:19:40.787628+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What should I do if I receive an incorrect refund amount?",
+      "answer": "If you believe your refund is incorrect, please let us know and we will assist you with your order details. We will review your case and ensure any discrepancies are corrected promptly.",
+      "tags": [
+        "refund issue",
+        "incorrect refund"
+      ],
+      "last_updated": "2026-02-21T21:19:40.787628+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Is there a way to expedite my delivery?",
+      "answer": "Yes, Shop4You offers express delivery options at checkout for an additional fee. If you need assistance selecting or modifying your delivery method, please let us know and we will assist you.",
+      "tags": [
+        "express delivery",
+        "delivery options"
+      ],
+      "last_updated": "2026-02-21T21:19:40.787628+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can I return multiple items from different orders together?",
+      "answer": "Yes, you can return multiple items from different orders in one parcel. Ensure each item has its respective return form included. If you need help, let us know and we will assist you for guidance.",
+      "tags": [
+        "multiple returns",
+        "return process"
+      ],
+      "last_updated": "2026-02-21T21:19:40.787628+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What should I do if I suspect my order has been lost in transit?",
+      "answer": "If you suspect your order is lost, let us know and we will assist you with your order details. We will investigate with the courier and arrange a replacement or refund if necessary.",
+      "tags": [
+        "lost order",
+        "order issue"
+      ],
+      "last_updated": "2026-02-21T21:19:40.787628+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How do I cancel a return request?",
+      "answer": "If you've changed your mind about returning an item, let us know and we will assist you as soon as possible. They can assist in cancelling the return request if it hasn't been processed yet.",
+      "tags": [
+        "cancel return",
+        "return request"
+      ],
+      "last_updated": "2026-02-21T21:19:40.787628+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What are the requirements for an item to be exchangeable?",
+      "answer": "For an item to be exchangeable, it must be in its original condition, unused, and returned within 30 days of receipt. Some items, like personalised products, may not be eligible for exchange. Check our exchange policy for more details.",
+      "tags": [
+        "exchange requirements",
+        "item exchange"
+      ],
+      "last_updated": "2026-02-21T21:19:40.787628+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can I get a refund if the price of an item drops after I purchase it?",
+      "answer": "If the price of an item drops within 14 days of your purchase, you may be eligible for a price adjustment refund. please let us know and we will assist you with your order details to discuss your options.",
+      "tags": [
+        "price adjustment",
+        "refund policy"
+      ],
+      "last_updated": "2026-02-21T21:19:40.787628+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Does Shop4You offer gift wrapping services?",
+      "answer": "Yes, Shop4You offers gift wrapping services for a small additional fee at checkout. You can select this option before finalising your purchase. If you have any questions about this service, our team is ready to help.",
+      "tags": [
+        "gift wrapping",
+        "order options"
+      ],
+      "last_updated": "2026-02-21T21:19:40.787628+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How do I report a problem with my order?",
+      "answer": "To report a problem with your order, please let us know and we will assist you with your order number and details of the issue. We are committed to resolving any problems quickly and efficiently.",
+      "tags": [
+        "order problem",
+        "customer support"
+      ],
+      "last_updated": "2026-02-21T21:19:40.787628+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What if I need help placing an order on Shop4You?",
+      "answer": "If you need assistance placing an order, our team is here to help. You can contact them via phone, email, or live chat for guidance on navigating our website and completing your purchase.",
+      "tags": [
+        "order assistance",
+        "customer support"
+      ],
+      "last_updated": "2026-02-21T21:19:40.787628+00:00",
+      "confidence_score": 0.95
+    }
+  ]
+}

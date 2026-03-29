@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop4You Capstone — Complete Project Steps</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-light: #dbeafe;
+            --success: #16a34a;
+            --success-light: #dcfce7;
+            --warning: #d97706;
+            --warning-light: #fef3c7;
+            --accent: #7c3aed;
+            --accent-light: #ede9fe;
+            --danger: #dc2626;
+            --danger-light: #fee2e2;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-600: #4b5563;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--gray-50);
+            color: var(--gray-800);
+            line-height: 1.7;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: var(--gray-900);
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .meta {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+
+        .meta span {
+            margin-right: 1.5rem;
+        }
+
+        .stretch-badges {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .badge-purple {
+            background: var(--accent-light);
+            color: var(--accent);
+        }
+
+        .badge-green {
+            background: var(--success-light);
+            color: var(--success);
+        }
+
+        .badge-blue {
+            background: var(--primary-light);
+            color: var(--primary);
+        }
+
+        .badge-orange {
+            background: var(--warning-light);
+            color: var(--warning);
+        }
+
+        .phase {
+            background: white;
+            border-radius: 12px;
+            padding: 1.75rem 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid var(--primary);
+        }
+
+        .phase.phase-2 {
+            border-left-color: var(--success);
+        }
+
+        .phase.phase-3 {
+            border-left-color: var(--warning);
+        }
+
+        .phase.phase-4 {
+            border-left-color: var(--accent);
+        }
+
+        .phase.phase-5 {
+            border-left-color: var(--danger);
+        }
+
+        .phase.phase-6 {
+            border-left-color: var(--gray-800);
+        }
+
+        .phase-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .phase h2 {
+            font-size: 1.35rem;
+            color: var(--gray-900);
+        }
+
+        .phase-timing {
+            font-size: 0.85rem;
+            padding: 0.2rem 0.7rem;
+            border-radius: 6px;
+            background: var(--gray-100);
+            color: var(--gray-600);
+            font-weight: 500;
+        }
+
+        .step {
+            margin-bottom: 1.25rem;
+            padding-left: 1rem;
+            border-left: 2px solid var(--gray-200);
+        }
+
+        .step:last-child {
+            margin-bottom: 0;
+        }
+
+        .step h3 {
+            font-size: 1.05rem;
+            color: var(--gray-900);
+            margin-bottom: 0.25rem;
+        }
+
+        .step-number {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 26px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-right: 0.5rem;
+        }
+
+        .step p,
+        .step ul {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+        }
+
+        .step ul {
+            padding-left: 1.25rem;
+            margin-top: 0.3rem;
+        }
+
+        .step li {
+            margin-bottom: 0.15rem;
+        }
+
+        .stretch-tag {
+            display: inline-block;
+            background: var(--accent-light);
+            color: var(--accent);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.1rem 0.5rem;
+            border-radius: 4px;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+
+        code {
+            background: var(--gray-100);
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.88rem;
+            font-family: 'Cascadia Code', 'Fira Code', Consolas, monospace;
+        }
+
+        pre {
+            background: var(--gray-900);
+            color: #e5e7eb;
+            padding: 1rem 1.25rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            line-height: 1.5;
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+        }
+
+        .summary-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .summary-table th,
+        .summary-table td {
+            padding: 0.6rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .summary-table th {
+            background: var(--gray-100);
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+
+        .summary-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .summary-box {
+            background: var(--primary-light);
+            border-radius: 10px;
+            padding: 1.25rem 1.5rem;
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+
+        .summary-box strong {
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .checklist li::before {
+            content: '☐ ';
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Shop4You Capstone — Complete Project Steps</h1>
+        <div class="meta">
+            <span><strong>Capstone Project:</strong> Agentic AI Assistant for Shop4You (Retail Company)</span>
+            <span><strong>Learner:</strong> Mohammed Emran</span>
+            <span><strong>Updated:</strong> February 23, 2026</span>
+        </div>
+        <div class="stretch-badges">
+            <span class="badge badge-purple">Stretch 1: Multi-User Memory</span>
+            <span class="badge badge-green">Stretch 2: Escalation Form</span>
+            <span class="badge badge-blue">Stretch 3: More Departments</span>
+            <span class="badge badge-orange">Stretch 4: FastAPI Deploy</span>
+        </div>
+
+        <!-- ============ PHASE 1 ============ -->
+        <div class="phase phase-1">
+            <div class="phase-header">
+                <h2>Phase 1: Setup &amp; Data</h2>
+                <span class="phase-timing">Week 1</span>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">1</span>Create Project Directory Structure</h3>
+                <p>Create folders: <code>data/</code>, <code>knowledge_base/</code>, <code>agents/</code>,
+                    <code>tools/</code>, <code>config/</code>, <code>api/</code>. Initialize virtual environment and
+                    <code>.gitignore</code>.</p>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">2</span>Finalize Departments (8+ total) <span class="stretch-tag">Stretch
+                        3</span></h3>
+                <ul>
+                    <li><strong>External:</strong> Orders &amp; Returns, Billing/Payment, Shipping/Delivery, Product
+                        Inquiries</li>
+                    <li><strong>Internal:</strong> HR, IT Helpdesk, Operations, Loyalty Program / Employee Benefits</li>
+                </ul>
+                <p>Define each department's scope, audience, and tone.</p>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">3</span>Generate Synthetic QA Datasets</h3>
+                <p>Use an LLM to generate <strong>10–15 QA pairs per department</strong> (80–120 total). Each entry:
+                    <code>question</code>, <code>answer</code>, <code>tags</code>, <code>last_updated</code>,
+                    <code>confidence_score</code>.</p>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">4</span>Store Datasets as JSON</h3>
+                <p>One JSON file per department with schema: <code>department</code>, <code>doc_id</code>,
+                    <code>entries[]</code>.</p>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">5</span>Set Up Environment Variables</h3>
+                <p>Create <code>.env</code> with <code>OPENAI_API_KEY</code>, <code>TAVILY_API_KEY</code>. Use
+                    <code>python-dotenv</code>.</p>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">6</span>Install All Dependencies</h3>
+                <pre><code>langchain, langchain-openai, langchain-community, langgraph
+langchain-chroma, langgraph-checkpoint-sqlite
+fastapi, uvicorn, pydantic, python-dotenv, rich, tiktoken</code></pre>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">7</span>Create Embeddings &amp; Ingest into ChromaDB</h3>
+                <p>Embed all QA docs using <code>OpenAIEmbeddings(model='text-embedding-3-small')</code>. Store in
+                    ChromaDB with <code>department</code> metadata. Persist to <code>./knowledge_base</code>.</p>
+            </div>
+        </div>
+
+        <!-- ============ PHASE 2 ============ -->
+        <div class="phase phase-2">
+            <div class="phase-header">
+                <h2>Phase 2: Core RAG Pipeline</h2>
+                <span class="phase-timing">Week 2</span>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">8</span>Build Retriever with Metadata Filtering</h3>
+                <p><code>kbase_db.as_retriever()</code> with <code>similarity_score_threshold</code>. Dynamic
+                    <code>filter={"department": dept}</code> per query.</p>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">9</span>Create RAG Prompt Templates</h3>
+                <p>Per-department prompt templates using <code>ChatPromptTemplate</code>. Include customer query +
+                    retrieved context. Fallback message for unanswerable queries.</p>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">10</span>Build RAG Worker Node</h3>
+                <p>Input: department + user query → retrieve context → inject into prompt → LLM generates answer.
+                    Output: formatted response with citations.</p>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">11</span>Test RAG Independently</h3>
+                <p>Verify each department retrieves correct documents. Test edge cases: ambiguous queries, empty
+                    retrieval, cross-department queries.</p>
+            </div>
+        </div>
+
+        <!-- ============ PHASE 3 ============ -->
+        <div class="phase phase-3">
+            <div class="phase-header">
+                <h2>Phase 3: Router &amp; Agentic Logic</h2>
+                <span class="phase-timing">Week 3</span>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">12</span>Build Router Agent</h3>
+                <p>LLM classifies <strong>department</strong> + <strong>sentiment</strong> using
+                    <code>with_structured_output()</code>. Pydantic models for <code>QueryCategory</code> and
+                    <code>QuerySentiment</code>.</p>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">13</span>Build Routing Logic</h3>
+                <p><code>add_conditional_edges()</code>: Negative sentiment OR Unknown department → Escalation. Valid
+                    department + Positive/Neutral → Department RAG node.</p>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">14</span>Build Escalation Node with Form <span class="stretch-tag">Stretch
+                        2</span></h3>
+                <p>Collect user details: name, phone, email. Display confirmation. Simulate sending email/WhatsApp
+                    notification. Store in <code>escalation_info</code> state.</p>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">15</span>Build Reflection / Self-Check Loop</h3>
+                <p>After generating RAG answer: check retrieval relevance, hallucination risk, policy compliance. Retry
+                    up to <code>MAX_ATTEMPTS = 3</code>.</p>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">16</span>Build Custom Workflows for Extra Departments <span
+                        class="stretch-tag">Stretch 3</span></h3>
+                <p>Product Inquiries: product search tool, stock check. Loyalty Program: points lookup, rewards info.
+                    Specialized <code>@tool</code> functions per department.</p>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">17</span>Add Multi-User Conversational Memory <span
+                        class="stretch-tag">Stretch 1</span></h3>
+                <p><code>SqliteSaver.from_conn_string("shop4you_memory.db")</code>. Unique <code>thread_id</code> per
+                    user. Conversations persist across sessions. User isolation guaranteed.</p>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">18</span>Define State Schema</h3>
+                <pre><code>class Shop4YouState(TypedDict):
+    messages: Annotated[list, add_messages]
+    customer_query: str
+    department: str
+    sentiment: str
+    retrieved_context: str
+    plan: List[str]
+    past_steps: Annotated[List[Tuple], operator.add]
+    reflection_count: int
+    final_response: str
+    user_id: str
+    escalation_info: dict</code></pre>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">19</span>Wire the Full LangGraph</h3>
+                <pre><code>START
+  → Step 0: classify_query (department, sentiment, severity)
+  → route_query (conditional — one path only)
+      ├─ IF valid dept (or low/med negative):
+      │    → Step 1a: department_rag (ChromaDB + tools + GPT-4o)
+      │    → Step 2:  reflect (quality score ≥7 → done, else retry up to 3×)
+      │    → END
+      └─ IF negative+HIGH severity OR unknown dept:
+           → Step 1b: escalate (CrewAI 3-agent crew → escalation_agent)
+           → END</code></pre>
+                <p style="margin-top:0.5em;font-size:0.85em;color:#6366f1;">📊 <a
+                        href="Shop4You_Architecture_Diagram.html" style="color:#6366f1;">Open visual architecture
+                        diagram</a> for a colour-coded interactive version.</p>
+            </div>
+        </div>
+
+        <!-- ============ PHASE 4 ============ -->
+        <div class="phase phase-4">
+            <div class="phase-header">
+                <h2>Phase 4: API &amp; Deployment <span class="stretch-tag">Stretch 4</span></h2>
+                <span class="phase-timing">Week 4 (first half)</span>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">20</span>Create FastAPI App</h3>
+                <p><code>POST /chat</code> endpoint: accepts <code>{ "query": "...", "user_id": "..." }</code>. Returns
+                    <code>{ "response": "...", "department": "...", "sentiment": "..." }</code>. Swagger UI at
+                    <code>/docs</code>.</p>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">21</span>Integrate Agent with API</h3>
+                <p>API calls compiled LangGraph agent. Passes <code>user_id</code> as <code>thread_id</code> for memory.
+                    Returns structured response.</p>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">22</span>Add Session Management</h3>
+                <p><code>GET /history/{user_id}</code> — retrieve conversation history.
+                    <code>DELETE /history/{user_id}</code> — clear a user's session.</p>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">23</span>Deploy the Web Service</h3>
+                <p>Run with <code>uvicorn api.main:app --reload</code>. Test via Swagger UI, curl, or Postman. Optional:
+                    deploy to cloud (Render, Railway, AWS).</p>
+            </div>
+        </div>
+
+        <!-- ============ PHASE 5 ============ -->
+        <div class="phase phase-5">
+            <div class="phase-header">
+                <h2>Phase 5: Testing &amp; Polish</h2>
+                <span class="phase-timing">Week 4 (second half)</span>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">24</span>End-to-End Testing</h3>
+                <p>Test 10+ sample queries covering:</p>
+                <ul class="checklist">
+                    <li>&#10004; Each department (8+ queries, one per dept)</li>
+                    <li>&#10004; Negative sentiment → escalation with form collection</li>
+                    <li>&#10004; Unknown department → escalation</li>
+                    <li>&#10004; Multi-turn conversations (same user returns, context recalled)</li>
+                    <li>&#10004; Different users don't see each other's history</li>
+                    <li>&#10004; API endpoint testing via Swagger/Postman</li>
+                    <li>&#10004; Reflection loop triggers on low-quality retrieval</li>
+                    <li>&#10004; <strong>Severity-based escalation</strong> (only HIGH severity escalates, not all
+                        negative)</li>
+                    <li>&#10004; <strong>Cross-department handoff</strong> (SUGGEST_TRANSFER tag + fallback detection)
+                    </li>
+                    <li>&#10004; <strong>Transfer keyword detection</strong> (22 phrases including "pass me to",
+                        "connect me")</li>
+                    <li>&#10004; <strong>Generic term handling</strong> ("customer service" → contextual department)
+                    </li>
+                    <li>&#10004; <strong>Conversation-aware classification</strong> (last 3 turns for follow-up context)
+                    </li>
+                    <li>&#10004; <strong>No "contact customer service" in responses</strong> (KB data fixed + RAG
+                        override)</li>
+                    <li>&#10004; <strong>70 orchestration tests passed</strong> across 12 categories</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">25</span>Add Logging and Metrics</h3>
+                <p>Query logs with timestamps. Retrieval precision. Escalation rate. Response latency tracking.</p>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">26</span>Verify Memory Isolation</h3>
+                <p>User A and User B have independent conversations. "What did we discuss?" returns only that user's
+                    history. SQLite persistence survives app restarts.</p>
+            </div>
+        </div>
+
+        <!-- ============ PHASE 6 ============ -->
+        <div class="phase phase-6">
+            <div class="phase-header">
+                <h2>Phase 6: Deliverables &amp; Presentation</h2>
+                <span class="phase-timing">Final Days</span>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">27</span>Prepare Demo Script</h3>
+                <p>10+ sample queries with expected outputs. Cover all departments, escalation paths, multi-turn, and
+                    API. Include edge cases.</p>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">28</span>Create Presentation / Slide Deck</h3>
+                <p>Architecture diagram — see <a href="Shop4You_Architecture_Diagram.html"
+                        style="color:#6366f1;">Shop4You_Architecture_Diagram.html</a> for the visual version. Demo
+                    walkthrough. Key patterns used (routing, RAG, reflection, planning, multi-agent). Business impact
+                    and scalability.</p>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">29</span>Write README and Documentation</h3>
+                <p><code>README.md</code>, <code>SETUP_GUIDE.md</code>, <code>API_REFERENCE.md</code>,
+                    <code>PROJECT_DOCUMENTATION.md</code> — complete guides for evaluators.</p>
+            </div>
+
+            <div class="step">
+                <h3><span class="step-number">30</span>Final Mentor Walkthrough and Submission</h3>
+                <p>Meet with mentor to review. Live project demo. Submit all code, data, documentation, and
+                    presentation.</p>
+            </div>
+        </div>
+
+        <!-- ============ SUMMARY ============ -->
+        <div class="phase" style="border-left-color: var(--primary);">
+            <h2>Summary</h2>
+            <table class="summary-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Steps</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Phase 1: Setup &amp; Data</td>
+                        <td>Steps 1–7</td>
+                        <td>Week 1</td>
+                    </tr>
+                    <tr>
+                        <td>Phase 2: Core RAG Pipeline</td>
+                        <td>Steps 8–11</td>
+                        <td>Week 2</td>
+                    </tr>
+                    <tr>
+                        <td>Phase 3: Router &amp; Agentic Logic</td>
+                        <td>Steps 12–19</td>
+                        <td>Week 3</td>
+                    </tr>
+                    <tr>
+                        <td>Phase 4: API &amp; Deployment</td>
+                        <td>Steps 20–23</td>
+                        <td>Week 4 (first half)</td>
+                    </tr>
+                    <tr>
+                        <td>Phase 5: Testing &amp; Polish</td>
+                        <td>Steps 24–26</td>
+                        <td>Week 4 (second half)</td>
+                    </tr>
+                    <tr>
+                        <td>Phase 6: Deliverables</td>
+                        <td>Steps 27–30</td>
+                        <td>Final days</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="summary-box">
+            <strong>Total: 30 steps &nbsp;|&nbsp; 6 phases &nbsp;|&nbsp; 4 stretch goals included</strong>
+        </div>
+
+    </div>
+</body>
+
+</html>

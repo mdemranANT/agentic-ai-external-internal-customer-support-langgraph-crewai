@@ -1,0 +1,285 @@
+{
+  "department": "Human Resources (HR)",
+  "department_key": "hr",
+  "audience": "internal",
+  "doc_id": "hr_faq_v1",
+  "generated_date": "2026-02-21T21:21:09.711449+00:00",
+  "num_entries": 25,
+  "entries": [
+    {
+      "question": "What is the annual leave entitlement for full-time employees at Shop4You?",
+      "answer": "Full-time employees at Shop4You are entitled to 28 days of annual leave per year, inclusive of bank holidays. It is important to plan your leave in advance and discuss with your line manager to ensure team coverage. Leave entitlements are prorated for part-time employees based on their contracted hours.",
+      "tags": [
+        "annual leave",
+        "entitlement",
+        "full-time"
+      ],
+      "last_updated": "2026-02-21T21:21:09.711449+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How do I access my payslip online?",
+      "answer": "You can access your payslip by logging into the Shop4You employee portal. Once logged in, navigate to 'Payroll' and select 'Payslips'. Here, you can view and download your current and past payslips. If you encounter any issues, please contact the HR department for assistance.",
+      "tags": [
+        "payslip",
+        "access",
+        "online"
+      ],
+      "last_updated": "2026-02-21T21:21:09.711449+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What should I do if I need to take a sick day?",
+      "answer": "If you need to take a sick day, inform your line manager as soon as possible, ideally before your shift begins. You should also record your absence in the Shop4You employee portal. If your illness extends beyond seven consecutive days, you'll need to provide a fit note from your GP.",
+      "tags": [
+        "sick leave",
+        "procedure",
+        "fit note"
+      ],
+      "last_updated": "2026-02-21T21:21:09.711449+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What are the steps to enrol in the Shop4You benefits programme?",
+      "answer": "To enrol in the benefits programme, log into the Shop4You employee portal and select 'Benefits'. Follow the instructions to review the available options and make your selections. Ensure you complete the enrolment process by the specified deadline. Contact HR if you have questions about specific benefits.",
+      "tags": [
+        "benefits",
+        "enrolment",
+        "process"
+      ],
+      "last_updated": "2026-02-21T21:21:09.711449+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can I change my benefits selection after the enrolment deadline?",
+      "answer": "Changes to your benefits selection after the enrolment deadline are generally not allowed unless you experience a qualifying life event, such as marriage or the birth of a child. In such cases, contact the HR department within 30 days of the event to discuss your options.",
+      "tags": [
+        "benefits",
+        "change",
+        "deadline"
+      ],
+      "last_updated": "2026-02-21T21:21:09.711449+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What happens if I miss the performance review deadline?",
+      "answer": "If you miss the performance review deadline, promptly inform your line manager and the HR department. They will work with you to reschedule the review. It's crucial to adhere to deadlines as they impact your performance metrics and potential merit increases.",
+      "tags": [
+        "performance review",
+        "deadline",
+        "reschedule"
+      ],
+      "last_updated": "2026-02-21T21:21:09.711449+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Who should I contact for questions about my job description?",
+      "answer": "For questions about your job description, your first point of contact should be your line manager, as they can provide specific details about your role. If further clarification is needed, the HR department can also assist in addressing your queries.",
+      "tags": [
+        "job description",
+        "contact",
+        "clarification"
+      ],
+      "last_updated": "2026-02-21T21:21:09.711449+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What is the procedure for reporting workplace harassment at Shop4You?",
+      "answer": "If you experience or witness workplace harassment, it's crucial to report it immediately. You can contact your line manager, HR representative, or use the confidential reporting hotline. All reports are taken seriously and will be investigated promptly while ensuring confidentiality.",
+      "tags": [
+        "harassment",
+        "reporting",
+        "procedure"
+      ],
+      "last_updated": "2026-02-21T21:21:09.711449+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Am I eligible for maternity leave, and how do I apply?",
+      "answer": "To be eligible for maternity leave at Shop4You, you must have been employed for at least 26 weeks by the 15th week before your expected due date. To apply, inform your line manager and HR in writing at least 15 weeks before your due date, including your MATB1 form from your midwife.",
+      "tags": [
+        "maternity leave",
+        "eligibility",
+        "application"
+      ],
+      "last_updated": "2026-02-21T21:21:09.711449+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How can I participate in Shop4You training programmes?",
+      "answer": "To participate in training programmes, visit the Shop4You employee portal and browse available training sessions under the 'Training' section. You can register for courses that align with your professional development goals. For guidance, discuss options with your line manager or HR.",
+      "tags": [
+        "training",
+        "participation",
+        "professional development"
+      ],
+      "last_updated": "2026-02-21T21:21:09.711449+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What should I do if I find discrepancies in my payslip?",
+      "answer": "If you notice discrepancies in your payslip, contact the payroll department immediately. Provide them with details of the discrepancies and any supporting documentation. The HR department can also offer guidance if you need further assistance resolving the issue.",
+      "tags": [
+        "payslip",
+        "discrepancies",
+        "payroll"
+      ],
+      "last_updated": "2026-02-21T21:21:09.711449+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Is flexible working available at Shop4You, and how can I request it?",
+      "answer": "Shop4You supports flexible working arrangements where possible. To request flexible working, submit a formal request through the employee portal, including details of the desired arrangement. Your line manager and HR will review your request and discuss feasible options with you.",
+      "tags": [
+        "flexible working",
+        "request",
+        "arrangement"
+      ],
+      "last_updated": "2026-02-21T21:21:09.711449+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What is the process for filing a grievance at Shop4You?",
+      "answer": "To file a grievance, complete the grievance form available on the employee portal and submit it to your line manager or HR. A meeting will be scheduled to discuss your concerns, and an investigation will follow. You will receive updates throughout the process, maintaining confidentiality.",
+      "tags": [
+        "grievance",
+        "process",
+        "confidentiality"
+      ],
+      "last_updated": "2026-02-21T21:21:09.711449+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How are performance reviews conducted at Shop4You?",
+      "answer": "Performance reviews at Shop4You are conducted annually and involve a self-assessment, manager evaluation, and a review meeting. You'll discuss your achievements, areas for improvement, and set goals for the next period. Feedback is documented and used to guide career development.",
+      "tags": [
+        "performance review",
+        "process",
+        "evaluation"
+      ],
+      "last_updated": "2026-02-21T21:21:09.711449+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What should I do if I need to update my personal information in the company records?",
+      "answer": "To update your personal information, log into the Shop4You employee portal and navigate to 'My Profile'. Make the necessary changes and save them. If you encounter any issues or have sensitive information to update, contact HR for assistance.",
+      "tags": [
+        "personal information",
+        "update",
+        "records"
+      ],
+      "last_updated": "2026-02-21T21:21:09.711449+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What are my options if I disagree with my performance review results?",
+      "answer": "If you disagree with your performance review results, schedule a follow-up meeting with your line manager to discuss your concerns. You can also request a review by the HR department for a neutral perspective. Open communication is encouraged to resolve discrepancies.",
+      "tags": [
+        "performance review",
+        "disagreement",
+        "resolution"
+      ],
+      "last_updated": "2026-02-21T21:21:09.711449+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How can I find information about Shop4You's pension scheme?",
+      "answer": "Information about Shop4You's pension scheme is available on the employee portal under 'Benefits'. You can review plan details, enrolment procedures, and contribution options. For further queries, contact the HR department or the pension provider directly.",
+      "tags": [
+        "pension",
+        "information",
+        "benefits"
+      ],
+      "last_updated": "2026-02-21T21:21:09.711449+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What is Shop4You's policy on remote work?",
+      "answer": "Shop4You offers remote work options depending on role requirements. Employees should discuss potential remote work arrangements with their line manager. Formal agreements are documented in writing, ensuring clarity on expectations and responsibilities.",
+      "tags": [
+        "remote work",
+        "policy",
+        "arrangements"
+      ],
+      "last_updated": "2026-02-21T21:21:09.711449+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "If I've been employed for less than a year, do I receive any annual leave?",
+      "answer": "Yes, employees at Shop4You accrue annual leave from their start date, even if employed for less than a year. The entitlement is prorated based on the duration of employment within the leave year. You can view your accrued leave balance on the employee portal.",
+      "tags": [
+        "annual leave",
+        "new employees",
+        "accrual"
+      ],
+      "last_updated": "2026-02-21T21:21:09.711449+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How do I report a health and safety concern at work?",
+      "answer": "To report a health and safety concern, inform your line manager immediately and document the issue using the form available on the employee portal. The health and safety team will investigate and take appropriate action to address the concern.",
+      "tags": [
+        "health and safety",
+        "reporting",
+        "concern"
+      ],
+      "last_updated": "2026-02-21T21:21:09.711449+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What is the Shop4You policy on parental leave?",
+      "answer": "Shop4You offers parental leave in accordance with statutory guidelines, which include maternity, paternity, and shared parental leave. Eligibility and duration vary depending on the type of leave. For specific details and assistance, contact the HR department.",
+      "tags": [
+        "parental leave",
+        "policy",
+        "eligibility"
+      ],
+      "last_updated": "2026-02-21T21:21:09.711449+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How can I escalate an unresolved HR issue?",
+      "answer": "If an HR issue remains unresolved, you can escalate it by contacting the HR manager directly. Provide all relevant details and documentation regarding the issue. The HR manager will review your case and work towards a resolution. Confidentiality will be maintained throughout.",
+      "tags": [
+        "HR issue",
+        "escalation",
+        "resolution"
+      ],
+      "last_updated": "2026-02-21T21:21:09.711449+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What is the Shop4You approach to diversity and inclusion?",
+      "answer": "Shop4You is committed to fostering a diverse and inclusive workplace. Our policies are designed to ensure equal opportunities for all employees, regardless of background. We provide regular training and encourage open dialogue to continuously improve our practices.",
+      "tags": [
+        "diversity",
+        "inclusion",
+        "policy"
+      ],
+      "last_updated": "2026-02-21T21:21:09.711449+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What are the emergency procedures in place at Shop4You?",
+      "answer": "Shop4You has comprehensive emergency procedures, including evacuation plans, first aid response, and communication protocols. Regular drills are conducted to ensure all employees are familiar with these procedures. Detailed information is available on the employee portal.",
+      "tags": [
+        "emergency procedures",
+        "safety",
+        "protocols"
+      ],
+      "last_updated": "2026-02-21T21:21:09.711449+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How can I provide feedback about my onboarding experience?",
+      "answer": "You can provide feedback on your onboarding experience by completing the onboarding survey sent to you via email. Alternatively, you can discuss your thoughts with your HR representative. Your feedback is valuable and helps us improve the onboarding process for future employees.",
+      "tags": [
+        "onboarding",
+        "feedback",
+        "improvement"
+      ],
+      "last_updated": "2026-02-21T21:21:09.711449+00:00",
+      "confidence_score": 0.95
+    }
+  ]
+}

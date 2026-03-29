@@ -1,0 +1,285 @@
+{
+  "department": "Operations",
+  "department_key": "operations",
+  "audience": "internal",
+  "doc_id": "operations_faq_v1",
+  "generated_date": "2026-02-22T09:22:46.910570+00:00",
+  "num_entries": 25,
+  "entries": [
+    {
+      "question": "What is the procedure for conducting an inventory check?",
+      "answer": "To conduct an inventory check, first verify the current stock levels in the system. Then, physically count the items on the shelves and compare them to the recorded data. Any discrepancies should be recorded and reported to the inventory manager for adjustment. Ensure all counts are completed within the scheduled timeframe to maintain accuracy.",
+      "tags": [
+        "inventory",
+        "procedure",
+        "checks"
+      ],
+      "last_updated": "2026-02-22T09:22:46.910570+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How do I update my shift schedule?",
+      "answer": "To update your shift schedule, access the employee portal and navigate to the 'Shift Management' section. From there, you can view your current schedule and request changes. Any modifications need to be approved by your supervisor and should be submitted at least 48 hours in advance.",
+      "tags": [
+        "shift schedule",
+        "employee",
+        "update"
+      ],
+      "last_updated": "2026-02-22T09:22:46.910570+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "I ordered blue pens but received black ones, what do I do?",
+      "answer": "If you received the wrong item, initiate a return request through the internal order management system. Provide details of the discrepancy and await instructions from the logistics team. The correct items will be dispatched once the return is processed.",
+      "tags": [
+        "order",
+        "discrepancy",
+        "return"
+      ],
+      "last_updated": "2026-02-22T09:22:46.910570+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What are the steps to coordinate with a new vendor?",
+      "answer": "To coordinate with a new vendor, first verify their credentials and add them to the approved vendor list. Then, contact the supplier to discuss terms and conditions. Once an agreement is reached, update the supply chain management system with their details and schedule periodic quality assessments.",
+      "tags": [
+        "vendor",
+        "coordination",
+        "steps"
+      ],
+      "last_updated": "2026-02-22T09:22:46.910570+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What happens if a shipment is delayed?",
+      "answer": "In the event of a delayed shipment, notify the logistics manager immediately. Assess the impact on operations and communicate with relevant departments to mitigate any issues. Consider alternative supply routes if necessary and keep all stakeholders informed of the updated timelines.",
+      "tags": [
+        "shipment",
+        "delay",
+        "logistics"
+      ],
+      "last_updated": "2026-02-22T09:22:46.910570+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Am I eligible for overtime pay if my shift extends?",
+      "answer": "Employees are eligible for overtime pay if they work beyond their regular scheduled hours. The overtime rate applies after the first 30 minutes of extended work. Ensure that any overtime is pre-approved by your supervisor and logged accurately in the time-tracking system.",
+      "tags": [
+        "overtime",
+        "shift",
+        "pay"
+      ],
+      "last_updated": "2026-02-22T09:22:46.910570+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Who do I contact for a supply chain update?",
+      "answer": "For the latest supply chain updates, contact the Supply Chain Manager. They can provide details on current stock levels, upcoming shipments, and any potential delays. Regular updates are also shared via the internal newsletter and the company portal.",
+      "tags": [
+        "supply chain",
+        "update",
+        "contact"
+      ],
+      "last_updated": "2026-02-22T09:22:46.910570+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How often should quality control checks be conducted?",
+      "answer": "Quality control checks should be conducted on a weekly basis to ensure compliance with Shop4You standards. Additionally, random spot checks are encouraged to identify any issues promptly. All findings should be documented and reported to the Quality Assurance team.",
+      "tags": [
+        "quality control",
+        "checks",
+        "frequency"
+      ],
+      "last_updated": "2026-02-22T09:22:46.910570+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can I change my inventory order after submission?",
+      "answer": "You can change your inventory order within 24 hours of submission by contacting the Inventory Management team. After this period, changes may not be possible due to processing constraints. It is advisable to double-check all details before final submission.",
+      "tags": [
+        "inventory",
+        "order",
+        "change"
+      ],
+      "last_updated": "2026-02-22T09:22:46.910570+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What is the process for handling damaged goods?",
+      "answer": "When handling damaged goods, immediately segregate them from undamaged stock. Document the damage with photographs and complete a damage assessment form. Submit the form to the Quality Assurance department for further action. Depending on the damage, goods may be repaired, returned, or written off.",
+      "tags": [
+        "damaged goods",
+        "process",
+        "handling"
+      ],
+      "last_updated": "2026-02-22T09:22:46.910570+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How can I access the vendor contact list?",
+      "answer": "The vendor contact list is accessible through the internal database on the employee portal. Ensure you have the necessary permissions to view this list. If access is restricted, request permission from your department manager.",
+      "tags": [
+        "vendor",
+        "contact",
+        "access"
+      ],
+      "last_updated": "2026-02-22T09:22:46.910570+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What procedure should I follow if I miss a shift deadline?",
+      "answer": "If you miss a shift deadline, notify your supervisor as soon as possible to explain the situation. Submit a missed shift report detailing the reasons for your absence. Repeated instances may require a formal review of your performance.",
+      "tags": [
+        "shift",
+        "deadline",
+        "procedure"
+      ],
+      "last_updated": "2026-02-22T09:22:46.910570+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Are there any penalties for late inventory submissions?",
+      "answer": "Late inventory submissions may result in a review by your supervisor. Consistent delays could lead to corrective actions. It is crucial to adhere to submission deadlines to maintain operational efficiency.",
+      "tags": [
+        "inventory",
+        "submissions",
+        "penalties"
+      ],
+      "last_updated": "2026-02-22T09:22:46.910570+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How do I report a supply chain issue?",
+      "answer": "To report a supply chain issue, fill out a Supply Chain Issue Report form, detailing the specific problem and any immediate impacts. Submit the form to the Supply Chain Management team for review. Prompt reporting ensures quicker resolution and minimises disruption.",
+      "tags": [
+        "supply chain",
+        "report",
+        "issue"
+      ],
+      "last_updated": "2026-02-22T09:22:46.910570+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What if a vendor fails to meet the quality standards?",
+      "answer": "If a vendor fails to meet quality standards, report the issue to the Quality Assurance team. They will conduct an evaluation and liaise with the vendor to resolve the matter. Persistent quality issues may lead to the vendor being removed from the approved list.",
+      "tags": [
+        "vendor",
+        "quality",
+        "standards"
+      ],
+      "last_updated": "2026-02-22T09:22:46.910570+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How do I request additional warehouse supplies?",
+      "answer": "To request additional warehouse supplies, fill out a Supply Request form specifying the items needed and their quantities. Submit the form to the Warehouse Manager for approval. Ensure requests are made in advance to allow for adequate processing time.",
+      "tags": [
+        "warehouse",
+        "supplies",
+        "request"
+      ],
+      "last_updated": "2026-02-22T09:22:46.910570+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What are the guidelines for coordinating logistics?",
+      "answer": "Logistics coordination involves scheduling deliveries, managing transportation, and ensuring timely distribution. Follow the logistics protocol outlined in the company manual, ensuring all coordination is documented. Regular communication with the logistics team is essential for smooth operations.",
+      "tags": [
+        "logistics",
+        "coordination",
+        "guidelines"
+      ],
+      "last_updated": "2026-02-22T09:22:46.910570+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How is inventory shrinkage managed?",
+      "answer": "Inventory shrinkage is managed through regular audits and implementing security measures. Discrepancies should be reported to the Inventory Control team, who will investigate and document the findings. Preventative measures include staff training and improved inventory tracking systems.",
+      "tags": [
+        "inventory",
+        "shrinkage",
+        "management"
+      ],
+      "last_updated": "2026-02-22T09:22:46.910570+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can I appeal a quality control decision?",
+      "answer": "If you believe a quality control decision is incorrect, you can appeal by submitting a Quality Control Appeal form within seven days. Provide detailed reasons and any supporting evidence. The appeal will be reviewed by the Quality Assurance team, and you will be notified of the final decision.",
+      "tags": [
+        "quality control",
+        "appeal",
+        "decision"
+      ],
+      "last_updated": "2026-02-22T09:22:46.910570+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What should I do if a vendor contact is unresponsive?",
+      "answer": "If a vendor contact is unresponsive, attempt alternative communication methods such as email or telephone. If there is still no response, escalate the matter to Vendor Management for further assistance. Persistent non-responsiveness may require exploring alternative vendors.",
+      "tags": [
+        "vendor",
+        "contact",
+        "unresponsive"
+      ],
+      "last_updated": "2026-02-22T09:22:46.910570+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How often are supply chain updates provided?",
+      "answer": "Supply chain updates are provided weekly through the internal newsletter and the company portal. For urgent updates, the Supply Chain Management team will communicate directly with affected departments. Stay informed by regularly checking these resources.",
+      "tags": [
+        "supply chain",
+        "updates",
+        "frequency"
+      ],
+      "last_updated": "2026-02-22T09:22:46.910570+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What is the process for rescheduling a missed delivery?",
+      "answer": "To reschedule a missed delivery, contact the Logistics Coordinator immediately. They will liaise with the carrier to arrange a new delivery date. Ensure to communicate any changes to relevant departments to minimise disruption.",
+      "tags": [
+        "delivery",
+        "reschedule",
+        "process"
+      ],
+      "last_updated": "2026-02-22T09:22:46.910570+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "What are the criteria for selecting a new vendor?",
+      "answer": "New vendors are selected based on criteria including product quality, cost-effectiveness, reliability, and compliance with Shop4You standards. A thorough vetting process is conducted by Vendor Management, and potential vendors are subject to a trial period before formal approval.",
+      "tags": [
+        "vendor",
+        "selection",
+        "criteria"
+      ],
+      "last_updated": "2026-02-22T09:22:46.910570+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "How do I escalate a supply chain problem?",
+      "answer": "To escalate a supply chain problem, contact the Supply Chain Manager with detailed information about the issue. If the problem persists, a formal escalation can be made to the Operations Director. Ensure all communication is documented for reference.",
+      "tags": [
+        "supply chain",
+        "problem",
+        "escalation"
+      ],
+      "last_updated": "2026-02-22T09:22:46.910570+00:00",
+      "confidence_score": 0.95
+    },
+    {
+      "question": "Can I access past shift schedules for reference?",
+      "answer": "Past shift schedules can be accessed through the employee portal under the 'Shift History' section. Ensure you are logged in with your credentials to view this information. Historical data is maintained for a period of up to 12 months.",
+      "tags": [
+        "shift schedule",
+        "history",
+        "access"
+      ],
+      "last_updated": "2026-02-22T09:22:46.910570+00:00",
+      "confidence_score": 0.95
+    }
+  ]
+}

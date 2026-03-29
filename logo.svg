@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 180" role="img" aria-label="Shop4You logo">
+  <defs>
+    <linearGradient id="card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="8" y="8" width="624" height="164" rx="24" fill="url(#card)"/>
+
+  <!-- cart mark -->
+  <g transform="translate(34,42)">
+    <path d="M2 12h24l8 54h82l14-44H42" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="56" cy="86" r="8" fill="#ffffff"/>
+    <circle cx="108" cy="86" r="8" fill="#ffffff"/>
+    <path d="M40 28h92" stroke="url(#accent)" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- wordmark -->
+  <text x="190" y="88" font-family="Segoe UI, Trebuchet MS, Arial, sans-serif" font-size="58" font-weight="800" fill="#ffffff">Shop</text>
+  <text x="334" y="88" font-family="Segoe UI, Trebuchet MS, Arial, sans-serif" font-size="58" font-weight="900" fill="url(#accent)">4</text>
+  <text x="372" y="88" font-family="Segoe UI, Trebuchet MS, Arial, sans-serif" font-size="58" font-weight="800" fill="#ffffff">You</text>
+
+  <text x="190" y="122" font-family="Segoe UI, Trebuchet MS, Arial, sans-serif" font-size="18" font-weight="500" fill="#dbeafe">Agentic AI Customer and Employee Support</text>
+</svg>
