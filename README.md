@@ -1,3 +1,7 @@
+# Agentic AI Customer Support System (LangGraph + CrewAI + RAG)
+
+Shop4You is an agentic AI customer support assistant using LangGraph orchestration, CrewAI escalation workflows, ChromaDB retrieval (RAG), FastAPI APIs, and a Streamlit chat interface.
+
 # Shop4You Capstone Project - Agentic AI Assistant
 
 > Learner: Mohammed Emran  
